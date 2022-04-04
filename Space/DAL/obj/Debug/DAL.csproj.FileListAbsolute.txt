@@ -1,0 +1,7 @@
+C:\Users\AssafHillel\source\repos\OuterSpaceProject\Space\DAL\bin\Debug\DAL.exe.config
+C:\Users\AssafHillel\source\repos\OuterSpaceProject\Space\DAL\bin\Debug\DAL.exe
+C:\Users\AssafHillel\source\repos\OuterSpaceProject\Space\DAL\bin\Debug\DAL.pdb
+C:\Users\AssafHillel\source\repos\OuterSpaceProject\Space\DAL\obj\Debug\DAL.csproj.AssemblyReference.cache
+C:\Users\AssafHillel\source\repos\OuterSpaceProject\Space\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+C:\Users\AssafHillel\source\repos\OuterSpaceProject\Space\DAL\obj\Debug\DAL.exe
+C:\Users\AssafHillel\source\repos\OuterSpaceProject\Space\DAL\obj\Debug\DAL.pdb

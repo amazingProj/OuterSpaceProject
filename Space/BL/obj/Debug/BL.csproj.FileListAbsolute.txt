@@ -1,0 +1,11 @@
+C:\Users\AssafHillel\source\repos\OuterSpaceProject\Space\BL\bin\Debug\BL.exe.config
+C:\Users\AssafHillel\source\repos\OuterSpaceProject\Space\BL\bin\Debug\BL.exe
+C:\Users\AssafHillel\source\repos\OuterSpaceProject\Space\BL\bin\Debug\BL.pdb
+C:\Users\AssafHillel\source\repos\OuterSpaceProject\Space\BL\obj\Debug\BL.csproj.AssemblyReference.cache
+C:\Users\AssafHillel\source\repos\OuterSpaceProject\Space\BL\obj\Debug\BL.csproj.CoreCompileInputs.cache
+C:\Users\AssafHillel\source\repos\OuterSpaceProject\Space\BL\obj\Debug\BL.exe
+C:\Users\AssafHillel\source\repos\OuterSpaceProject\Space\BL\obj\Debug\BL.pdb
+C:\Users\AssafHillel\source\repos\OuterSpaceProject\Space\BL\bin\Debug\DAL.exe
+C:\Users\AssafHillel\source\repos\OuterSpaceProject\Space\BL\bin\Debug\DAL.pdb
+C:\Users\AssafHillel\source\repos\OuterSpaceProject\Space\BL\bin\Debug\DAL.exe.config
+C:\Users\AssafHillel\source\repos\OuterSpaceProject\Space\BL\obj\Debug\BL.csproj.CopyComplete
