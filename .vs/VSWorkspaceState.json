@@ -1,7 +1,12 @@
 {
   "ExpandedNodes": [
     "",
-    "\\Space"
+    "\\Space",
+    "\\Space\\DAL",
+    "\\Space\\UI",
+    "\\Space\\UI\\MVVM",
+    "\\Space\\UI\\MVVM\\View"
   ],
+  "SelectedNode": "\\Space\\DAL\\DAL.cs",
   "PreviewInSolutionExplorer": false
 }

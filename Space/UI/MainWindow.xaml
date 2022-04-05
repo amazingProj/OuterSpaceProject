@@ -36,45 +36,45 @@
 
             <StackPanel Grid.Row="1">
 
-                <RadioButton Content="Home"
-                             Height="50"
+                <RadioButton Content="Home &#x0a;Page"
+                             Height="70"
                              Foreground="White"
-                             FontSize="14"
+                             FontSize="16"
                              Style="{StaticResource MenuButtonTheme}"
                              IsChecked="True"
                              Command="{Binding HomeViewCommand}"/>
-                <RadioButton Content="Search"
-                             Height="50"
+                <RadioButton Content="Search &#x0a;Hazards"
+                             Height="70"
                              Foreground="White"
-                             FontSize="14"
+                             FontSize="16"
                              Style="{StaticResource MenuButtonTheme}"
                              Command="{Binding SearchViewCommand}"/>
 
-                <RadioButton Content="Media"
-                             Height="50"
+                <RadioButton Content="Media &#x0a;Discovery"
+                             Height="70"
                              Foreground="White"
-                             FontSize="14"
+                             FontSize="16"
                              Style="{StaticResource MenuButtonTheme}"
                              Command="{Binding MediaViewCommand}"/>
 
                 <RadioButton Content="Solar &#x0a;System"
-                             Height="50"
+                             Height="70"
                              Foreground="White"
-                             FontSize="14"
+                             FontSize="16"
                              Style="{StaticResource MenuButtonTheme}"
                              Command="{Binding SolarSystemViewCommand}"/>
 
                 <RadioButton Content="Today&#x0a;Picture"
-                             Height="50"
+                             Height="70"
                              Foreground="White"
-                             FontSize="14"
+                             FontSize="16"
                              Style="{StaticResource MenuButtonTheme}"
                              Command="{Binding TodayPictureViewCommand}"/>
 
                 <RadioButton Content="My&#x0a;Gallery"
-                             Height="50"
+                             Height="70"
                              Foreground="White"
-                             FontSize="14"
+                             FontSize="16"
                              Style="{StaticResource MenuButtonTheme}"
                              Command="{Binding MyGalleryViewCommand}"/>
 
@@ -93,19 +93,19 @@
                 HorizontalAlignment="Right"
                 Content="Quick Analysis"
                         Foreground="White"
-                        FontSize="12"
+                        FontSize="14"
                         FontWeight="Medium"
                     Margin="0,-4,-38,17.2" RenderTransformOrigin="0.151,0.363" Width="194">
                 <Button.Style>
                     <Style TargetType="Button">
                         <Setter Property="TextElement.FontFamily" Value="Fonts/#Fredoka"
                                     />
-                        <Setter Property="Background" Value="#FE6584"
+                        <Setter Property="Background" Value="#39385d"
                                     />
                         <Setter Property="Cursor" Value="Hand" />
                         <Style.Triggers>
                             <Trigger Property="IsMouseOver" Value="True">
-                                <Setter Property="Background" Value="#FF4C70" />
+                                <Setter Property="Background" Value="#3a3950" />
                             </Trigger>
                         </Style.Triggers>
                     </Style>

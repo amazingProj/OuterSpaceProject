@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing.Imaging;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -32,6 +33,9 @@ namespace UI.MVVM.View
                 string fileName = Path.GetFileName(files[0]);
 
                 FileName.Content = fileName;
+
+                BL.IBL bL = new BL.BL();
+
             }
 
         }

@@ -8,8 +8,7 @@ using UI.Core;
 namespace UI.MVVM.ViewModel
 {
     class MainViewModel : ObservableObject
-    {
-       // private BL.IBL bL = new BL.BL();
+    { 
         public RelayCommand HomeViewCommand { get; set; }
 
         public RelayCommand SearchViewCommand { get; set; }
@@ -87,10 +86,5 @@ namespace UI.MVVM.ViewModel
                 CurrentView = MyGalleryVM;
             });
         }
-
-       // public BL.IBL GetBL()
-        //{
-        //    return bL;
-       // }
     }
 }

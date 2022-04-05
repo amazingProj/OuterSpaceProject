@@ -5,3 +5,6 @@ C:\Users\AssafHillel\source\repos\OuterSpaceProject\Space\DAL\obj\Debug\DAL.cspr
 C:\Users\AssafHillel\source\repos\OuterSpaceProject\Space\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
 C:\Users\AssafHillel\source\repos\OuterSpaceProject\Space\DAL\obj\Debug\DAL.exe
 C:\Users\AssafHillel\source\repos\OuterSpaceProject\Space\DAL\obj\Debug\DAL.pdb
+C:\Users\AssafHillel\Source\Repos\OuterSpaceProject\Space\DAL\bin\Debug\Newtonsoft.Json.dll
+C:\Users\AssafHillel\Source\Repos\OuterSpaceProject\Space\DAL\bin\Debug\Newtonsoft.Json.xml
+C:\Users\AssafHillel\Source\Repos\OuterSpaceProject\Space\DAL\obj\Debug\DAL.csproj.CopyComplete

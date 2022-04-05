@@ -11,7 +11,7 @@ namespace UI.MVVM.ViewModel
     {
         public GalleryViewModel()
         {
-
+           
         }
     }
 }

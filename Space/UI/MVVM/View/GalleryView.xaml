@@ -9,7 +9,7 @@
     <StackPanel>
         <StackPanel AllowDrop="True"
                   >
-            <TextBlock Text="Upload a space picture" 
+            <TextBlock Text="Upload a planet picture" 
                    Foreground="White"
                    FontSize="20"
                    HorizontalAlignment="Left"
@@ -20,14 +20,14 @@
                 Foreground="White"
                 x:Name="FileName"
                 HorizontalAlignment="Center"
-                Content="Upload images with .png or .jpeg"
+                Content="Upload dot png images"
                FontSize="12"/>
             <StackPanel 
                         
                         Drop="FileUpload_Event"
                         Orientation="Horizontal"
                         HorizontalAlignment="Center">
-                <Border Width="500" Height="250" Opacity="0.8">
+                <Border Width="900" Height="250" Opacity="0.8">
                     <Border.Background>
                         <LinearGradientBrush StartPoint="0,0" EndPoint="1,2">
                             <GradientStop Color="#22207f" Offset="0.0"/>
@@ -35,14 +35,14 @@
                         </LinearGradientBrush>
                     </Border.Background>
                     <Border.Clip>
-                        <RectangleGeometry RadiusX="10" RadiusY="10"
-                                       Rect="0,0,500,250"/>
+                        <RectangleGeometry RadiusX="50" RadiusY="50"
+                                       Rect="0,0,900,250"/>
                     </Border.Clip>
 
 
 
                     <Grid>
-                        <StackPanel HorizontalAlignment="Left">
+                        <StackPanel HorizontalAlignment="Center">
                             <TextBlock Text="Upload Images&#x0a;Planets and Asteroids"
                                    Foreground="White"
                                    FontSize="28"

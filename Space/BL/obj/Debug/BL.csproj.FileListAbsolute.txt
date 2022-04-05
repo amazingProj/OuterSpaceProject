@@ -9,3 +9,5 @@ C:\Users\AssafHillel\source\repos\OuterSpaceProject\Space\BL\bin\Debug\DAL.exe
 C:\Users\AssafHillel\source\repos\OuterSpaceProject\Space\BL\bin\Debug\DAL.pdb
 C:\Users\AssafHillel\source\repos\OuterSpaceProject\Space\BL\bin\Debug\DAL.exe.config
 C:\Users\AssafHillel\source\repos\OuterSpaceProject\Space\BL\obj\Debug\BL.csproj.CopyComplete
+C:\Users\AssafHillel\Source\Repos\OuterSpaceProject\Space\BL\bin\Debug\Newtonsoft.Json.dll
+C:\Users\AssafHillel\Source\Repos\OuterSpaceProject\Space\BL\bin\Debug\Newtonsoft.Json.xml
