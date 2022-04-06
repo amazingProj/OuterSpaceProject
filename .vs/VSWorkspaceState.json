@@ -5,7 +5,8 @@
     "\\Space\\DAL",
     "\\Space\\UI",
     "\\Space\\UI\\MVVM",
-    "\\Space\\UI\\MVVM\\View"
+    "\\Space\\UI\\MVVM\\View",
+    "\\Space\\UI\\Theme"
   ],
   "SelectedNode": "\\Space\\UI\\MVVM\\View\\MediaView.xaml",
   "PreviewInSolutionExplorer": false

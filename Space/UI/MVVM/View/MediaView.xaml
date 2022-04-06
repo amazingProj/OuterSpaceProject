@@ -7,101 +7,106 @@
              mc:Ignorable="d"
              d:DesignHeight="550"
              d:DesignWidth="900">
-    <StackPanel Orientation="Horizontal"
-                HorizontalAlignment="Center">
+    <StackPanel Orientation="Vertical">
+        <StackPanel Orientation="Horizontal"
+                    HorizontalAlignment="Center"
+                    Height="100"
+                    Margin="0,20,0,0">
 
-        <StackPanel Orientation="Vertical">
-            <Border CornerRadius="10,7,0,0"
-                    Margin="50,20,10,0"
-                    Width="500"
-                    Height="35"
-                    BorderBrush="#186DB6"
-                    BorderThickness="1">
+            <StackPanel Orientation="Vertical"
+                        Margin="0,0,0,0"
+                        Height="100">
+
                 <TextBox HorizontalAlignment="Center"
-                         Style="{StaticResource Moderntextbox}" />
+                         Margin="0.2,0.2,0.8,0.8"
+                         Style="{StaticResource SearchBox}" />
 
-            </Border>
 
-            <StackPanel Orientation="Horizontal"
-                        HorizontalAlignment="Left">
-                <StackPanel>
-                    <Border Background="#186DB6"
-                            Height="21"
-                            Width="76"
-                            Margin="80,0,0,0">
 
-                        <StackPanel Orientation="Horizontal"
-                                    HorizontalAlignment="Right">
-                            <CheckBox Margin="100,1,5,0"
-                                      IsChecked="True" />
-                            <TextBlock Foreground="White"
-                                       FontSize="12"
-                                       Text="Image"
-                                       Margin="0,0,10,0"
-                                       Width="40"
-                                       FontFamily="/Fonts/#Lora"/>
-                        </StackPanel>
+                <StackPanel Orientation="Horizontal"
+                            HorizontalAlignment="Left">
+                    <StackPanel>
+                        <Border Background="#186DB6"
+                                Height="21"
+                                Width="76"
+                                Margin="80,0,0,0">
 
-                    </Border>
+                            <StackPanel Orientation="Horizontal"
+                                        HorizontalAlignment="Right">
+                                <CheckBox Margin="100,1,5,0"
+                                          IsChecked="True" />
+                                <TextBlock Foreground="White"
+                                           FontSize="12"
+                                           Text="Image"
+                                           Margin="0,0,10,0"
+                                           Width="40"
+                                           FontFamily="/Fonts/#Lora" />
+                            </StackPanel>
 
+                        </Border>
+
+                    </StackPanel>
+
+                    <StackPanel>
+                        <Border Background="#186DB6"
+                                Height="21"
+                                Width="76"
+                                Margin="20,0,0,0">
+
+                            <StackPanel Orientation="Horizontal"
+                                        HorizontalAlignment="Right">
+                                <CheckBox Margin="100,1,5,0"
+                                          IsChecked="True"
+                                          Style="{StaticResource CustomCheckBox}" />
+                                <TextBlock Foreground="White"
+                                           FontSize="12"
+                                           Text="Video"
+                                           FontFamily="/Fonts/#Lora"
+                                           Margin="0,0,10,0"
+                                           Width="40" />
+                            </StackPanel>
+
+                        </Border>
+
+                    </StackPanel>
+                    <StackPanel>
+                        <Border Background="#186DB6"
+                                Height="21"
+                                Width="76"
+                                Margin="20,0,0,0">
+
+                            <StackPanel Orientation="Horizontal"
+                                        HorizontalAlignment="Right">
+
+                                <CheckBox IsChecked="True"
+                                          Margin="100,1,5,0" />
+
+
+                                <TextBlock Foreground="White"
+                                           FontSize="12"
+                                           Text="Audio"
+                                           Margin="0,0,10,0"
+                                           Width="40"
+                                           FontFamily="/Fonts/#Lora" />
+                            </StackPanel>
+
+                        </Border>
+
+                    </StackPanel>
                 </StackPanel>
 
-                <StackPanel>
-                    <Border Background="#186DB6"
-                            Height="21"
-                            Width="76"
-                            Margin="20,0,0,0">
-
-                        <StackPanel Orientation="Horizontal"
-                                    HorizontalAlignment="Right">
-                            <CheckBox Margin="100,1,5,0"
-                                      IsChecked="True"
-                                      Style="{StaticResource CustomCheckBox}" />
-                            <TextBlock Foreground="White"
-                                       FontSize="12"
-                                       Text="Video"
-                                       FontFamily="/Fonts/#Lora"
-                                       Margin="0,0,10,0"
-                                       Width="40" />
-                        </StackPanel>
-
-                    </Border>
-
-                </StackPanel>
-                <StackPanel>
-                    <Border Background="#186DB6"
-                            Height="21"
-                            Width="76"
-                            Margin="20,0,0,0">
-
-                        <StackPanel Orientation="Horizontal"
-                                    HorizontalAlignment="Right">
-                            
-                                <CheckBox 
-                                     
-                                    IsChecked="True"
-                                      Margin="100,1,5,0" />
-                            
-                           
-                            <TextBlock Foreground="White"
-                                       FontSize="12"
-                                       Text="Audio"
-                                       Margin="0,0,10,0"
-                                       Width="40"
-                                       FontFamily="/Fonts/#Lora"/>
-                        </StackPanel>
-
-                    </Border>
-
-                </StackPanel>
             </StackPanel>
+            <Image Height="60"
+                   Margin="0,0,0,0"
+                   VerticalAlignment="Top"
+                   Source="/Icons/nasa_logo-large.png"
+                   Width="97" />
+
 
         </StackPanel>
-        <Image Height="60"
-               Margin="0,20,0,0"
-               VerticalAlignment="Top"
-               Source="/Icons/nasa_logo-large.png"
-               Width="97" />
+        <ListView Width="900"
+                  Height="500" />
     </StackPanel>
+    
 
 </UserControl>

@@ -40,3 +40,4 @@ C:\Users\AssafHillel\Source\Repos\OuterSpaceProject\Space\UI\bin\Debug\DAL.exe.c
 C:\Users\AssafHillel\Source\Repos\OuterSpaceProject\Space\UI\bin\Debug\Newtonsoft.Json.xml
 C:\Users\AssafHillel\Source\Repos\OuterSpaceProject\Space\UI\obj\Debug\Theme\CheckBoxTheme.baml
 C:\Users\AssafHillel\Source\Repos\OuterSpaceProject\Space\UI\obj\Debug\Theme\TextBlockTheme.baml
+C:\Users\AssafHillel\Source\Repos\OuterSpaceProject\Space\UI\obj\Debug\Theme\SearchBoxTheme.baml
