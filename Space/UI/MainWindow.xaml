@@ -30,11 +30,11 @@
             <TextBlock Text="Welcome"
                        Foreground="White"
                        VerticalAlignment="Center"
-                       FontSize="22"
+                       FontSize="30"
                        Margin="40,0,0,0"
-                       FontFamily="/Fonts/#Fredoka"/>
+                       FontFamily="/Fonts/#Cardo"/>
 
-            <StackPanel Grid.Row="1">
+            <StackPanel Grid.Row="1" Margin="0,40,0,0">
 
                 <RadioButton Content="Home &#x0a;Page"
                              Height="70"
@@ -86,8 +86,9 @@
                          Margin="50,5,5,5"
                          Grid.Column="1"
                          Style="{StaticResource Moderntextbox}"  />
-
+           
             <Button
+                FontFamily="/Fonts/#Inter"
                 Grid.Column="1"
                 VerticalContentAlignment="Center"
                 HorizontalAlignment="Right"
@@ -95,7 +96,8 @@
                         Foreground="White"
                         FontSize="14"
                         FontWeight="Medium"
-                    Margin="0,-4,-38,17.2" RenderTransformOrigin="0.151,0.363" Width="194">
+                    Margin="0,0,-30,23.2"
+                    RenderTransformOrigin="0.151,0.363" Width="194">
                 <Button.Style>
                     <Style TargetType="Button">
                         <Setter Property="TextElement.FontFamily" Value="Fonts/#Fredoka"
@@ -113,9 +115,9 @@
 
                 <Button.Template>
                     <ControlTemplate TargetType="Button">
-                        <Border Width="100" Height="40" CornerRadius="8"
+                        <Border Width="120" Height="40" CornerRadius="8"
                                     Background="{TemplateBinding Background}"
-                                    >
+                                RenderTransformOrigin="0.031,0.565">
                             <ContentPresenter VerticalAlignment="Center" 
                                                   HorizontalAlignment="Center"/>
                         </Border>

@@ -6,15 +6,51 @@
              xmlns:local="clr-namespace:UI.MVVM.View"
              mc:Ignorable="d" 
              d:DesignHeight="550" d:DesignWidth="900">
-    <StackPanel>
-        <StackPanel>
-            <TextBlock 
+    <StackPanel Margin="0,30,0,0">
+        
+            <TextBlock
+                FontFamily="/Fonts/#Arvo"
                 FontSize="20"
                 Foreground="White"
                 HorizontalAlignment="Center"
-                Text="Today Picture of NASA"/>
-            <TextBlock />
-            <Image />
+                Text="Today Picture of NASA"
+                Margin="0,0,105,80"/>
+        <StackPanel Orientation="Horizontal">
+            <StackPanel Orientation="Vertical" Margin="0,0,0,20">
+                <TextBlock
+                       FontFamily="/Fonts/#Arvo"
+                       x:Name="title"                       
+                       FontSize="16"
+                       Foreground="White"/>
+                <TextBlock 
+                FontFamily="/Fonts/#Oswald"
+                x:Name="date"
+                FontSize="14"
+                Foreground="White"/>
+                <StackPanel Width="400">
+                    <TextBlock
+                        FontFamily="/Fonts/#Roboto"
+                    HorizontalAlignment="Left"
+                        TextWrapping="Wrap"
+                       x:Name="content"
+                       Margin="0,40,40,0"
+                       FontSize="13"
+                       Foreground="White"/>
+                </StackPanel>
+            </StackPanel>
+            <StackPanel>
+                <Rectangle RadiusX="20" RadiusY="20"
+                           Margin="15,0,0,0" Width="400" Height="400"  HorizontalAlignment="Left">
+                    <Rectangle.Fill>
+                        <ImageBrush x:Name="img" />
+                    </Rectangle.Fill>
+                </Rectangle>
+            </StackPanel>
+           
+
+
+
+
         </StackPanel>
     </StackPanel>
 </UserControl>

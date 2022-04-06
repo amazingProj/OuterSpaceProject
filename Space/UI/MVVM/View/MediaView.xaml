@@ -1,12 +1,107 @@
 ﻿<UserControl x:Class="UI.MVVM.View.MediaView"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:local="clr-namespace:UI.MVVM.View"
-             mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
-    <Grid>
-            
-    </Grid>
+             mc:Ignorable="d"
+             d:DesignHeight="550"
+             d:DesignWidth="900">
+    <StackPanel Orientation="Horizontal"
+                HorizontalAlignment="Center">
+
+        <StackPanel Orientation="Vertical">
+            <Border CornerRadius="10,7,0,0"
+                    Margin="50,20,10,0"
+                    Width="500"
+                    Height="35"
+                    BorderBrush="#186DB6"
+                    BorderThickness="1">
+                <TextBox HorizontalAlignment="Center"
+                         Style="{StaticResource Moderntextbox}" />
+
+            </Border>
+
+            <StackPanel Orientation="Horizontal"
+                        HorizontalAlignment="Left">
+                <StackPanel>
+                    <Border Background="#186DB6"
+                            Height="21"
+                            Width="76"
+                            Margin="80,0,0,0">
+
+                        <StackPanel Orientation="Horizontal"
+                                    HorizontalAlignment="Right">
+                            <CheckBox Margin="100,1,5,0"
+                                      IsChecked="True" />
+                            <TextBlock Foreground="White"
+                                       FontSize="12"
+                                       Text="Image"
+                                       Margin="0,0,10,0"
+                                       Width="40"
+                                       FontFamily="/Fonts/#Lora"/>
+                        </StackPanel>
+
+                    </Border>
+
+                </StackPanel>
+
+                <StackPanel>
+                    <Border Background="#186DB6"
+                            Height="21"
+                            Width="76"
+                            Margin="20,0,0,0">
+
+                        <StackPanel Orientation="Horizontal"
+                                    HorizontalAlignment="Right">
+                            <CheckBox Margin="100,1,5,0"
+                                      IsChecked="True"
+                                      Style="{StaticResource CustomCheckBox}" />
+                            <TextBlock Foreground="White"
+                                       FontSize="12"
+                                       Text="Video"
+                                       FontFamily="/Fonts/#Lora"
+                                       Margin="0,0,10,0"
+                                       Width="40" />
+                        </StackPanel>
+
+                    </Border>
+
+                </StackPanel>
+                <StackPanel>
+                    <Border Background="#186DB6"
+                            Height="21"
+                            Width="76"
+                            Margin="20,0,0,0">
+
+                        <StackPanel Orientation="Horizontal"
+                                    HorizontalAlignment="Right">
+                            
+                                <CheckBox 
+                                     
+                                    IsChecked="True"
+                                      Margin="100,1,5,0" />
+                            
+                           
+                            <TextBlock Foreground="White"
+                                       FontSize="12"
+                                       Text="Audio"
+                                       Margin="0,0,10,0"
+                                       Width="40"
+                                       FontFamily="/Fonts/#Lora"/>
+                        </StackPanel>
+
+                    </Border>
+
+                </StackPanel>
+            </StackPanel>
+
+        </StackPanel>
+        <Image Height="60"
+               Margin="0,20,0,0"
+               VerticalAlignment="Top"
+               Source="/Icons/nasa_logo-large.png"
+               Width="97" />
+    </StackPanel>
+
 </UserControl>

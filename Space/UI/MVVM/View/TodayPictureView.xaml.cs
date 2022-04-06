@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.ComponentModel;
 
 namespace UI.MVVM.View
 {
@@ -20,9 +21,33 @@ namespace UI.MVVM.View
     /// </summary>
     public partial class TodayPictureView : UserControl
     {
+        BackgroundWorker backGroundWorker = new BackgroundWorker();
         public TodayPictureView()
         {
             InitializeComponent();
+            backGroundWorker.DoWork += UpdateTodayPictureUserInterface;
+            backGroundWorker.RunWorkerAsync();
         }
+
+        private void UpdateTodayPictureUserInterface(object sender, DoWorkEventArgs doWorkEventArgs)
+        {
+            this.Dispatcher.Invoke(()
+                =>
+            {
+                BL.IBL bl = new BL.BL();
+                Dictionary<string, string> dic = bl.GetPictureOfTheDay();
+                var bitmapImage = new BitmapImage();
+                bitmapImage.BeginInit();
+                bitmapImage.UriSource = new Uri(dic["HDPicUrl"]);
+                bitmapImage.EndInit();
+                img.ImageSource = bitmapImage;
+                content.Text = dic["Explanation"];
+                title.Text = dic["PicTitle"];
+
+                date.Text = dic["Date"];
+            });
+        }
+
+        
     }
 }

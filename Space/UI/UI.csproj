@@ -94,7 +94,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Theme\CheckBoxTheme.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Theme\MenuButtonTheme.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Theme\TextBlockTheme.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -146,6 +154,15 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <Resource Include="Fonts\Roboto.ttf" />
+    <Resource Include="Fonts\Arvo.ttf" />
+    <Resource Include="Fonts\Oswald.ttf" />
+    <Resource Include="Fonts\Poppins.ttf" />
+    <Resource Include="Fonts\Cardo.ttf" />
+    <Resource Include="Fonts\OldStandardTT.ttf" />
+    <Resource Include="Fonts\Nunito.ttf" />
+    <Resource Include="Fonts\Inter.ttf" />
+    <Resource Include="Fonts\Lora.ttf" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -155,7 +172,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Fonts\" />
     <Folder Include="MVVM\Model\" />
   </ItemGroup>
   <ItemGroup>
@@ -166,6 +182,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Icons\upload-button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icons\nasa_logo-large.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

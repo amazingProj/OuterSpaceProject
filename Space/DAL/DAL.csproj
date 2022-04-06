@@ -48,6 +48,7 @@
   <ItemGroup>
     <Compile Include="DAL.cs" />
     <Compile Include="IDAL.cs" />
+    <Compile Include="IFireBase.cs" />
     <Compile Include="IMediaStream.cs" />
     <Compile Include="NasaPictureOfTheDay.cs" />
     <Compile Include="Program.cs" />

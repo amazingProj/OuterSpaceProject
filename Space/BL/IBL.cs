@@ -8,5 +8,6 @@ namespace BL
 {
     public interface IBL : IFirebase
     {
+        Dictionary<string, string> GetPictureOfTheDay(); 
     }
 }

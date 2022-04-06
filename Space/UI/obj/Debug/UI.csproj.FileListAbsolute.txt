@@ -33,3 +33,10 @@ C:\Users\AssafHillel\source\repos\OuterSpaceProject\Space\UI\obj\Debug\MVVM\View
 C:\Users\AssafHillel\source\repos\OuterSpaceProject\Space\UI\obj\Debug\MVVM\View\SolarSystemView.baml
 C:\Users\AssafHillel\source\repos\OuterSpaceProject\Space\UI\obj\Debug\MVVM\View\TodayPictureView.baml
 C:\Users\AssafHillel\source\repos\OuterSpaceProject\Space\UI\obj\Debug\UI.csproj.CopyComplete
+C:\Users\AssafHillel\Source\Repos\OuterSpaceProject\Space\UI\bin\Debug\DAL.exe
+C:\Users\AssafHillel\Source\Repos\OuterSpaceProject\Space\UI\bin\Debug\Newtonsoft.Json.dll
+C:\Users\AssafHillel\Source\Repos\OuterSpaceProject\Space\UI\bin\Debug\DAL.pdb
+C:\Users\AssafHillel\Source\Repos\OuterSpaceProject\Space\UI\bin\Debug\DAL.exe.config
+C:\Users\AssafHillel\Source\Repos\OuterSpaceProject\Space\UI\bin\Debug\Newtonsoft.Json.xml
+C:\Users\AssafHillel\Source\Repos\OuterSpaceProject\Space\UI\obj\Debug\Theme\CheckBoxTheme.baml
+C:\Users\AssafHillel\Source\Repos\OuterSpaceProject\Space\UI\obj\Debug\Theme\TextBlockTheme.baml

@@ -8,6 +8,6 @@ namespace DAL
 {
     public interface IMediaStream
     {
-        
+        Dictionary<string, string> GetPictureOfTheDay();
     }
 }

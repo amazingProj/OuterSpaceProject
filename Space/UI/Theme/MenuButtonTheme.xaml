@@ -12,7 +12,7 @@
                               Background="{TemplateBinding Background}">
                             <TextBlock Text="{TemplateBinding Property=Content}"
                                        VerticalAlignment="Center"
-                                       FontFamily="/Fonts/#Fredoka"
+                                       FontFamily="/Fonts/#Poppins"
                                        Margin="50,0,0,0"/>
                         </Grid>
                     </ControlTemplate>
