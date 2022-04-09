@@ -8,7 +8,8 @@ using UI.Core;
 namespace UI.MVVM.ViewModel
 {
     class MainViewModel : ObservableObject
-    { 
+    {
+        private BL.IBL bl { get; set; }
         public RelayCommand HomeViewCommand { get; set; }
 
         public RelayCommand SearchViewCommand { get; set; }
@@ -47,12 +48,13 @@ namespace UI.MVVM.ViewModel
 
         public MainViewModel()
         {
-            HomeVM = new HomeViewModel();
-            SearchVM = new SearchViewModel();
-            MediaVM = new MediaViewModel();
-            SolarSystemVM = new SolarSystemViewModel();
-            TodayPictureVM = new TodayPictureViewModel();
-            MyGalleryVM = new GalleryViewModel();
+            HomeVM = new HomeViewModel(this);
+            SearchVM = new SearchViewModel(this);
+            MediaVM = new MediaViewModel(this);
+            SolarSystemVM = new SolarSystemViewModel(this);
+            TodayPictureVM = new TodayPictureViewModel(this);
+            MyGalleryVM = new GalleryViewModel(this);
+            bl = new BL.BL();
 
             CurrentView = HomeVM;
 

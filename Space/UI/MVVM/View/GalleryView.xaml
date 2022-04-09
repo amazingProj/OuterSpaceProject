@@ -22,8 +22,7 @@
                 HorizontalAlignment="Center"
                 Content="Upload dot png images"
                FontSize="12"/>
-            <StackPanel 
-                        
+            <StackPanel MouseDown="StackPanel_MouseDown"
                         Drop="FileUpload_Event"
                         Orientation="Horizontal"
                         HorizontalAlignment="Center">
@@ -42,6 +41,7 @@
 
 
                     <Grid>
+                        
                         <StackPanel HorizontalAlignment="Center">
                             <TextBlock Text="Upload Images&#x0a;Planets and Asteroids"
                                    Foreground="White"

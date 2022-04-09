@@ -4,10 +4,11 @@
     "\\Space",
     "\\Space\\DAL",
     "\\Space\\UI",
+    "\\Space\\UI\\Core",
     "\\Space\\UI\\MVVM",
     "\\Space\\UI\\MVVM\\View",
     "\\Space\\UI\\Theme"
   ],
-  "SelectedNode": "\\Space\\UI\\MVVM\\View\\MediaView.xaml",
+  "SelectedNode": "\\Space\\UI\\MVVM\\View\\TodayPictureView.xaml.cs",
   "PreviewInSolutionExplorer": false
 }

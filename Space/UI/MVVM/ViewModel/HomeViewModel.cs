@@ -9,5 +9,16 @@ namespace UI.MVVM.ViewModel
 {
     class HomeViewModel : ObservableObject
     {
+        private MainViewModel mainViewModel;
+
+        public HomeViewModel()
+        {
+
+        }
+
+        public HomeViewModel(MainViewModel _mainViewModel)
+        {
+            mainViewModel = _mainViewModel;
+        }
     }
 }

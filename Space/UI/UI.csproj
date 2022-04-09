@@ -106,6 +106,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Theme\Templates.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Theme\TextBlockTheme.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -192,6 +196,16 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Icons\1024px-Search_Icon.svg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icons\max_def.png" />
+    <Resource Include="Icons\shutdown_def.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icons\shutdown_mo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icons\max_mo.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

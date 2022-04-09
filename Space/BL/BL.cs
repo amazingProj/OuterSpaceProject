@@ -10,12 +10,18 @@ namespace BL
 {
     public class BL : IBL
     {
-        DAL.IDAL dAL = new DAL.DAL();
+        DAL.IDAL dAL;
+
+        public BL()
+        {
+            dAL = new DAL.DAL();
+        }
 
         public Dictionary<string,string> GetPictureOfTheDay()
         {
             return dAL.GetPictureOfTheDay();
         }
+
         public string ImageUpload()
         {
            

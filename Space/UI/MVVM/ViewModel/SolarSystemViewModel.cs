@@ -9,5 +9,16 @@ namespace UI.MVVM.ViewModel
 {
     class SolarSystemViewModel : ObservableObject
     {
+        private MainViewModel mainViewModel;
+
+        public SolarSystemViewModel()
+        {
+
+        }
+
+        public SolarSystemViewModel(MainViewModel _mainViewModel)
+        {
+            mainViewModel = _mainViewModel;
+        }
     }
 }

@@ -9,5 +9,16 @@ namespace UI.MVVM.ViewModel
 {
     class SearchViewModel : ObservableObject
     {
+        private MainViewModel mainViewModel;
+
+        public SearchViewModel()
+        {
+
+        }
+
+        public SearchViewModel(MainViewModel _mainViewModel)
+        {
+            mainViewModel = _mainViewModel;
+        }
     }
 }

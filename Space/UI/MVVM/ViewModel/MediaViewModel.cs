@@ -9,5 +9,16 @@ namespace UI.MVVM.ViewModel
 {
     class MediaViewModel : ObservableObject
     {
+        private MainViewModel mainViewModel;
+
+        public MediaViewModel()
+        {
+
+        }
+
+        public MediaViewModel(MainViewModel _mainViewModel)
+        {
+            mainViewModel = _mainViewModel;
+        }
     }
 }

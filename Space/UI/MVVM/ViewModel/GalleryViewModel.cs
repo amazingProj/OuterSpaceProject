@@ -9,9 +9,15 @@ namespace UI.MVVM.ViewModel
 {
     class GalleryViewModel : ObservableObject
     {
+        private MainViewModel mainViewModel;
         public GalleryViewModel()
         {
            
+        }
+
+        public GalleryViewModel(MainViewModel _mainViewModel)
+        {
+            mainViewModel = _mainViewModel;
         }
     }
 }

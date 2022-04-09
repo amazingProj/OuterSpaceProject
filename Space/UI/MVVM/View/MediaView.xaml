@@ -56,19 +56,19 @@
                             <StackPanel Orientation="Horizontal"
                                         HorizontalAlignment="Right">
                                 <CheckBox Margin="100,1,5,0"
-                                          IsChecked="True"
-                                          Style="{StaticResource CustomCheckBox}" />
+                                          IsChecked="True" />
                                 <TextBlock Foreground="White"
                                            FontSize="12"
                                            Text="Video"
-                                           FontFamily="/Fonts/#Lora"
                                            Margin="0,0,10,0"
-                                           Width="40" />
+                                           Width="40"
+                                           FontFamily="/Fonts/#Lora" />
                             </StackPanel>
 
                         </Border>
 
                     </StackPanel>
+
                     <StackPanel>
                         <Border Background="#186DB6"
                                 Height="21"
@@ -77,11 +77,8 @@
 
                             <StackPanel Orientation="Horizontal"
                                         HorizontalAlignment="Right">
-
-                                <CheckBox IsChecked="True"
-                                          Margin="100,1,5,0" />
-
-
+                                <CheckBox Margin="100,1,5,0"
+                                          IsChecked="True" />
                                 <TextBlock Foreground="White"
                                            FontSize="12"
                                            Text="Audio"

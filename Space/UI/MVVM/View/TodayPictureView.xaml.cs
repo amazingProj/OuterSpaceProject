@@ -27,8 +27,8 @@ namespace UI.MVVM.View
             InitializeComponent();
             backGroundWorker.DoWork += UpdateTodayPictureUserInterface;
             backGroundWorker.RunWorkerAsync();
-        }
 
+        }
         private void UpdateTodayPictureUserInterface(object sender, DoWorkEventArgs doWorkEventArgs)
         {
             this.Dispatcher.Invoke(()
@@ -36,15 +36,16 @@ namespace UI.MVVM.View
             {
                 BL.IBL bl = new BL.BL();
                 Dictionary<string, string> dic = bl.GetPictureOfTheDay();
+               
+                content.Text = dic["Explanation"];
+                title.Text = dic["PicTitle"];
+                
+                date.Text = dic["Date"];
                 var bitmapImage = new BitmapImage();
                 bitmapImage.BeginInit();
                 bitmapImage.UriSource = new Uri(dic["HDPicUrl"]);
                 bitmapImage.EndInit();
                 img.ImageSource = bitmapImage;
-                content.Text = dic["Explanation"];
-                title.Text = dic["PicTitle"];
-
-                date.Text = dic["Date"];
             });
         }
 
