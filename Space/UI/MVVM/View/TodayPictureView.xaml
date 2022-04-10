@@ -9,10 +9,6 @@
              d:DesignHeight="550"
              d:DesignWidth="970">
 
-    <UserControl.DataContext>
-        <viewModel:TodayPictureViewModel />
-    </UserControl.DataContext>
-    
     <StackPanel Margin="0,30,0,0">
 
         <TextBlock FontFamily="/Fonts/#Arvo"
@@ -21,16 +17,19 @@
                    HorizontalAlignment="Center"
                    Text="Today Picture of NASA"
                    Margin="0,0,105,80" />
-        <StackPanel Orientation="Horizontal">
+        <StackPanel Orientation="Horizontal"
+                    HorizontalAlignment="Center">
             <StackPanel Orientation="Vertical"
                         Margin="0,0,0,20">
                 <TextBlock FontFamily="/Fonts/#Arvo"
                            x:Name="title"
                            FontSize="18"
+                           HorizontalAlignment="Left"
                            Foreground="White" />
                 <TextBlock FontFamily="/Fonts/#Oswald"
                            x:Name="date"
                            FontSize="16"
+                           HorizontalAlignment="Left"
                            Foreground="White" />
                 <StackPanel Width="450">
                     <TextBlock FontFamily="/Fonts/#Roboto"
@@ -43,8 +42,8 @@
                                Foreground="White" />
                 </StackPanel>
             </StackPanel>
-            <StackPanel>
-                <Grid>
+            <StackPanel HorizontalAlignment="Center">
+                <Grid >
                      <Rectangle RadiusX="67"
                                RadiusY="67"
                                Margin="15,0,0,0"
