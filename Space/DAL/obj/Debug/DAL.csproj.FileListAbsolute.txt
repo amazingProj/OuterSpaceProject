@@ -8,3 +8,13 @@ C:\Users\AssafHillel\source\repos\OuterSpaceProject\Space\DAL\obj\Debug\DAL.pdb
 C:\Users\AssafHillel\Source\Repos\OuterSpaceProject\Space\DAL\bin\Debug\Newtonsoft.Json.dll
 C:\Users\AssafHillel\Source\Repos\OuterSpaceProject\Space\DAL\bin\Debug\Newtonsoft.Json.xml
 C:\Users\AssafHillel\Source\Repos\OuterSpaceProject\Space\DAL\obj\Debug\DAL.csproj.CopyComplete
+C:\Users\33768\Desktop\C# (2)\PROJECT\Space\DAL\bin\Debug\DAL.exe.config
+C:\Users\33768\Desktop\C# (2)\PROJECT\Space\DAL\bin\Debug\DAL.exe
+C:\Users\33768\Desktop\C# (2)\PROJECT\Space\DAL\bin\Debug\DAL.pdb
+C:\Users\33768\Desktop\C# (2)\PROJECT\Space\DAL\bin\Debug\Newtonsoft.Json.dll
+C:\Users\33768\Desktop\C# (2)\PROJECT\Space\DAL\bin\Debug\Newtonsoft.Json.xml
+C:\Users\33768\Desktop\C# (2)\PROJECT\Space\DAL\obj\Debug\DAL.csprojAssemblyReference.cache
+C:\Users\33768\Desktop\C# (2)\PROJECT\Space\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+C:\Users\33768\Desktop\C# (2)\PROJECT\Space\DAL\obj\Debug\DAL.csproj.CopyComplete
+C:\Users\33768\Desktop\C# (2)\PROJECT\Space\DAL\obj\Debug\DAL.exe
+C:\Users\33768\Desktop\C# (2)\PROJECT\Space\DAL\obj\Debug\DAL.pdb

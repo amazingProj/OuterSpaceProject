@@ -5,8 +5,120 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:UI.MVVM.View"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
-    <Grid>
-            
-    </Grid>
+             d:DesignHeight="450" d:DesignWidth="800" Background="#FF0E0E34">
+    <!--metre une image ici-->
+
+
+
+    <UserControl.Resources>
+        <SolidColorBrush x:Key="ListBox.Static.Background" Color="#FF050825"/>
+        <!--FOND ECRAN LISTE>-->
+        <SolidColorBrush x:Key="ListBox.Static.Border" Color="#FFABADB3"/>
+        <SolidColorBrush x:Key="ListBox.Disabled.Background" Color="#FFFFFFFF"/>
+        <SolidColorBrush x:Key="ListBox.Disabled.Border" Color="#FFD9D9D9"/>
+
+        <Style x:Key="ListBoxStyle1" TargetType="{x:Type ListBox}">
+            <Setter Property="Background" Value="{StaticResource ListBox.Static.Background}"/>
+            <Setter Property="BorderBrush" Value="{StaticResource ListBox.Static.Border}"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"/>
+            <Setter Property="ScrollViewer.HorizontalScrollBarVisibility" Value="Auto"/>
+            <Setter Property="ScrollViewer.VerticalScrollBarVisibility" Value="Auto"/>
+            <Setter Property="ScrollViewer.CanContentScroll" Value="true"/>
+            <Setter Property="ScrollViewer.PanningMode" Value="Both"/>
+            <Setter Property="Stylus.IsFlicksEnabled" Value="False"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type ListBox}">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+
+
+                            <RepeatButton Tag="{Binding ElementName=sv}" Click="Button_Click_Left">
+                                <Path x:Name="ArrowLeft" Data="M 3.18,7 C3.18,7 5,7 5,7 5,7 1.81,3.5 1.81,3.5 1.81,3.5 5,0 5,0 5,0 3.18,0 3.18,0 3.18,0 0,3.5 0,3.5 0,3.5 3.18,7 3.18,7 z" Fill="Black" Margin="3" Stretch="Uniform"/>
+                            </RepeatButton>
+
+
+                            <Border x:Name="Bd" Grid.Column="1" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" Padding="1" SnapsToDevicePixels="true">
+                                <ScrollViewer x:Name="sv" Focusable="false" Padding="{TemplateBinding Padding}" HorizontalScrollBarVisibility="Hidden">
+                                    <ItemsPresenter SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"/>
+                                </ScrollViewer>
+                            </Border>
+
+
+                            <RepeatButton Grid.Column="2" Tag="{Binding ElementName=sv}" Click="Button_Click_Right">
+                                <Path x:Name="ArrowRight" Data="M 1.81,7 C1.81,7 0,7 0,7 0,7 3.18,3.5 3.18,3.5 3.18,3.5 0,0 0,0 0,0 1.81,0 1.81,0 1.81,0 5,3.5 5,3.5 5,3.5 1.81,7 1.81,7 z" Fill="Black" Margin="3" Stretch="Uniform"/>
+                            </RepeatButton>
+                        </Grid>
+
+
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsEnabled" Value="false">
+                                <Setter Property="Background" TargetName="Bd" Value="{StaticResource ListBox.Disabled.Background}"/>
+                                <Setter Property="BorderBrush" TargetName="Bd" Value="{StaticResource ListBox.Disabled.Border}"/>
+                            </Trigger>
+                            <MultiTrigger>
+                                <MultiTrigger.Conditions>
+                                    <Condition Property="IsGrouping" Value="true"/>
+                                    <Condition Property="VirtualizingPanel.IsVirtualizingWhenGrouping" Value="false"/>
+                                </MultiTrigger.Conditions>
+                                <Setter Property="ScrollViewer.CanContentScroll" Value="false"/>
+                            </MultiTrigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+
+
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </UserControl.Resources>
+
+    <StackPanel Margin="33,28,21,10" Orientation="Vertical" >
+        <!--arranger la taille-->
+        <!--arranger la taille-->
+        <!--arranger la taille-->
+        <ListBox  x:Name="lb" Style="{DynamicResource ListBoxStyle1}" Margin="0,0,0,10" Height="218"  >
+            <ListBox.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <!--horizontal list-->
+                    <StackPanel Orientation="Horizontal" />
+
+                </ItemsPanelTemplate>
+            </ListBox.ItemsPanel>
+
+
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal" >
+                        <Grid Height="auto">
+                            <Grid.RowDefinitions >
+                                <RowDefinition Height="202"/>
+                                <RowDefinition Height="30"/>
+                            </Grid.RowDefinitions>
+
+                            <!--<Label Content="{Binding Nome_Perfil}"  VerticalAlignment="Bottom" HorizontalAlignment="Center" Width="auto" Height="auto" Grid.Row="2"></Label>-->
+
+                            <Image Source="/Icons/nasa_logo-large.png" />
+                            <!--LE FAIRE BINDING-->
+
+
+                            <TextBlock Text="{Binding Name}" VerticalAlignment="Bottom" HorizontalAlignment="Center" Width="auto" Height="auto" Grid.Row="1" Foreground="White"/>
+
+                        </Grid>
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+
+
+        </ListBox>
+        <TextBlock Text="{Binding SelectedItem.Description, ElementName=lb, UpdateSourceTrigger=PropertyChanged}"  
+                   TextAlignment="Center" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Top" TextWrapping="WrapWithOverflow"
+                   Height="181" Width="645" Margin="49,0,52,0"  />
+    </StackPanel>
+
 </UserControl>
