@@ -208,5 +208,10 @@
   <ItemGroup>
     <Resource Include="Icons\max_mo.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icons\backround solar galaxie  .jpg" />
+    <Resource Include="Icons\backround solar galaxie srars  .jpg" />
+    <Resource Include="Icons\backround solar.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
