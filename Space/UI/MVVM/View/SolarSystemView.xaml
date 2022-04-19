@@ -6,15 +6,17 @@
              xmlns:local="clr-namespace:UI.MVVM.View"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800" >
-    <UserControl.Background>    <!--metre backround image ici-->
+    <UserControl.Background>
+        <!--metre backround image ici-->
 
-        <ImageBrush ImageSource="/Icons/backround solar.jpg"  Stretch="Fill" />
-    </UserControl.Background> 
+        <ImageBrush ImageSource="/Icons/backround solar galaxie srars  .jpg"
+                    Stretch="Fill" Opacity="0.3" />
+    </UserControl.Background>
 
     <UserControl.Resources>
-        <SolidColorBrush x:Key="ListBox.Static.Background" Color="#FF050825"/>
+        <SolidColorBrush x:Key="ListBox.Static.Background" Color="Transparent"/>
         <!--FOND ECRAN LISTE>-->
-        <SolidColorBrush x:Key="ListBox.Static.Border" Color="#FFABADB3"/>
+        <SolidColorBrush x:Key="ListBox.Static.Border" Color="#FF211C42"/>
         <SolidColorBrush x:Key="ListBox.Disabled.Background" Color="#FFFFFFFF"/>
         <SolidColorBrush x:Key="ListBox.Disabled.Border" Color="#FFD9D9D9"/>
 
@@ -41,7 +43,7 @@
 
 
                             <RepeatButton Tag="{Binding ElementName=sv}" Click="Button_Click_Left">
-                                <Path x:Name="ArrowLeft" Data="M 3.18,7 C3.18,7 5,7 5,7 5,7 1.81,3.5 1.81,3.5 1.81,3.5 5,0 5,0 5,0 3.18,0 3.18,0 3.18,0 0,3.5 0,3.5 0,3.5 3.18,7 3.18,7 z" Fill="Black" Margin="3" Stretch="Uniform"/>
+                                <Path x:Name="ArrowLeft" Data="M 10.18,7 C3.18,7 5,7 5,7 5,7 1.81,3.5 1.81,3.5 1.81,3.5 5,0 5,0 5,0 3.18,0 3.18,0 3.18,0 0,3.5 0,3.5 0,3.5 3.18,7 3.18,7 z" Fill="Black" Margin="3" Stretch="Uniform"/>
                             </RepeatButton>
 
 
@@ -53,7 +55,7 @@
 
 
                             <RepeatButton Grid.Column="2" Tag="{Binding ElementName=sv}" Click="Button_Click_Right">
-                                <Path x:Name="ArrowRight" Data="M 1.81,7 C1.81,7 0,7 0,7 0,7 3.18,3.5 3.18,3.5 3.18,3.5 0,0 0,0 0,0 1.81,0 1.81,0 1.81,0 5,3.5 5,3.5 5,3.5 1.81,7 1.81,7 z" Fill="Black" Margin="3" Stretch="Uniform"/>
+                                <Path x:Name="ArrowRight" Data="M 10.81,7 C1.81,7 0,7 0,7 0,7 3.18,3.5 3.18,3.5 3.18,3.5 0,0 0,0 0,0 1.81,0 1.81,0 1.81,0 5,3.5 5,3.5 5,3.5 1.81,7 1.81,7 z" Fill="Black" Margin="3" Stretch="Uniform"/>
                             </RepeatButton>
                         </Grid>
 
@@ -79,11 +81,11 @@
         </Style>
     </UserControl.Resources>
 
-    <StackPanel Margin="33,28,21,10" Orientation="Vertical" >
+    <StackPanel Margin="33,10,21,10" Orientation="Vertical" >
         <!--arranger la taille-->
         <!--arranger la taille-->
         <!--arranger la taille-->
-        <ListBox  x:Name="lb" Style="{DynamicResource ListBoxStyle1}" Margin="0,0,0,10" Height="218"  >
+        <ListBox  x:Name="lb" Style="{DynamicResource ListBoxStyle1}" Margin="10,0,10,26" Height="242"  >
             <ListBox.ItemsPanel>
                 <ItemsPanelTemplate>
                     <!--horizontal list-->
@@ -104,11 +106,11 @@
 
                             <!--<Label Content="{Binding Nome_Perfil}"  VerticalAlignment="Bottom" HorizontalAlignment="Center" Width="auto" Height="auto" Grid.Row="2"></Label>-->
 
-                            <Image Source="/Icons/nasa_logo-large.png" />
-                            <!--LE FAIRE BINDING-->
+                            <Image Source="{Binding ImagesPath}" />
+                            <!-- BINDING-->
 
 
-                            <TextBlock Text="{Binding Name}" VerticalAlignment="Bottom" HorizontalAlignment="Center" Width="auto" Height="auto" Grid.Row="1" Foreground="White"/>
+                            <TextBlock Text="{Binding Name}" VerticalAlignment="Bottom" HorizontalAlignment="Center" Width="auto" Height="auto" Grid.Row="1" Foreground="White" FontSize="16" FontFamily="Century Gothic" FontWeight="Bold"/>
 
                         </Grid>
                     </StackPanel>
@@ -117,9 +119,38 @@
 
 
         </ListBox>
-        <TextBlock Text="{Binding SelectedItem.Description, ElementName=lb, UpdateSourceTrigger=PropertyChanged}"  
-                   TextAlignment="Center" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Top" TextWrapping="WrapWithOverflow"
-                   Height="181" Width="645" Margin="49,0,52,0"  />
+        <Grid Margin="10,0">
+            
+            <TextBlock x:Name="DESCRIPTION" Text="{Binding SelectedItem.Description, ElementName=lb, UpdateSourceTrigger=PropertyChanged}"  
+                       TextAlignment="Center" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Top" TextWrapping="WrapWithOverflow"
+                       Height="153" Width="285" Margin="409,0,52,0" FontSize="16"  />
+
+            <!--in one text à trou or grid whith sadot-->
+         
+            
+            
+            <Label Foreground="White" Content="Mean Temperature :" HorizontalAlignment="Left" Height="32" Margin="31,25,0,0" VerticalAlignment="Top" Width="141" FontSize="14"/>
+            <Label Foreground="White" Content="Distance From Sun :" HorizontalAlignment="Left" Height="32" Margin="31,89,0,0" VerticalAlignment="Top" Width="132" FontSize="14"/>
+            <Label Foreground="White" Content="Length Of Year :" HorizontalAlignment="Left" Height="32" Margin="31,57,0,0" VerticalAlignment="Top" Width="112" FontSize="14"/>
+            <Label Foreground="White" Content="Mean Temperature :" HorizontalAlignment="Left" Height="32" Margin="31,121,0,0" VerticalAlignment="Top" Width="141" FontSize="14"/>
+
+            <TextBlock Text="{Binding SelectedItem.Mean_Temperature, ElementName=lb, UpdateSourceTrigger=PropertyChanged}"  
+                       TextAlignment="Left" Foreground="Wheat" HorizontalAlignment="Center" VerticalAlignment="Top" 
+                       Height="32" Width="101" Margin="172,25,473,0" FontSize="16"  />
+
+            <TextBlock Text="{Binding SelectedItem.Distance, ElementName=lb, UpdateSourceTrigger=PropertyChanged}"  
+                       TextAlignment="Left" Foreground="Wheat" HorizontalAlignment="Center" VerticalAlignment="Top" 
+                       Height="32" Width="101" Margin="143,57,502,0" FontSize="16"  />
+            <TextBlock Text="{Binding SelectedItem.Distance, ElementName=lb, UpdateSourceTrigger=PropertyChanged}"  
+                TextAlignment="Left" Foreground="Wheat" HorizontalAlignment="Center" VerticalAlignment="Top" 
+                Height="32" Width="101" Margin="163,84,482,0" FontSize="16"  />
+            <TextBlock Text="{Binding SelectedItem.Distance, ElementName=lb, UpdateSourceTrigger=PropertyChanged}"  
+                TextAlignment="Left" Foreground="Wheat" HorizontalAlignment="Center" VerticalAlignment="Top" 
+                Height="32" Width="101" Margin="163,121,482,0" FontSize="16"  />
+
+
+
+        </Grid>
     </StackPanel>
 
 </UserControl>

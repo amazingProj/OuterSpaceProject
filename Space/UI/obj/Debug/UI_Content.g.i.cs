@@ -8,8 +8,13 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("icons/backround%20solar%20galaxie%20%20.jpg")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("icons/backround%20solar%20galaxie%20srars%20%20.jpg")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("icons/backround%20solar.jpg")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("icons/earth.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("icons/jupiter.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("icons/mars.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("icons/mercury.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("icons/neptune.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("icons/saturn.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("icons/uranus.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("icons/venus.png")]
 
 
