@@ -6,9 +6,11 @@
     "\\Space\\UI",
     "\\Space\\UI\\Core",
     "\\Space\\UI\\MVVM",
+    "\\Space\\UI\\MVVM\\Model",
     "\\Space\\UI\\MVVM\\View",
+    "\\Space\\UI\\MVVM\\ViewModel",
     "\\Space\\UI\\Theme"
   ],
-  "SelectedNode": "\\Space\\UI\\MVVM\\View\\TodayPictureView.xaml",
+  "SelectedNode": "\\Space\\UI\\MVVM\\ViewModel\\TodayPictureViewModel.cs",
   "PreviewInSolutionExplorer": false
 }

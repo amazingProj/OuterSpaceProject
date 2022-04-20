@@ -9,7 +9,6 @@ namespace UI.MVVM.ViewModel
 {
     class MainViewModel : ObservableObject
     {
-        private BL.IBL bl { get; set; }
         public RelayCommand HomeViewCommand { get; set; }
 
         public RelayCommand SearchViewCommand { get; set; }
@@ -54,7 +53,6 @@ namespace UI.MVVM.ViewModel
             SolarSystemVM = new SolarSystemViewModel(this);
             TodayPictureVM = new TodayPictureViewModel(this);
             MyGalleryVM = new GalleryViewModel(this);
-            bl = new BL.BL();
 
             CurrentView = HomeVM;
 

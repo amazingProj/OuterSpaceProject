@@ -8,6 +8,10 @@
              mc:Ignorable="d"
              d:DesignHeight="550"
              d:DesignWidth="970">
+    
+    <UserControl.DataContext>
+        <viewModel:TodayPictureViewModel />
+    </UserControl.DataContext>
 
     <StackPanel Margin="0,30,0,0">
 
@@ -30,7 +34,8 @@
                            x:Name="date"
                            FontSize="16"
                            HorizontalAlignment="Left"
-                           Foreground="White" />
+                           Foreground="White"
+                           />
                 <StackPanel Width="450">
                     <TextBlock FontFamily="/Fonts/#Roboto"
                                HorizontalAlignment="Left"
@@ -39,7 +44,8 @@
                                Margin="0,40,40,0"
                                FontSize="14"
                                LineHeight="25"
-                               Foreground="White" />
+                               Foreground="White"
+                               Text="{Binding Path=DataContext.TodayPictureModel.Content}"/>
                 </StackPanel>
             </StackPanel>
             <StackPanel HorizontalAlignment="Center">

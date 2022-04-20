@@ -133,9 +133,9 @@
            
             <ContentControl Grid.Row="1" Grid.Column="1"
                             Margin="10"
-                            Content="{Binding CurrentView}"/>
+                            Content="{Binding CurrentView}" />
 
-            <Button 
+            <Button Margin="0,17,60,0"
                     Grid.Column="1"
                     x:Name="MaxBtn"
                     Style="{StaticResource MaxBtnStyle}"
@@ -146,6 +146,7 @@
             <!--// Close App //-->
 
             <Button 
+                    Margin="0,17,15,0"
                     Grid.Column="1"
                     HorizontalAlignment="Right"
                     x:Name="CloseBtn"

@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.ComponentModel;
+using UI.MVVM.ViewModel;
 
 namespace UI.MVVM.View
 {
@@ -37,7 +38,7 @@ namespace UI.MVVM.View
                 BL.IBL bl = new BL.BL();
                 Dictionary<string, string> dic = bl.GetPictureOfTheDay();
                
-                content.Text = dic["Explanation"];
+                //content.Text = dic["Explanation"];
                 title.Text = dic["PicTitle"];
                 
                 date.Text = dic["Date"];
