@@ -8,5 +8,6 @@ namespace DAL
 {
     public interface IDAL : IMediaStream, IFireBase
     {
+        
     }
 }

@@ -102,9 +102,10 @@ namespace DAL
 
             string temp;
 
-            for (int i = 0; i < Convert.ToInt32(get.cnt); ++i)
+            for (int i = 1; i < Convert.ToInt32(get.cnt); ++i)
             {
-                FirebaseResponse responseImage = await client.GetTaskAsync("Images/{i}");
+                string path = "Images/" + i.ToString();
+                FirebaseResponse responseImage = await client.GetTaskAsync(path);
                 Image_Modal image = responseImage.ResultAs<Image_Modal>();
                 temp = image.ImagePart1 + image.ImagePart2 + image.ImagePart3 + image.ImagePart4;
                 result.Add(temp);
@@ -118,7 +119,5 @@ namespace DAL
             var task = await InsertImageToFireBaseAsync(convertedImage);
             return "success";
         }
-
-        //async 
     }
 }

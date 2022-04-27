@@ -18,11 +18,20 @@ namespace UI.MVVM.View
     /// </summary>
     public partial class GalleryView : UserControl
     {
-
-
+        BL.IBL bL;
         public GalleryView()
         {
             InitializeComponent();
+            bL = new BL.BL();
+        }
+
+        private async void GetStartedButton_Click(object sender, RoutedEventArgs e)
+        {
+            List<string> picturesStringFormatted = await bL.RetriveAllImagesFromFireBase();
+            foreach (string picture in picturesStringFormatted)
+            {
+
+            }
         }
     }
 }
