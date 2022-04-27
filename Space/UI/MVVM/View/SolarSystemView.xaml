@@ -19,6 +19,9 @@
         <SolidColorBrush x:Key="ListBox.Static.Border" Color="#FF211C42"/>
         <SolidColorBrush x:Key="ListBox.Disabled.Background" Color="#FFFFFFFF"/>
         <SolidColorBrush x:Key="ListBox.Disabled.Border" Color="#FFD9D9D9"/>
+        
+        
+
 
         <Style x:Key="ListBoxStyle1" TargetType="{x:Type ListBox}">
             <Setter Property="Background" Value="{StaticResource ListBox.Static.Background}"/>
@@ -32,8 +35,14 @@
             <Setter Property="Stylus.IsFlicksEnabled" Value="False"/>
             <Setter Property="VerticalContentAlignment" Value="Center"/>
             <Setter Property="Template">
+                
                 <Setter.Value>
-                    <ControlTemplate TargetType="{x:Type ListBox}">
+               
+                  
+                    
+                    <ControlTemplate TargetType="{x:Type ListBox}">   
+                      
+                        
                         <Grid>
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="Auto"/>
@@ -47,7 +56,8 @@
                             </RepeatButton>
 
 
-                            <Border x:Name="Bd" Grid.Column="1" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" Padding="1" SnapsToDevicePixels="true">
+                            <Border x:Name="Bd"  Grid.Column="1" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" Padding="1" SnapsToDevicePixels="true">
+                              
                                 <ScrollViewer x:Name="sv" Focusable="false" Padding="{TemplateBinding Padding}" HorizontalScrollBarVisibility="Hidden">
                                     <ItemsPresenter SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"/>
                                 </ScrollViewer>
@@ -61,13 +71,20 @@
 
 
                         <ControlTemplate.Triggers>
+                            
                             <Trigger Property="IsEnabled" Value="false">
                                 <Setter Property="Background" TargetName="Bd" Value="{StaticResource ListBox.Disabled.Background}"/>
                                 <Setter Property="BorderBrush" TargetName="Bd" Value="{StaticResource ListBox.Disabled.Border}"/>
                             </Trigger>
+                            <!--<Trigger Property="IsSelected" Value="true">
+
+                                <Setter TargetName="Bd" Property="Background"    Value="red"/>
+
+                            </Trigger>-->
                             <MultiTrigger>
                                 <MultiTrigger.Conditions>
                                     <Condition Property="IsGrouping" Value="true"/>
+                                   
                                     <Condition Property="VirtualizingPanel.IsVirtualizingWhenGrouping" Value="false"/>
                                 </MultiTrigger.Conditions>
                                 <Setter Property="ScrollViewer.CanContentScroll" Value="false"/>
@@ -81,16 +98,15 @@
         </Style>
     </UserControl.Resources>
 
-    <StackPanel Margin="33,10,21,10" Orientation="Vertical" >
-        <!--arranger la taille-->
-        <!--arranger la taille-->
-        <!--arranger la taille-->
-        <ListBox  x:Name="lb" Style="{DynamicResource ListBoxStyle1}" Margin="10,0,10,26" Height="242"  >
+    <StackPanel Margin="33,10,21,0" Orientation="Vertical" >
+       
+        <ListBox  x:Name="lb" Style="{DynamicResource ListBoxStyle1}" Margin="10,0,10,26" Height="242"  SelectedIndex="0">
+            
             <ListBox.ItemsPanel>
                 <ItemsPanelTemplate>
                     <!--horizontal list-->
                     <StackPanel Orientation="Horizontal" />
-
+                    
                 </ItemsPanelTemplate>
             </ListBox.ItemsPanel>
 
@@ -105,7 +121,7 @@
                             </Grid.RowDefinitions>
 
                             <!--<Label Content="{Binding Nome_Perfil}"  VerticalAlignment="Bottom" HorizontalAlignment="Center" Width="auto" Height="auto" Grid.Row="2"></Label>-->
-
+                               
                             <Image Source="{Binding ImagesPath}" />
                             <!-- BINDING-->
 
@@ -116,41 +132,70 @@
                     </StackPanel>
                 </DataTemplate>
             </ListBox.ItemTemplate>
-
+            
+            
 
         </ListBox>
-        <Grid Margin="10,0">
-            
-            <TextBlock x:Name="DESCRIPTION" Text="{Binding SelectedItem.Description, ElementName=lb, UpdateSourceTrigger=PropertyChanged}"  
-                       TextAlignment="Center" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Top" TextWrapping="WrapWithOverflow"
-                       Height="153" Width="285" Margin="409,0,52,0" FontSize="16"  />
+        <StackPanel  Orientation="Horizontal" VerticalAlignment="Top" Height="277">
 
-            <!--in one text à trou or grid whith sadot-->
-         
-            
-            
-            <Label Foreground="White" Content="Mean Temperature :" HorizontalAlignment="Left" Height="32" Margin="31,25,0,0" VerticalAlignment="Top" Width="141" FontSize="14"/>
-            <Label Foreground="White" Content="Distance From Sun :" HorizontalAlignment="Left" Height="32" Margin="31,89,0,0" VerticalAlignment="Top" Width="132" FontSize="14"/>
-            <Label Foreground="White" Content="Length Of Year :" HorizontalAlignment="Left" Height="32" Margin="31,57,0,0" VerticalAlignment="Top" Width="112" FontSize="14"/>
-            <Label Foreground="White" Content="Mean Temperature :" HorizontalAlignment="Left" Height="32" Margin="31,121,0,0" VerticalAlignment="Top" Width="141" FontSize="14"/>
+            <StackPanel x:Name="Sadot_column" Orientation="Vertical" VerticalAlignment="Top" >
 
-            <TextBlock Text="{Binding SelectedItem.Mean_Temperature, ElementName=lb, UpdateSourceTrigger=PropertyChanged}"  
-                       TextAlignment="Left" Foreground="Wheat" HorizontalAlignment="Center" VerticalAlignment="Top" 
-                       Height="32" Width="101" Margin="172,25,473,0" FontSize="16"  />
+                <Label Foreground="White" Content="Mass :" HorizontalAlignment="Left" VerticalAlignment="Top" Width="150" FontSize="16" Height="40"/>
+                <Label Foreground="White" Content="Diameter :" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="150" Height="40" FontSize="16" />
+                <Label Foreground="White" Content="Density :" HorizontalAlignment="Left" VerticalAlignment="Top" Width="150" Height="40" FontSize="16"/>
+                <Label Foreground="White" Content="Gravity :" HorizontalAlignment="Left" VerticalAlignment="Top" Width="150" Height="40" FontSize="16"/>
+                <Label Foreground="White" Content="Rotation Period :" HorizontalAlignment="Left" VerticalAlignment="Top" Width="150" Height="40" FontSize="16"/>
+                <Label Foreground="White" Content="Distance from Sun :" HorizontalAlignment="Left" VerticalAlignment="Top" Width="150" Height="40" FontSize="16"/>
+                <Label Foreground="White" Content="Mean Temperature :" HorizontalAlignment="Left" VerticalAlignment="Top" Width="150" Height="40" FontSize="16"/>
 
-            <TextBlock Text="{Binding SelectedItem.Distance, ElementName=lb, UpdateSourceTrigger=PropertyChanged}"  
-                       TextAlignment="Left" Foreground="Wheat" HorizontalAlignment="Center" VerticalAlignment="Top" 
-                       Height="32" Width="101" Margin="143,57,502,0" FontSize="16"  />
-            <TextBlock Text="{Binding SelectedItem.Distance, ElementName=lb, UpdateSourceTrigger=PropertyChanged}"  
-                TextAlignment="Left" Foreground="Wheat" HorizontalAlignment="Center" VerticalAlignment="Top" 
-                Height="32" Width="101" Margin="163,84,482,0" FontSize="16"  />
-            <TextBlock Text="{Binding SelectedItem.Distance, ElementName=lb, UpdateSourceTrigger=PropertyChanged}"  
-                TextAlignment="Left" Foreground="Wheat" HorizontalAlignment="Center" VerticalAlignment="Top" 
-                Height="32" Width="101" Margin="163,121,482,0" FontSize="16"  />
+                <Button VerticalAlignment="Bottom" Click="Motre_Details_Click" Content="More Details" Height="29">
+
+                </Button>
+
+            </StackPanel>
+
+            <StackPanel x:Name="binding_column" VerticalAlignment="Top" Orientation="Vertical" >
+                <Label Content="{Binding SelectedItem.mass, ElementName=lb, UpdateSourceTrigger=PropertyChanged}"  
+                                   Foreground="Wheat" HorizontalAlignment="Left" VerticalAlignment="Top" 
+                                   Width="155" Height="40" FontSize="16" />
+                <Label Content="{Binding SelectedItem.diameter, ElementName=lb, UpdateSourceTrigger=PropertyChanged}"  
+                           Foreground="Wheat" HorizontalAlignment="Left" VerticalAlignment="Top" 
+                             Width="155" Height="40" FontSize="16"  />
+                <Label Content="{Binding SelectedItem.density, ElementName=lb, UpdateSourceTrigger=PropertyChanged}"  
+                             Foreground="Wheat" HorizontalAlignment="Left" VerticalAlignment="Top" 
+                            Width="155" Height="40" FontSize="16" />
+                <Label Content="{Binding SelectedItem.gravity, ElementName=lb, UpdateSourceTrigger=PropertyChanged}"  
+                            Foreground="Wheat" HorizontalAlignment="Left" VerticalAlignment="Top" 
+                            Width="155" Height="40" FontSize="16" />
+                <Label Content="{Binding SelectedItem.rotation_period, ElementName=lb, UpdateSourceTrigger=PropertyChanged}"  
+                            Foreground="Wheat" HorizontalAlignment="Left" VerticalAlignment="Top" 
+                            Width="155" Height="40" FontSize="16" />
+                <Label Content="{Binding SelectedItem.distance_from_sun, ElementName=lb, UpdateSourceTrigger=PropertyChanged}"  
+                         Foreground="Wheat" HorizontalAlignment="Left" VerticalAlignment="Top" 
+                           Width="155" Height="40" FontSize="16" />
+                <Label Content="{Binding SelectedItem.mean_temperature, ElementName=lb, UpdateSourceTrigger=PropertyChanged}"  
+                             Foreground="Wheat" HorizontalAlignment="Left" VerticalAlignment="Top" 
+                            Width="155" Height="40" FontSize="16" />
+            </StackPanel>
+
+            <StackPanel x:Name="bindingDESCRIPTION_column" VerticalAlignment="Top" Orientation="Vertical" Height="277" Width="436"  >
+
+                <Label Content="{Binding SelectedItem.Description, ElementName=lb, UpdateSourceTrigger=PropertyChanged}"  
+                             Foreground="Wheat" HorizontalAlignment="Center" VerticalAlignment="Top" 
+                            FontSize="20" FontFamily="/UI;component/Fonts/#Roboto" />
+
+            </StackPanel>
 
 
 
-        </Grid>
+
+
+
+        </StackPanel>
+
+
+
+
     </StackPanel>
 
 </UserControl>
