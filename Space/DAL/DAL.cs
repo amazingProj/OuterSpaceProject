@@ -77,7 +77,7 @@ namespace DAL
             var data = new Image_Modal
             {
                 ImagePart1 = convertedImage.Substring(0, sizeDividedFive),
-                ImagePart2 = convertedImage.Substring(sizeDividedFive + 1, sizeDividedFive * 2),
+                ImagePart2 = convertedImage.Substring(sizeDividedFive, sizeDividedFive * 2),
                 ImagePart3 = convertedImage.Substring(sizeDividedFive * 2, sizeDividedFive * 3),
                 ImagePart4 = convertedImage.Substring(sizeDividedFive * 3),
             };
@@ -104,9 +104,10 @@ namespace DAL
 
             string temp;
 
-            for (int i = 1; i < Convert.ToInt32(get.cnt); ++i)
+            for (int i = 0; i < Convert.ToInt32(get.cnt); ++i)
             {
-                string path = "Images/" + i.ToString();
+                int p = i + 1;
+                string path = "Images/" + p.ToString();
                 FirebaseResponse responseImage = await client.GetTaskAsync(path);
                 Image_Modal image = responseImage.ResultAs<Image_Modal>();
                 temp = image.ImagePart1 + image.ImagePart2 + image.ImagePart3 + image.ImagePart4;

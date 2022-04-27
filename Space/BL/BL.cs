@@ -16,13 +16,12 @@ namespace BL
         Dictionary<string, string> keywordsSpace = new Dictionary<string, string>();
 
         DAL.IDAL dAL;
-
         //IEnumerable<Planets> GetPlanets();
-        //public IEnumerable<Planets> GetPlanets()
-        //{
-        //    return (from item in dAL.GetPlanets() ////////////////////    SELECT CLONING ?
-        //            select item;
-        //}
+        /*public IEnumerable<Planets> GetPlanets()
+        {
+            return (from item in dAL.GetPlanets() ////////////////////    SELECT CLONING ?
+                    select item;
+        }*/
 
         RestClient client;
         public BL()
@@ -85,8 +84,6 @@ namespace BL
             string messageResponseDal = await dAL.InsertImageToFireBaseAsync(imageConverted);
 
             return messageResponseDal;
-
-
         }
 
         public Task<List<string>> RetriveAllImagesFromFireBase()

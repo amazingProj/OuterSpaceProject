@@ -72,5 +72,12 @@
                 </Button.Template>
             </Button>
         </StackPanel>
+        <ListView Height="500"
+                      Width="700"
+                      x:Name="ListViewGallery"
+                      Margin="0,20,0,0"
+                      Background="Transparent">
+            
+        </ListView>
     </StackPanel>
 </UserControl>

@@ -28,14 +28,14 @@ namespace UI.MVVM.View
     public partial class SolarSystemView : UserControl
     {         
         double offset = 0;
-        ObservableCollection<BL.Planet> Planets_list;  // ADD REFERENCE
+        //ObservableCollection<BL.Planet> Planets_list;  // ADD REFERENCE
 
         public SolarSystemView()
         {
             InitializeComponent();
 
-            Planets_list = new ObservableCollection<BL.Planet>(BL.getPlanets());
-            lb.ItemsSource = Planets_list;
+            //Planets_list = new ObservableCollection<BL.Planet>(BL.getPlanets());
+            //lb.ItemsSource = Planets_list;
 
 
         }
