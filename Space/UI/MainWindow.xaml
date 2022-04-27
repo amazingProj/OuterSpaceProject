@@ -71,12 +71,19 @@
                              Style="{StaticResource MenuButtonTheme}"
                              Command="{Binding TodayPictureViewCommand}"/>
 
-                <RadioButton Content="My&#x0a;Gallery"
+                <RadioButton Content="Users&#x0a;Gallery"
                              Height="70"
                              Foreground="White"
                              FontSize="16"
                              Style="{StaticResource MenuButtonTheme}"
                              Command="{Binding MyGalleryViewCommand}"/>
+
+                <RadioButton Content="Upload&#x0a;Image"
+                             Height="70"
+                             Foreground="White"
+                             FontSize="16"
+                             Style="{StaticResource MenuButtonTheme}"
+                             Command="{Binding UploadImageViewCommand}" />
 
             </StackPanel>
 
@@ -91,6 +98,12 @@
                     Margin="20,5,5,5"
                     RenderTransformOrigin="0.151,0.363"
                     Width="194">
+                <Button.ToolTip>
+                    <StackPanel>
+                        <TextBlock Text="Quickly Get the most&#x0a;potentially dangerous asteroids&#x0a;from today till 30 days" />
+
+                    </StackPanel>
+                </Button.ToolTip>
                 <Button.Style>
                     <Style TargetType="Button">
                         <Setter Property="TextElement.FontFamily"
@@ -122,35 +135,58 @@
                     </ControlTemplate>
                 </Button.Template>
             </Button>
-            
-            <TextBox   
-                         VerticalContentAlignment="Center"
-                         HorizontalAlignment="Left"
-                         Margin="200,5,5,5"
-                         Grid.Column="1"
-                         Style="{StaticResource Moderntextbox}"  />
-            
-           
+
+            <TextBox VerticalContentAlignment="Center"
+                     HorizontalAlignment="Left"
+                     Margin="200,5,5,5"
+                     Grid.Column="1"
+                     Style="{StaticResource Moderntextbox}">
+
+                <TextBox.ToolTip>
+                    <TextBlock Text="Search Space Pictures&#x0a;click enter when finished" />
+                </TextBox.ToolTip>
+            </TextBox>
+
+
             <ContentControl Grid.Row="1" Grid.Column="1"
                             Margin="10"
-                            Content="{Binding CurrentView}"/>
+                            Content="{Binding CurrentView}" />
 
-            <Button 
+            <Button Margin="0,17,60,0"
                     Grid.Column="1"
                     x:Name="MaxBtn"
                     Style="{StaticResource MaxBtnStyle}"
                     Click="MaxBtn_Click"
-                    HorizontalAlignment="Right"
-                    />
+                    HorizontalAlignment="Right">
+                <Button.ToolTip>
+                    <StackPanel>
+                        <TextBlock Text="Full Screen"
+                                   Foreground="Black"
+                                   FontSize="12"
+                                   Background="Transparent"/>
+
+                    </StackPanel>
+                </Button.ToolTip>
+            </Button>
 
             <!--// Close App //-->
 
-            <Button 
+            <Button Margin="0,17,15,0"
                     Grid.Column="1"
                     HorizontalAlignment="Right"
                     x:Name="CloseBtn"
                     Style="{StaticResource CloseBtnStyle}"
-                    Click="CloseBtn_Click" />
+                    Click="CloseBtn_Click">
+                <Button.ToolTip>
+                    <StackPanel>
+                        <TextBlock Text="Shut down"
+                                   Foreground="Black"
+                                   FontSize="12"
+                                   Background="Transparent"/>
+
+                    </StackPanel>
+                </Button.ToolTip>
+            </Button>
 
         </Grid>
 

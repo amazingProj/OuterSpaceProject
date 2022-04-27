@@ -68,7 +68,7 @@ namespace UI.MVVM.View
             items.Add(new Planet() { ImagesPath = "/Icons/uranus.png", Name = "URANUS",     Description = "Small PLANET AND.......??" });
             items.Add(new Planet() { ImagesPath = "/Icons/neptune.png", Name = "NEPTUNE",   Description = "Small PLANET AND.......??" });
 
-            lb.ItemsSource =items ;
+            lb.ItemsSource = items ;
 
 
         }

@@ -56,7 +56,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Service\IViewModelRepository.cs" />
+    <Compile Include="MVVM\Model\TodayPictureModel.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -95,6 +95,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="MVVM\View\UploadImage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Theme\CheckBoxTheme.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -128,6 +132,7 @@
     <Compile Include="MVVM\ViewModel\SearchViewModel.cs" />
     <Compile Include="MVVM\ViewModel\SolarSystemViewModel.cs" />
     <Compile Include="MVVM\ViewModel\TodayPictureViewModel.cs" />
+    <Compile Include="MVVM\ViewModel\UploadImageViewModel.cs" />
     <Compile Include="MVVM\View\GalleryView.xaml.cs">
       <DependentUpon>GalleryView.xaml</DependentUpon>
     </Compile>
@@ -145,6 +150,9 @@
     </Compile>
     <Compile Include="MVVM\View\TodayPictureView.xaml.cs">
       <DependentUpon>TodayPictureView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MVVM\View\UploadImage.xaml.cs">
+      <DependentUpon>UploadImage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
@@ -180,9 +188,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="MVVM\Model\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\BL\BL.csproj">
       <Project>{afbc9eb5-e07a-4057-818e-2ad4314b04dc}</Project>

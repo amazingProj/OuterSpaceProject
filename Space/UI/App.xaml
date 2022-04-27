@@ -37,6 +37,10 @@
             <DataTemplate DataType="{x:Type viewModel:GalleryViewModel}">
                 <view:GalleryView/>
             </DataTemplate>
+
+            <DataTemplate DataType="{x:Type viewModel:UploadImageViewModel}">
+                <view:UploadImage />
+            </DataTemplate>
         </ResourceDictionary>
     </Application.Resources>
 </Application>

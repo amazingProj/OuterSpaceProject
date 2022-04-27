@@ -8,5 +8,8 @@ namespace DAL
 {
     public interface IFireBase
     {
+        Task<string> InsertImageToFireBaseAsync(string byteFile);
+
+        Task<List<string>> RetriveAllImagesFromFireBase();
     }
 }

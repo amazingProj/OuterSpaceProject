@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.ComponentModel;
+using UI.MVVM.ViewModel;
 
 namespace UI.MVVM.View
 {

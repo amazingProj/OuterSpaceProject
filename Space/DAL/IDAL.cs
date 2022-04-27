@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DAL
 {
-    public interface IDAL : IMediaStream
+    public interface IDAL : IMediaStream, IFireBase
     {
     }
 }

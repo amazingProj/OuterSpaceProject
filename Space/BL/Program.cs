@@ -10,6 +10,7 @@ namespace BL
     {
         static void Main(string[] args)
         {
+            BL bL = new BL();
         }
     }
 }

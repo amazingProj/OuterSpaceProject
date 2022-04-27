@@ -8,6 +8,8 @@ namespace BL
 {
     public interface IFirebase
     {
-        string ImageUpload();
+        Task<string> ImageUpload(string imageConvered, string path);
+
+        Task<List<string>> RetriveAllImagesFromFireBase();
     }
 }
