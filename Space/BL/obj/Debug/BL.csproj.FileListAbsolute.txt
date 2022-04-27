@@ -11,3 +11,16 @@ C:\Users\AssafHillel\source\repos\OuterSpaceProject\Space\BL\bin\Debug\DAL.exe.c
 C:\Users\AssafHillel\source\repos\OuterSpaceProject\Space\BL\obj\Debug\BL.csproj.CopyComplete
 C:\Users\AssafHillel\Source\Repos\OuterSpaceProject\Space\BL\bin\Debug\Newtonsoft.Json.dll
 C:\Users\AssafHillel\Source\Repos\OuterSpaceProject\Space\BL\bin\Debug\Newtonsoft.Json.xml
+C:\Users\33768\Desktop\C# (2)\PROJECT\Space\BL\bin\Debug\BL.exe.config
+C:\Users\33768\Desktop\C# (2)\PROJECT\Space\BL\bin\Debug\BL.exe
+C:\Users\33768\Desktop\C# (2)\PROJECT\Space\BL\bin\Debug\BL.pdb
+C:\Users\33768\Desktop\C# (2)\PROJECT\Space\BL\bin\Debug\DAL.exe
+C:\Users\33768\Desktop\C# (2)\PROJECT\Space\BL\bin\Debug\Newtonsoft.Json.dll
+C:\Users\33768\Desktop\C# (2)\PROJECT\Space\BL\bin\Debug\DAL.pdb
+C:\Users\33768\Desktop\C# (2)\PROJECT\Space\BL\bin\Debug\DAL.exe.config
+C:\Users\33768\Desktop\C# (2)\PROJECT\Space\BL\bin\Debug\Newtonsoft.Json.xml
+C:\Users\33768\Desktop\C# (2)\PROJECT\Space\BL\obj\Debug\BL.csprojAssemblyReference.cache
+C:\Users\33768\Desktop\C# (2)\PROJECT\Space\BL\obj\Debug\BL.csproj.CoreCompileInputs.cache
+C:\Users\33768\Desktop\C# (2)\PROJECT\Space\BL\obj\Debug\BL.csproj.CopyComplete
+C:\Users\33768\Desktop\C# (2)\PROJECT\Space\BL\obj\Debug\BL.exe
+C:\Users\33768\Desktop\C# (2)\PROJECT\Space\BL\obj\Debug\BL.pdb

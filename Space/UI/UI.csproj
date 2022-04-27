@@ -206,5 +206,20 @@
   <ItemGroup>
     <Resource Include="Icons\max_mo.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icons\backround solar galaxie  .jpg" />
+    <Resource Include="Icons\backround solar galaxie srars  .jpg" />
+    <Resource Include="Icons\backround solar.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icons\earth.png" />
+    <Resource Include="Icons\jupiter.png" />
+    <Resource Include="Icons\mars.png" />
+    <Resource Include="Icons\mercury.png" />
+    <Resource Include="Icons\neptune.png" />
+    <Resource Include="Icons\saturn.png" />
+    <Resource Include="Icons\uranus.png" />
+    <Resource Include="Icons\venus.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
