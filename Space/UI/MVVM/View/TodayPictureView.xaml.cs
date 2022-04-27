@@ -38,7 +38,7 @@ namespace UI.MVVM.View
                 BL.IBL bl = new BL.BL();
                 Dictionary<string, string> dic = bl.GetPictureOfTheDay();
                
-                //content.Text = dic["Explanation"];
+                content.Text = dic["Explanation"];
                 title.Text = dic["PicTitle"];
                 
                 date.Text = dic["Date"];

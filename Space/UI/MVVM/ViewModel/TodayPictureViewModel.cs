@@ -14,24 +14,8 @@ namespace UI.MVVM.ViewModel
         public TodayPictureViewModel()
         {
             bl = new BL.BL();
-            TodayPictureModel = new TodayPictureModel();
-            SetTodayPicture();
         }
 
-        public void SetTodayPicture()
-        {
-            Dictionary<string, string> dic = bl.GetPictureOfTheDay();
-
-            TodayPictureModel.Content = dic["Explanation"];
-            TodayPictureModel.Title = dic["PicTitle"];
-
-            TodayPictureModel.Date = dic["Date"];
-            var bitmapImage = new BitmapImage();
-            bitmapImage.BeginInit();
-            bitmapImage.UriSource = new Uri(dic["HDPicUrl"]);
-            bitmapImage.EndInit();
-            TodayPictureModel.TodayPicture = bitmapImage;
-        }
         public TodayPictureViewModel(MainViewModel _mainViewModel)
         {
             mainViewModel = _mainViewModel;

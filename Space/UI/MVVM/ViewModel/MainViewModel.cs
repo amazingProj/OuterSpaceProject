@@ -21,6 +21,8 @@ namespace UI.MVVM.ViewModel
 
         public RelayCommand MyGalleryViewCommand { get; set; }
 
+        public RelayCommand UploadImageViewCommand { get; set; }
+
         public HomeViewModel HomeVM { get; set; }
 
         public SearchViewModel SearchVM { get; set; }
@@ -32,6 +34,8 @@ namespace UI.MVVM.ViewModel
         public TodayPictureViewModel TodayPictureVM;
 
         public GalleryViewModel MyGalleryVM;
+
+        public UploadImageViewModel UploadImageVM;
 
         private object _currentView;
 
@@ -53,6 +57,7 @@ namespace UI.MVVM.ViewModel
             SolarSystemVM = new SolarSystemViewModel(this);
             TodayPictureVM = new TodayPictureViewModel(this);
             MyGalleryVM = new GalleryViewModel(this);
+            UploadImageVM = new UploadImageViewModel();
 
             CurrentView = HomeVM;
 
@@ -84,6 +89,11 @@ namespace UI.MVVM.ViewModel
             MyGalleryViewCommand = new RelayCommand(s =>
             {
                 CurrentView = MyGalleryVM;
+            });
+
+            UploadImageViewCommand = new RelayCommand(s =>
+            {
+                CurrentView = UploadImageVM;
             });
         }
     }

@@ -10,11 +10,11 @@ none
 false
 TRACE
 C:\Users\AssafHillel\Source\Repos\OuterSpaceProject\Space\UI\App.xaml
-13921098801
+14301415781
 
-21-1134351625
+23289234085
 15-1485430525
-MainWindow.xaml;MVVM\View\GalleryView.xaml;MVVM\View\HomeView.xaml;MVVM\View\MediaView.xaml;MVVM\View\SearchView.xaml;MVVM\View\SolarSystemView.xaml;MVVM\View\TodayPictureView.xaml;Theme\CheckBoxTheme.xaml;Theme\MenuButtonTheme.xaml;Theme\SearchBoxTheme.xaml;Theme\Templates.xaml;Theme\TextBlockTheme.xaml;Theme\TextBoxTheme.xaml;
+MainWindow.xaml;MVVM\View\GalleryView.xaml;MVVM\View\HomeView.xaml;MVVM\View\MediaView.xaml;MVVM\View\SearchView.xaml;MVVM\View\SolarSystemView.xaml;MVVM\View\TodayPictureView.xaml;MVVM\View\UploadImage.xaml;Theme\CheckBoxTheme.xaml;Theme\MenuButtonTheme.xaml;Theme\SearchBoxTheme.xaml;Theme\Templates.xaml;Theme\TextBlockTheme.xaml;Theme\TextBoxTheme.xaml;
 
 True
 

@@ -1,80 +1,12 @@
 ﻿<UserControl x:Class="UI.MVVM.View.GalleryView"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:local="clr-namespace:UI.MVVM.View"
-             mc:Ignorable="d" 
-             d:DesignHeight="550" d:DesignWidth="900">
-    <StackPanel>
-        <StackPanel AllowDrop="True"
-                  >
-            <TextBlock Text="Upload a planet picture" 
-                   Foreground="White"
-                   FontSize="20"
-                   HorizontalAlignment="Left"
-                   Margin="0,0,0,20"
-                   FontFamily="#Fredoka"/>
-            <Label
-               
-                Foreground="White"
-                x:Name="FileName"
-                HorizontalAlignment="Center"
-                Content="Upload dot png images"
-               FontSize="12"/>
-            <StackPanel MouseDown="StackPanel_MouseDown"
-                        Drop="FileUpload_Event"
-                        Orientation="Horizontal"
-                        HorizontalAlignment="Center">
-                <Border Width="900" Height="250" Opacity="0.8">
-                    <Border.Background>
-                        <LinearGradientBrush StartPoint="0,0" EndPoint="1,2">
-                            <GradientStop Color="#22207f" Offset="0.0"/>
-                            <GradientStop Color="#22204f" Offset="1"/>
-                        </LinearGradientBrush>
-                    </Border.Background>
-                    <Border.Clip>
-                        <RectangleGeometry RadiusX="50" RadiusY="50"
-                                       Rect="0,0,900,250"/>
-                    </Border.Clip>
-
-
-
-                    <Grid>
-                        
-                        <StackPanel HorizontalAlignment="Center">
-                            <TextBlock Text="Upload Images&#x0a;Planets and Asteroids"
-                                   Foreground="White"
-                                   FontSize="28"
-                                   Margin="10,10,0,0"
-                                   FontFamily="/Fonts/#Fredoka"/>
-                            <TextBlock Text="Drop a file or click for file explorer"
-                                   Foreground="White"
-                                   FontSize="18"
-                                   Margin="10,10,0,0"
-                                   FontFamily="/Fonts/#Fredoka"/>
-                        </StackPanel>
-                        <Image
-                                Opacity="0.65"
-                                Source="/Icons/upload-button.png" Margin="104,151,116,-51.4"/>
-
-                    </Grid>
-                </Border>
-            </StackPanel>
-        </StackPanel>
-
-        <StackPanel>
-            <StackPanel.Resources>
-                <Style TargetType="{x:Type Border}">
-                    <Setter Property="Margin" Value="15,0,0,0"/>
-                </Style>
-            </StackPanel.Resources>
-            <TextBlock Text="My Gallery's Images" 
-                   Foreground="White"
-                   FontSize="28"
-                   HorizontalAlignment="Left"
-                   Margin="0,20,0,20"
-                   FontFamily="#Fredoka"/>
-        </StackPanel>
-    </StackPanel>
+             mc:Ignorable="d"
+             d:DesignHeight="550"
+             d:DesignWidth="900"
+             Background="Red">
+   
 </UserControl>

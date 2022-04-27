@@ -18,3 +18,7 @@ C:\Users\33768\Desktop\C# (2)\PROJECT\Space\DAL\obj\Debug\DAL.csproj.CoreCompile
 C:\Users\33768\Desktop\C# (2)\PROJECT\Space\DAL\obj\Debug\DAL.csproj.CopyComplete
 C:\Users\33768\Desktop\C# (2)\PROJECT\Space\DAL\obj\Debug\DAL.exe
 C:\Users\33768\Desktop\C# (2)\PROJECT\Space\DAL\obj\Debug\DAL.pdb
+C:\Users\AssafHillel\source\repos\OuterSpaceProject\Space\DAL\bin\Debug\FireSharp.dll
+C:\Users\AssafHillel\source\repos\OuterSpaceProject\Space\DAL\bin\Debug\FireSharp.Serialization.JsonNet.dll
+C:\Users\AssafHillel\source\repos\OuterSpaceProject\Space\DAL\bin\Debug\RestSharp.dll
+C:\Users\AssafHillel\source\repos\OuterSpaceProject\Space\DAL\bin\Debug\RestSharp.xml

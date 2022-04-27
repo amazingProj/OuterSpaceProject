@@ -19,7 +19,13 @@
 
                 <TextBox HorizontalAlignment="Center"
                          Margin="0.2,0.2,0.8,0.8"
-                         Style="{StaticResource SearchBox}" />
+                         Style="{StaticResource SearchBox}">
+                    <TextBox.ToolTip>
+                        <TextBlock Text="Click to Search"
+                                   Foreground="Black"/>
+                    </TextBox.ToolTip>
+                
+                </TextBox>
 
 
 
@@ -102,7 +108,8 @@
 
         </StackPanel>
         <ListView Width="900"
-                  Height="500" />
+                  Height="500"
+                  Background="Transparent"/>
     </StackPanel>
     
 
