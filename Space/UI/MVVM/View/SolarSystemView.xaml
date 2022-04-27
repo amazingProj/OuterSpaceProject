@@ -136,7 +136,7 @@
             
 
         </ListBox>
-        <StackPanel  Orientation="Horizontal" VerticalAlignment="Top" Height="277">
+        <StackPanel  Orientation="Horizontal" VerticalAlignment="Top" >
 
             <StackPanel x:Name="Sadot_column" Orientation="Vertical" VerticalAlignment="Top" >
 
@@ -148,7 +148,7 @@
                 <Label Foreground="White" Content="Distance from Sun :" HorizontalAlignment="Left" VerticalAlignment="Top" Width="150" Height="40" FontSize="16"/>
                 <Label Foreground="White" Content="Mean Temperature :" HorizontalAlignment="Left" VerticalAlignment="Top" Width="150" Height="40" FontSize="16"/>
 
-                <Button VerticalAlignment="Bottom" Click="Motre_Details_Click" Content="More Details" Height="29">
+                <Button Foreground="White" VerticalAlignment="Bottom" Click="Motre_Details_Click" Content="More Details" Height="29" Background="#FF1B4064">
 
                 </Button>
 

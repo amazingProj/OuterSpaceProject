@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\AssafHillel\source\repos\OuterSpaceProject\Space\UI\obj\Debug\
+C:\Users\33768\Desktop\C# (2)\PROJECT\Space\UI\obj\Debug\
 UI
 none
 false
 DEBUG;TRACE
-C:\Users\AssafHillel\source\repos\OuterSpaceProject\Space\UI\App.xaml
+C:\Users\33768\Desktop\C# (2)\PROJECT\Space\UI\App.xaml
 14301415781
 
 23289234085
-15-577722033
+152027062953
 MainWindow.xaml;MVVM\View\GalleryView.xaml;MVVM\View\HomeView.xaml;MVVM\View\MediaView.xaml;MVVM\View\SearchView.xaml;MVVM\View\SolarSystemView.xaml;MVVM\View\TodayPictureView.xaml;MVVM\View\UploadImage.xaml;Theme\CheckBoxTheme.xaml;Theme\MenuButtonTheme.xaml;Theme\SearchBoxTheme.xaml;Theme\Templates.xaml;Theme\TextBlockTheme.xaml;Theme\TextBoxTheme.xaml;
 
-False
+True
 
