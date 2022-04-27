@@ -1,0 +1,149 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <NativeReference Include="Native References/Leadtools.ColorConversion.framework">
+      <Kind>Framework</Kind>
+    </NativeReference>
+    <LeadtoolsFrameworkFiles_Leadtools_ColorConversion_framework Include="$(MSBuildThisFileDirectory)/Leadtools.ColorConversion.framework/*" />
+    <LeadtoolsFrameworkHeaderFiles_Leadtools_ColorConversion_framework Include="$(MSBuildThisFileDirectory)/Leadtools.ColorConversion.framework/Headers/*" />
+    <NativeReference Include="Native References/Leadtools.Codecs.Cmw.framework">
+      <Kind>Framework</Kind>
+    </NativeReference>
+    <LeadtoolsFrameworkFiles_Leadtools_Codecs_Cmw_framework Include="$(MSBuildThisFileDirectory)/Leadtools.Codecs.Cmw.framework/*" />
+    <LeadtoolsFrameworkHeaderFiles_Leadtools_Codecs_Cmw_framework Include="$(MSBuildThisFileDirectory)/Leadtools.Codecs.Cmw.framework/Headers/*" />
+    <NativeReference Include="Native References/Leadtools.Codecs.J2k.framework">
+      <Kind>Framework</Kind>
+    </NativeReference>
+    <LeadtoolsFrameworkFiles_Leadtools_Codecs_J2k_framework Include="$(MSBuildThisFileDirectory)/Leadtools.Codecs.J2k.framework/*" />
+    <LeadtoolsFrameworkHeaderFiles_Leadtools_Codecs_J2k_framework Include="$(MSBuildThisFileDirectory)/Leadtools.Codecs.J2k.framework/Headers/*" />
+    <NativeReference Include="Native References/Leadtools.Codecs.Jb2.framework">
+      <Kind>Framework</Kind>
+    </NativeReference>
+    <LeadtoolsFrameworkFiles_Leadtools_Codecs_Jb2_framework Include="$(MSBuildThisFileDirectory)/Leadtools.Codecs.Jb2.framework/*" />
+    <LeadtoolsFrameworkHeaderFiles_Leadtools_Codecs_Jb2_framework Include="$(MSBuildThisFileDirectory)/Leadtools.Codecs.Jb2.framework/Headers/*" />
+    <NativeReference Include="Native References/Leadtools.Codecs.Jbg.framework">
+      <Kind>Framework</Kind>
+    </NativeReference>
+    <LeadtoolsFrameworkFiles_Leadtools_Codecs_Jbg_framework Include="$(MSBuildThisFileDirectory)/Leadtools.Codecs.Jbg.framework/*" />
+    <LeadtoolsFrameworkHeaderFiles_Leadtools_Codecs_Jbg_framework Include="$(MSBuildThisFileDirectory)/Leadtools.Codecs.Jbg.framework/Headers/*" />
+    <NativeReference Include="Native References/Leadtools.Codecs.Cmp.framework">
+      <Kind>Framework</Kind>
+    </NativeReference>
+    <LeadtoolsFrameworkFiles_Leadtools_Codecs_Cmp_framework Include="$(MSBuildThisFileDirectory)/Leadtools.Codecs.Cmp.framework/*" />
+    <LeadtoolsFrameworkHeaderFiles_Leadtools_Codecs_Cmp_framework Include="$(MSBuildThisFileDirectory)/Leadtools.Codecs.Cmp.framework/Headers/*" />
+    <NativeReference Include="Native References/Leadtools.Codecs.Gif.framework">
+      <Kind>Framework</Kind>
+    </NativeReference>
+    <LeadtoolsFrameworkFiles_Leadtools_Codecs_Gif_framework Include="$(MSBuildThisFileDirectory)/Leadtools.Codecs.Gif.framework/*" />
+    <LeadtoolsFrameworkHeaderFiles_Leadtools_Codecs_Gif_framework Include="$(MSBuildThisFileDirectory)/Leadtools.Codecs.Gif.framework/Headers/*" />
+    <NativeReference Include="Native References/Leadtools.Codecs.Tif.framework">
+      <Kind>Framework</Kind>
+    </NativeReference>
+    <LeadtoolsFrameworkFiles_Leadtools_Codecs_Tif_framework Include="$(MSBuildThisFileDirectory)/Leadtools.Codecs.Tif.framework/*" />
+    <LeadtoolsFrameworkHeaderFiles_Leadtools_Codecs_Tif_framework Include="$(MSBuildThisFileDirectory)/Leadtools.Codecs.Tif.framework/Headers/*" />
+    <NativeReference Include="Native References/Leadtools.Codecs.Raw.framework">
+      <Kind>Framework</Kind>
+    </NativeReference>
+    <LeadtoolsFrameworkFiles_Leadtools_Codecs_Raw_framework Include="$(MSBuildThisFileDirectory)/Leadtools.Codecs.Raw.framework/*" />
+    <LeadtoolsFrameworkHeaderFiles_Leadtools_Codecs_Raw_framework Include="$(MSBuildThisFileDirectory)/Leadtools.Codecs.Raw.framework/Headers/*" />
+    <NativeReference Include="Native References/Leadtools.Codecs.Png.framework">
+      <Kind>Framework</Kind>
+    </NativeReference>
+    <LeadtoolsFrameworkFiles_Leadtools_Codecs_Png_framework Include="$(MSBuildThisFileDirectory)/Leadtools.Codecs.Png.framework/*" />
+    <LeadtoolsFrameworkHeaderFiles_Leadtools_Codecs_Png_framework Include="$(MSBuildThisFileDirectory)/Leadtools.Codecs.Png.framework/Headers/*" />
+    <NativeReference Include="Native References/Leadtools.Codecs.Fax.framework">
+      <Kind>Framework</Kind>
+    </NativeReference>
+    <LeadtoolsFrameworkFiles_Leadtools_Codecs_Fax_framework Include="$(MSBuildThisFileDirectory)/Leadtools.Codecs.Fax.framework/*" />
+    <LeadtoolsFrameworkHeaderFiles_Leadtools_Codecs_Fax_framework Include="$(MSBuildThisFileDirectory)/Leadtools.Codecs.Fax.framework/Headers/*" />
+    <NativeReference Include="Native References/Leadtools.Codecs.Bmp.framework">
+      <Kind>Framework</Kind>
+    </NativeReference>
+    <LeadtoolsFrameworkFiles_Leadtools_Codecs_Bmp_framework Include="$(MSBuildThisFileDirectory)/Leadtools.Codecs.Bmp.framework/*" />
+    <LeadtoolsFrameworkHeaderFiles_Leadtools_Codecs_Bmp_framework Include="$(MSBuildThisFileDirectory)/Leadtools.Codecs.Bmp.framework/Headers/*" />
+  </ItemGroup>
+  <Target Name="CreateNativeReferencesDirectory_Leadtools_ColorConversion_framework" AfterTargets="BeforeBuild">
+    <MakeDir Directories="$(ProjectDir)/Native References/Leadtools.ColorConversion.framework/Headers" />
+  </Target>
+  <Target Name="CopyLeadtoolsNativeFrameworks_Leadtools_ColorConversion_framework" AfterTargets="CreateNativeReferencesDirectory_Leadtools_ColorConversion_framework">
+    <Copy SourceFiles="@(LeadtoolsFrameworkFiles_Leadtools_ColorConversion_framework)" DestinationFolder="$(ProjectDir)/Native References/Leadtools.ColorConversion.framework" />
+    <Copy SourceFiles="@(LeadtoolsFrameworkHeaderFiles_Leadtools_ColorConversion_framework)" DestinationFolder="$(ProjectDir)/Native References/Leadtools.ColorConversion.framework/Headers" />
+  </Target>
+  <Target Name="CreateNativeReferencesDirectory_Leadtools_Codecs_Cmw_framework" AfterTargets="BeforeBuild">
+    <MakeDir Directories="$(ProjectDir)/Native References/Leadtools.Codecs.Cmw.framework/Headers" />
+  </Target>
+  <Target Name="CopyLeadtoolsNativeFrameworks_Leadtools_Codecs_Cmw_framework" AfterTargets="CreateNativeReferencesDirectory_Leadtools_Codecs_Cmw_framework">
+    <Copy SourceFiles="@(LeadtoolsFrameworkFiles_Leadtools_Codecs_Cmw_framework)" DestinationFolder="$(ProjectDir)/Native References/Leadtools.Codecs.Cmw.framework" />
+    <Copy SourceFiles="@(LeadtoolsFrameworkHeaderFiles_Leadtools_Codecs_Cmw_framework)" DestinationFolder="$(ProjectDir)/Native References/Leadtools.Codecs.Cmw.framework/Headers" />
+  </Target>
+  <Target Name="CreateNativeReferencesDirectory_Leadtools_Codecs_J2k_framework" AfterTargets="BeforeBuild">
+    <MakeDir Directories="$(ProjectDir)/Native References/Leadtools.Codecs.J2k.framework/Headers" />
+  </Target>
+  <Target Name="CopyLeadtoolsNativeFrameworks_Leadtools_Codecs_J2k_framework" AfterTargets="CreateNativeReferencesDirectory_Leadtools_Codecs_J2k_framework">
+    <Copy SourceFiles="@(LeadtoolsFrameworkFiles_Leadtools_Codecs_J2k_framework)" DestinationFolder="$(ProjectDir)/Native References/Leadtools.Codecs.J2k.framework" />
+    <Copy SourceFiles="@(LeadtoolsFrameworkHeaderFiles_Leadtools_Codecs_J2k_framework)" DestinationFolder="$(ProjectDir)/Native References/Leadtools.Codecs.J2k.framework/Headers" />
+  </Target>
+  <Target Name="CreateNativeReferencesDirectory_Leadtools_Codecs_Jb2_framework" AfterTargets="BeforeBuild">
+    <MakeDir Directories="$(ProjectDir)/Native References/Leadtools.Codecs.Jb2.framework/Headers" />
+  </Target>
+  <Target Name="CopyLeadtoolsNativeFrameworks_Leadtools_Codecs_Jb2_framework" AfterTargets="CreateNativeReferencesDirectory_Leadtools_Codecs_Jb2_framework">
+    <Copy SourceFiles="@(LeadtoolsFrameworkFiles_Leadtools_Codecs_Jb2_framework)" DestinationFolder="$(ProjectDir)/Native References/Leadtools.Codecs.Jb2.framework" />
+    <Copy SourceFiles="@(LeadtoolsFrameworkHeaderFiles_Leadtools_Codecs_Jb2_framework)" DestinationFolder="$(ProjectDir)/Native References/Leadtools.Codecs.Jb2.framework/Headers" />
+  </Target>
+  <Target Name="CreateNativeReferencesDirectory_Leadtools_Codecs_Jbg_framework" AfterTargets="BeforeBuild">
+    <MakeDir Directories="$(ProjectDir)/Native References/Leadtools.Codecs.Jbg.framework/Headers" />
+  </Target>
+  <Target Name="CopyLeadtoolsNativeFrameworks_Leadtools_Codecs_Jbg_framework" AfterTargets="CreateNativeReferencesDirectory_Leadtools_Codecs_Jbg_framework">
+    <Copy SourceFiles="@(LeadtoolsFrameworkFiles_Leadtools_Codecs_Jbg_framework)" DestinationFolder="$(ProjectDir)/Native References/Leadtools.Codecs.Jbg.framework" />
+    <Copy SourceFiles="@(LeadtoolsFrameworkHeaderFiles_Leadtools_Codecs_Jbg_framework)" DestinationFolder="$(ProjectDir)/Native References/Leadtools.Codecs.Jbg.framework/Headers" />
+  </Target>
+  <Target Name="CreateNativeReferencesDirectory_Leadtools_Codecs_Cmp_framework" AfterTargets="BeforeBuild">
+    <MakeDir Directories="$(ProjectDir)/Native References/Leadtools.Codecs.Cmp.framework/Headers" />
+  </Target>
+  <Target Name="CopyLeadtoolsNativeFrameworks_Leadtools_Codecs_Cmp_framework" AfterTargets="CreateNativeReferencesDirectory_Leadtools_Codecs_Cmp_framework">
+    <Copy SourceFiles="@(LeadtoolsFrameworkFiles_Leadtools_Codecs_Cmp_framework)" DestinationFolder="$(ProjectDir)/Native References/Leadtools.Codecs.Cmp.framework" />
+    <Copy SourceFiles="@(LeadtoolsFrameworkHeaderFiles_Leadtools_Codecs_Cmp_framework)" DestinationFolder="$(ProjectDir)/Native References/Leadtools.Codecs.Cmp.framework/Headers" />
+  </Target>
+  <Target Name="CreateNativeReferencesDirectory_Leadtools_Codecs_Gif_framework" AfterTargets="BeforeBuild">
+    <MakeDir Directories="$(ProjectDir)/Native References/Leadtools.Codecs.Gif.framework/Headers" />
+  </Target>
+  <Target Name="CopyLeadtoolsNativeFrameworks_Leadtools_Codecs_Gif_framework" AfterTargets="CreateNativeReferencesDirectory_Leadtools_Codecs_Gif_framework">
+    <Copy SourceFiles="@(LeadtoolsFrameworkFiles_Leadtools_Codecs_Gif_framework)" DestinationFolder="$(ProjectDir)/Native References/Leadtools.Codecs.Gif.framework" />
+    <Copy SourceFiles="@(LeadtoolsFrameworkHeaderFiles_Leadtools_Codecs_Gif_framework)" DestinationFolder="$(ProjectDir)/Native References/Leadtools.Codecs.Gif.framework/Headers" />
+  </Target>
+  <Target Name="CreateNativeReferencesDirectory_Leadtools_Codecs_Tif_framework" AfterTargets="BeforeBuild">
+    <MakeDir Directories="$(ProjectDir)/Native References/Leadtools.Codecs.Tif.framework/Headers" />
+  </Target>
+  <Target Name="CopyLeadtoolsNativeFrameworks_Leadtools_Codecs_Tif_framework" AfterTargets="CreateNativeReferencesDirectory_Leadtools_Codecs_Tif_framework">
+    <Copy SourceFiles="@(LeadtoolsFrameworkFiles_Leadtools_Codecs_Tif_framework)" DestinationFolder="$(ProjectDir)/Native References/Leadtools.Codecs.Tif.framework" />
+    <Copy SourceFiles="@(LeadtoolsFrameworkHeaderFiles_Leadtools_Codecs_Tif_framework)" DestinationFolder="$(ProjectDir)/Native References/Leadtools.Codecs.Tif.framework/Headers" />
+  </Target>
+  <Target Name="CreateNativeReferencesDirectory_Leadtools_Codecs_Raw_framework" AfterTargets="BeforeBuild">
+    <MakeDir Directories="$(ProjectDir)/Native References/Leadtools.Codecs.Raw.framework/Headers" />
+  </Target>
+  <Target Name="CopyLeadtoolsNativeFrameworks_Leadtools_Codecs_Raw_framework" AfterTargets="CreateNativeReferencesDirectory_Leadtools_Codecs_Raw_framework">
+    <Copy SourceFiles="@(LeadtoolsFrameworkFiles_Leadtools_Codecs_Raw_framework)" DestinationFolder="$(ProjectDir)/Native References/Leadtools.Codecs.Raw.framework" />
+    <Copy SourceFiles="@(LeadtoolsFrameworkHeaderFiles_Leadtools_Codecs_Raw_framework)" DestinationFolder="$(ProjectDir)/Native References/Leadtools.Codecs.Raw.framework/Headers" />
+  </Target>
+  <Target Name="CreateNativeReferencesDirectory_Leadtools_Codecs_Png_framework" AfterTargets="BeforeBuild">
+    <MakeDir Directories="$(ProjectDir)/Native References/Leadtools.Codecs.Png.framework/Headers" />
+  </Target>
+  <Target Name="CopyLeadtoolsNativeFrameworks_Leadtools_Codecs_Png_framework" AfterTargets="CreateNativeReferencesDirectory_Leadtools_Codecs_Png_framework">
+    <Copy SourceFiles="@(LeadtoolsFrameworkFiles_Leadtools_Codecs_Png_framework)" DestinationFolder="$(ProjectDir)/Native References/Leadtools.Codecs.Png.framework" />
+    <Copy SourceFiles="@(LeadtoolsFrameworkHeaderFiles_Leadtools_Codecs_Png_framework)" DestinationFolder="$(ProjectDir)/Native References/Leadtools.Codecs.Png.framework/Headers" />
+  </Target>
+  <Target Name="CreateNativeReferencesDirectory_Leadtools_Codecs_Fax_framework" AfterTargets="BeforeBuild">
+    <MakeDir Directories="$(ProjectDir)/Native References/Leadtools.Codecs.Fax.framework/Headers" />
+  </Target>
+  <Target Name="CopyLeadtoolsNativeFrameworks_Leadtools_Codecs_Fax_framework" AfterTargets="CreateNativeReferencesDirectory_Leadtools_Codecs_Fax_framework">
+    <Copy SourceFiles="@(LeadtoolsFrameworkFiles_Leadtools_Codecs_Fax_framework)" DestinationFolder="$(ProjectDir)/Native References/Leadtools.Codecs.Fax.framework" />
+    <Copy SourceFiles="@(LeadtoolsFrameworkHeaderFiles_Leadtools_Codecs_Fax_framework)" DestinationFolder="$(ProjectDir)/Native References/Leadtools.Codecs.Fax.framework/Headers" />
+  </Target>
+  <Target Name="CreateNativeReferencesDirectory_Leadtools_Codecs_Bmp_framework" AfterTargets="BeforeBuild">
+    <MakeDir Directories="$(ProjectDir)/Native References/Leadtools.Codecs.Bmp.framework/Headers" />
+  </Target>
+  <Target Name="CopyLeadtoolsNativeFrameworks_Leadtools_Codecs_Bmp_framework" AfterTargets="CreateNativeReferencesDirectory_Leadtools_Codecs_Bmp_framework">
+    <Copy SourceFiles="@(LeadtoolsFrameworkFiles_Leadtools_Codecs_Bmp_framework)" DestinationFolder="$(ProjectDir)/Native References/Leadtools.Codecs.Bmp.framework" />
+    <Copy SourceFiles="@(LeadtoolsFrameworkHeaderFiles_Leadtools_Codecs_Bmp_framework)" DestinationFolder="$(ProjectDir)/Native References/Leadtools.Codecs.Bmp.framework/Headers" />
+  </Target>
+</Project>

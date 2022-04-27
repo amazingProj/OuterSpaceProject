@@ -38,12 +38,17 @@ namespace UI.MVVM.View
                 pictureBytes = Encoding.ASCII.GetBytes(picture);
                 using (var stream = new MemoryStream(pictureBytes))
                 {
-                    var bitmap = new BitmapImage();
-                    bitmap.BeginInit();
-                    bitmap.StreamSource = stream;
-                    bitmap.CacheOption = BitmapCacheOption.OnLoad;
-                    bitmap.Freeze();
-                    ListViewGallery.Items.Add(bitmap);
+                    this.Dispatcher.Invoke(()
+                        =>
+                        {
+                            var bitmap = new BitmapImage();
+                            bitmap.BeginInit();
+                            bitmap.StreamSource = stream;
+                            bitmap.CacheOption = BitmapCacheOption.OnLoad;
+                            bitmap.Freeze();
+                            ListViewGallery.Items.Add(bitmap);
+                        });
+                    
                 }
 
             }

@@ -1,0 +1,41 @@
+﻿<UserControl x:Class="UI.MVVM.View.QuickSearch"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:UI.MVVM.View"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <StackPanel>
+        <StackPanel>
+            <TextBlock Text="Most dangerous close to Earth Asteroids"
+                       FontSize="18"
+                       Foreground="White"
+                       HorizontalAlignment="Center"
+                       FontFamily="/Fonts/#Arvo"/>
+            <StackPanel Margin="0,20,0,0"
+                        Orientation="Horizontal"
+                        HorizontalAlignment="Center">
+                <TextBlock Text="From"
+                           FontSize="14"
+                           Foreground="White"
+                           FontFamily="/Fonts/#Poppins" />
+                <TextBlock FontSize="14"
+                           Margin="5,0,5,3"
+                           x:Name="Now"
+                           Foreground="White"
+                           FontFamily="/Fonts/#Oswald" />
+                <TextBlock Text="Toward"
+                           FontSize="14"
+                           Foreground="White"
+                           FontFamily="/Fonts/#Poppins" />
+                <TextBlock FontSize="14"
+                           x:Name="Future"
+                           Margin="5,0,0,3"
+                           Foreground="White"
+                           FontFamily="/Fonts/#Oswald" />
+            </StackPanel>
+            
+        </StackPanel>
+    </StackPanel>
+</UserControl>

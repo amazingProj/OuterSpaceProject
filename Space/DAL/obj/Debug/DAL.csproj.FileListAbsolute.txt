@@ -26,3 +26,7 @@ C:\Users\33768\Desktop\C# (2)\PROJECT\Space\DAL\bin\Debug\FireSharp.dll
 C:\Users\33768\Desktop\C# (2)\PROJECT\Space\DAL\bin\Debug\FireSharp.Serialization.JsonNet.dll
 C:\Users\33768\Desktop\C# (2)\PROJECT\Space\DAL\bin\Debug\RestSharp.dll
 C:\Users\33768\Desktop\C# (2)\PROJECT\Space\DAL\bin\Debug\RestSharp.xml
+C:\Users\AssafHillel\source\repos\OuterSpaceProject\Space\DAL\bin\Debug\EntityFramework.dll
+C:\Users\AssafHillel\source\repos\OuterSpaceProject\Space\DAL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\AssafHillel\source\repos\OuterSpaceProject\Space\DAL\bin\Debug\EntityFramework.xml
+C:\Users\AssafHillel\source\repos\OuterSpaceProject\Space\DAL\bin\Debug\EntityFramework.SqlServer.xml

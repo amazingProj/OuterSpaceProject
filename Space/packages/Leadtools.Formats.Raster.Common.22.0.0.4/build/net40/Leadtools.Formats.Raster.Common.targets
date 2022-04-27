@@ -1,0 +1,143 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Reference Include="Leadtools.ColorConversion" Condition="'$(Platform)' == 'x86' Or ('$(Platform)' == 'AnyCPU' And ('$(Prefer32Bit)' == 'True' Or ('$(Use64BitIISExpress)' == 'False' And '$(Use64BitIISExpress)' != '')))">
+      <HintPath>$(MSBuildThisFileDirectory)..\net40\x86\Leadtools.ColorConversion.dll</HintPath>
+    </Reference>
+    <Reference Include="Leadtools.ColorConversion" Condition="'$(Platform)' == 'x64' Or ('$(Platform)' == 'AnyCPU' And (('$(Prefer32Bit)' == 'False' And '$(Prefer32Bit)' != '') Or '$(Use64BitIISExpress)' == 'True'))">
+      <HintPath>$(MSBuildThisFileDirectory)..\net40\x64\Leadtools.ColorConversion.dll</HintPath>
+    </Reference>
+    <Content Include="$(MSBuildThisFileDirectory)\..\net40\x86\Leadtools.Codecs.Cmw.dll" Condition="'$(Platform)' == 'x86' Or ('$(Platform)' == 'AnyCPU' And ('$(Prefer32Bit)' == 'True' Or ('$(Use64BitIISExpress)' == 'False' And '$(Use64BitIISExpress)' != '')))">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Link>Leadtools.Codecs.Cmw.dll</Link>
+      <PublishState>Included</PublishState>
+      <Visible>False</Visible>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)\..\net40\x64\Leadtools.Codecs.Cmw.dll" Condition="'$(Platform)' == 'x64' Or ('$(Platform)' == 'AnyCPU' And (('$(Prefer32Bit)' == 'False' And '$(Prefer32Bit)' != '') Or '$(Use64BitIISExpress)' == 'True'))">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Link>Leadtools.Codecs.Cmw.dll</Link>
+      <PublishState>Included</PublishState>
+      <Visible>False</Visible>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)\..\net40\x86\Leadtools.Codecs.J2k.dll" Condition="'$(Platform)' == 'x86' Or ('$(Platform)' == 'AnyCPU' And ('$(Prefer32Bit)' == 'True' Or ('$(Use64BitIISExpress)' == 'False' And '$(Use64BitIISExpress)' != '')))">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Link>Leadtools.Codecs.J2k.dll</Link>
+      <PublishState>Included</PublishState>
+      <Visible>False</Visible>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)\..\net40\x64\Leadtools.Codecs.J2k.dll" Condition="'$(Platform)' == 'x64' Or ('$(Platform)' == 'AnyCPU' And (('$(Prefer32Bit)' == 'False' And '$(Prefer32Bit)' != '') Or '$(Use64BitIISExpress)' == 'True'))">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Link>Leadtools.Codecs.J2k.dll</Link>
+      <PublishState>Included</PublishState>
+      <Visible>False</Visible>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)\..\net40\x86\Leadtools.Codecs.Jb2.dll" Condition="'$(Platform)' == 'x86' Or ('$(Platform)' == 'AnyCPU' And ('$(Prefer32Bit)' == 'True' Or ('$(Use64BitIISExpress)' == 'False' And '$(Use64BitIISExpress)' != '')))">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Link>Leadtools.Codecs.Jb2.dll</Link>
+      <PublishState>Included</PublishState>
+      <Visible>False</Visible>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)\..\net40\x64\Leadtools.Codecs.Jb2.dll" Condition="'$(Platform)' == 'x64' Or ('$(Platform)' == 'AnyCPU' And (('$(Prefer32Bit)' == 'False' And '$(Prefer32Bit)' != '') Or '$(Use64BitIISExpress)' == 'True'))">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Link>Leadtools.Codecs.Jb2.dll</Link>
+      <PublishState>Included</PublishState>
+      <Visible>False</Visible>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)\..\net40\x86\Leadtools.Codecs.Jbg.dll" Condition="'$(Platform)' == 'x86' Or ('$(Platform)' == 'AnyCPU' And ('$(Prefer32Bit)' == 'True' Or ('$(Use64BitIISExpress)' == 'False' And '$(Use64BitIISExpress)' != '')))">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Link>Leadtools.Codecs.Jbg.dll</Link>
+      <PublishState>Included</PublishState>
+      <Visible>False</Visible>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)\..\net40\x64\Leadtools.Codecs.Jbg.dll" Condition="'$(Platform)' == 'x64' Or ('$(Platform)' == 'AnyCPU' And (('$(Prefer32Bit)' == 'False' And '$(Prefer32Bit)' != '') Or '$(Use64BitIISExpress)' == 'True'))">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Link>Leadtools.Codecs.Jbg.dll</Link>
+      <PublishState>Included</PublishState>
+      <Visible>False</Visible>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)\..\net40\x86\Leadtools.Codecs.Cmp.dll" Condition="'$(Platform)' == 'x86' Or ('$(Platform)' == 'AnyCPU' And ('$(Prefer32Bit)' == 'True' Or ('$(Use64BitIISExpress)' == 'False' And '$(Use64BitIISExpress)' != '')))">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Link>Leadtools.Codecs.Cmp.dll</Link>
+      <PublishState>Included</PublishState>
+      <Visible>False</Visible>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)\..\net40\x64\Leadtools.Codecs.Cmp.dll" Condition="'$(Platform)' == 'x64' Or ('$(Platform)' == 'AnyCPU' And (('$(Prefer32Bit)' == 'False' And '$(Prefer32Bit)' != '') Or '$(Use64BitIISExpress)' == 'True'))">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Link>Leadtools.Codecs.Cmp.dll</Link>
+      <PublishState>Included</PublishState>
+      <Visible>False</Visible>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)\..\net40\x86\Leadtools.Codecs.Gif.dll" Condition="'$(Platform)' == 'x86' Or ('$(Platform)' == 'AnyCPU' And ('$(Prefer32Bit)' == 'True' Or ('$(Use64BitIISExpress)' == 'False' And '$(Use64BitIISExpress)' != '')))">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Link>Leadtools.Codecs.Gif.dll</Link>
+      <PublishState>Included</PublishState>
+      <Visible>False</Visible>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)\..\net40\x64\Leadtools.Codecs.Gif.dll" Condition="'$(Platform)' == 'x64' Or ('$(Platform)' == 'AnyCPU' And (('$(Prefer32Bit)' == 'False' And '$(Prefer32Bit)' != '') Or '$(Use64BitIISExpress)' == 'True'))">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Link>Leadtools.Codecs.Gif.dll</Link>
+      <PublishState>Included</PublishState>
+      <Visible>False</Visible>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)\..\net40\x86\Leadtools.Codecs.Tif.dll" Condition="'$(Platform)' == 'x86' Or ('$(Platform)' == 'AnyCPU' And ('$(Prefer32Bit)' == 'True' Or ('$(Use64BitIISExpress)' == 'False' And '$(Use64BitIISExpress)' != '')))">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Link>Leadtools.Codecs.Tif.dll</Link>
+      <PublishState>Included</PublishState>
+      <Visible>False</Visible>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)\..\net40\x64\Leadtools.Codecs.Tif.dll" Condition="'$(Platform)' == 'x64' Or ('$(Platform)' == 'AnyCPU' And (('$(Prefer32Bit)' == 'False' And '$(Prefer32Bit)' != '') Or '$(Use64BitIISExpress)' == 'True'))">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Link>Leadtools.Codecs.Tif.dll</Link>
+      <PublishState>Included</PublishState>
+      <Visible>False</Visible>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)\..\net40\x86\Leadtools.Codecs.Raw.dll" Condition="'$(Platform)' == 'x86' Or ('$(Platform)' == 'AnyCPU' And ('$(Prefer32Bit)' == 'True' Or ('$(Use64BitIISExpress)' == 'False' And '$(Use64BitIISExpress)' != '')))">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Link>Leadtools.Codecs.Raw.dll</Link>
+      <PublishState>Included</PublishState>
+      <Visible>False</Visible>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)\..\net40\x64\Leadtools.Codecs.Raw.dll" Condition="'$(Platform)' == 'x64' Or ('$(Platform)' == 'AnyCPU' And (('$(Prefer32Bit)' == 'False' And '$(Prefer32Bit)' != '') Or '$(Use64BitIISExpress)' == 'True'))">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Link>Leadtools.Codecs.Raw.dll</Link>
+      <PublishState>Included</PublishState>
+      <Visible>False</Visible>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)\..\net40\x86\Leadtools.Codecs.Png.dll" Condition="'$(Platform)' == 'x86' Or ('$(Platform)' == 'AnyCPU' And ('$(Prefer32Bit)' == 'True' Or ('$(Use64BitIISExpress)' == 'False' And '$(Use64BitIISExpress)' != '')))">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Link>Leadtools.Codecs.Png.dll</Link>
+      <PublishState>Included</PublishState>
+      <Visible>False</Visible>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)\..\net40\x64\Leadtools.Codecs.Png.dll" Condition="'$(Platform)' == 'x64' Or ('$(Platform)' == 'AnyCPU' And (('$(Prefer32Bit)' == 'False' And '$(Prefer32Bit)' != '') Or '$(Use64BitIISExpress)' == 'True'))">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Link>Leadtools.Codecs.Png.dll</Link>
+      <PublishState>Included</PublishState>
+      <Visible>False</Visible>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)\..\net40\x86\Leadtools.Codecs.Fax.dll" Condition="'$(Platform)' == 'x86' Or ('$(Platform)' == 'AnyCPU' And ('$(Prefer32Bit)' == 'True' Or ('$(Use64BitIISExpress)' == 'False' And '$(Use64BitIISExpress)' != '')))">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Link>Leadtools.Codecs.Fax.dll</Link>
+      <PublishState>Included</PublishState>
+      <Visible>False</Visible>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)\..\net40\x64\Leadtools.Codecs.Fax.dll" Condition="'$(Platform)' == 'x64' Or ('$(Platform)' == 'AnyCPU' And (('$(Prefer32Bit)' == 'False' And '$(Prefer32Bit)' != '') Or '$(Use64BitIISExpress)' == 'True'))">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Link>Leadtools.Codecs.Fax.dll</Link>
+      <PublishState>Included</PublishState>
+      <Visible>False</Visible>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)\..\net40\x86\Leadtools.Codecs.Bmp.dll" Condition="'$(Platform)' == 'x86' Or ('$(Platform)' == 'AnyCPU' And ('$(Prefer32Bit)' == 'True' Or ('$(Use64BitIISExpress)' == 'False' And '$(Use64BitIISExpress)' != '')))">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Link>Leadtools.Codecs.Bmp.dll</Link>
+      <PublishState>Included</PublishState>
+      <Visible>False</Visible>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)\..\net40\x64\Leadtools.Codecs.Bmp.dll" Condition="'$(Platform)' == 'x64' Or ('$(Platform)' == 'AnyCPU' And (('$(Prefer32Bit)' == 'False' And '$(Prefer32Bit)' != '') Or '$(Use64BitIISExpress)' == 'True'))">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Link>Leadtools.Codecs.Bmp.dll</Link>
+      <PublishState>Included</PublishState>
+      <Visible>False</Visible>
+    </Content>
+  </ItemGroup>
+</Project>

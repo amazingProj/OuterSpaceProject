@@ -41,6 +41,10 @@
             <DataTemplate DataType="{x:Type viewModel:UploadImageViewModel}">
                 <view:UploadImage />
             </DataTemplate>
+
+            <DataTemplate DataType="{x:Type viewModel:QuickSearchViewModel}">
+                <view:QuickSearch />
+            </DataTemplate>
         </ResourceDictionary>
     </Application.Resources>
 </Application>

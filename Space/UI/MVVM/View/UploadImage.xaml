@@ -85,15 +85,10 @@
                         Orientation="Horizontal">
                 <StackPanel>
                     <Grid>
-                        <Rectangle RadiusX="20"
-                                   RadiusY="20"
-                                   Margin="118,-56,-133,-303"
-                                   Width="375"
-                                   HorizontalAlignment="Left">
-                            <Rectangle.Fill>
-                                <ImageBrush x:Name="image" />
-                            </Rectangle.Fill>
-                        </Rectangle>
+                        <Image x:Name="image"
+                               Height="290"
+                               Width="400"
+                               Margin="225,-3,0.4,1" />
                     </Grid>
                 </StackPanel>
                 <StackPanel>
@@ -107,7 +102,7 @@
                             Foreground="White"
                             FontSize="14"
                             FontWeight="Medium"
-                            Margin="200,40,0,0"
+                            Margin="20,40,0,0"
                             RenderTransformOrigin="0.151,0.363"
                             Width="200"
                             Height="120">

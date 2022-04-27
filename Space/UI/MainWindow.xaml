@@ -97,7 +97,8 @@
                     FontWeight="Medium"
                     Margin="20,5,5,5"
                     RenderTransformOrigin="0.151,0.363"
-                    Width="194">
+                    Width="194"
+                    Command="{Binding QuickSearchViewCommand}">
                 <Button.ToolTip>
                     <StackPanel>
                         <TextBlock Text="Quickly Get the most&#x0a;potentially dangerous asteroids&#x0a;from today till 30 days" />
