@@ -6,7 +6,71 @@
              xmlns:local="clr-namespace:UI.MVVM.View"
              mc:Ignorable="d"
              d:DesignHeight="550"
-             d:DesignWidth="900"
-             Background="Red">
-   
+             d:DesignWidth="900">
+    <StackPanel Orientation="Vertical">
+        <TextBlock Text="Public Community Gallery"
+                   Foreground="White"
+                   FontSize="18"
+                   Margin="400,20,0,0"
+                   FontFamily="/Fonts/#Arvo" />
+        <StackPanel Orientation="Horizontal">
+            <TextBlock Text="See users' public gallery&#x0a;To Here Users can share&#x0a;Space related pictures&#x0a;Get Started Today!"
+                       Foreground="White"
+                       FontSize="13"
+                       FontFamily="/Fonts/#Roboto"
+                       Margin="350,10,0,0" />
+
+            <Button FontFamily="/Fonts/#Inter"
+                    x:Name="GetStartedButton"
+                    Click="GetStartedButton_Click"
+                    VerticalContentAlignment="Top"
+                    HorizontalAlignment="Left"
+                    Content="Get Started"
+                    Foreground="White"
+                    FontSize="16"
+                    FontWeight="Medium"
+                    Margin="20,10,0,0"
+                    RenderTransformOrigin="0.207,0.424"
+                    Width="182"
+                    Height="55">
+                <Button.ToolTip>
+                    <StackPanel>
+                        <TextBlock Text="Click to approve&#x0a;Then See community treassures" />
+
+                    </StackPanel>
+                </Button.ToolTip>
+                <Button.Style>
+                    <Style TargetType="{x:Type Button}">
+                        <Setter Property="TextElement.FontFamily"
+                                Value="Fonts/#Poppins" />
+                        <Setter Property="Background"
+                                Value="#19385d" />
+                        <Setter Property="Cursor"
+                                Value="Hand" />
+                        <Style.Triggers>
+                            <Trigger Property="IsMouseOver"
+                                     Value="True">
+                                <Setter Property="Background"
+                                        Value="#1a3950" />
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </Button.Style>
+
+                <Button.Template>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border Width="200"
+                                Height="100"
+                                CornerRadius="8,8,8,8"
+                                Background="{TemplateBinding Background}"
+                                RenderTransformOrigin="0.031,0.565">
+                            <ContentPresenter VerticalAlignment="Top"
+                                              Margin="0,15,10,0"
+                                              HorizontalAlignment="Center" />
+                        </Border>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+        </StackPanel>
+    </StackPanel>
 </UserControl>
