@@ -200,7 +200,9 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="Icons\true_man.png" />
+  </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BL\BL.csproj">
       <Project>{afbc9eb5-e07a-4057-818e-2ad4314b04dc}</Project>

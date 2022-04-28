@@ -121,3 +121,5 @@ C:\Users\AssafHillel\source\repos\OuterSpaceProject\Space\UI\bin\Debug\Leadtools
 C:\Users\AssafHillel\source\repos\OuterSpaceProject\Space\UI\bin\Debug\Leadtools.Svg.xml
 C:\Users\AssafHillel\source\repos\OuterSpaceProject\Space\UI\bin\Debug\Leadtools.Document.Core.xml
 C:\Users\AssafHillel\source\repos\OuterSpaceProject\Space\UI\bin\Debug\Leadtools.Logging.xml
+C:\Users\AssafHillel\source\repos\OuterSpaceProject\Space\UI\bin\Debug\EntityFramework.dll
+C:\Users\AssafHillel\source\repos\OuterSpaceProject\Space\UI\bin\Debug\EntityFramework.xml

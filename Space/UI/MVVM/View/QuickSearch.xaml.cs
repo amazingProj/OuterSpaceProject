@@ -40,9 +40,9 @@ namespace UI.MVVM.View
             backgroundWorker.RunWorkerAsync();
         }
 
-        private async void IntializeListViewAsync(object sender, DoWorkEventArgs doWorkEventArgs)
+        private void IntializeListViewAsync(object sender, DoWorkEventArgs doWorkEventArgs)
         {
-            List<Dictionary<string, string>> dictionary = await bl.GetOnlyDangerous(dateNow, future);
+            List<Dictionary<string, string>> dictionary = bl.GetOnlyDangerous(dateNow, future);
             int x = 0;
         }
     }

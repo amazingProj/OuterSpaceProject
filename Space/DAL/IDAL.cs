@@ -8,6 +8,8 @@ namespace DAL
 {
     public interface IDAL : IMediaStream, IFireBase
     {
-        Task<List<Dictionary<string, string>>> GetOnlyDangerous(string initialDate, string endDate);
+        List<Dictionary<string, string>> GetOnlyDangerous(string initialDate, string endDate);
+
+        string GetNormalTodayPicture();
     }
 }

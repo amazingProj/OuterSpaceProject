@@ -70,13 +70,25 @@
     <Compile Include="IFireBase.cs" />
     <Compile Include="Image_Modal.cs" />
     <Compile Include="IMediaStream.cs" />
+    <Compile Include="Migrations\202204280622253_CreatePlanet.cs" />
+    <Compile Include="Migrations\202204280622253_CreatePlanet.Designer.cs">
+      <DependentUpon>202204280622253_CreatePlanet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="NasaPictureOfTheDay.cs" />
+    <Compile Include="Planet.cs" />
+    <Compile Include="PlanetContext.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202204280622253_CreatePlanet.resx">
+      <DependentUpon>202204280622253_CreatePlanet.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

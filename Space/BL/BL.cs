@@ -25,13 +25,19 @@ namespace BL
             keywordsSpace.Add("star", "keyword");
         }
 
-        public async Task<List<Dictionary<string, string>>> GetOnlyDangerous(string initialDate, string endDate = null)
+        public string GetNormalTodayPicture()
+        {
+            return dAL.GetNormalTodayPicture();
+        }
+
+        public List<Dictionary<string, string>> GetOnlyDangerous(string initialDate, string endDate = null)
         {
             if (initialDate == null)
             {
                 return null;
             }
-            return await dAL.GetOnlyDangerous(initialDate, endDate);
+            List<Dictionary<string, string>> dangerous =  dAL.GetOnlyDangerous(initialDate, endDate);
+            return dangerous;
         }
 
         public Dictionary<string,string> GetPictureOfTheDay()

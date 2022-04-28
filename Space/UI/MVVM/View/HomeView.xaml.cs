@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,9 +21,30 @@ namespace UI.MVVM.View
     /// </summary>
     public partial class HomeView : UserControl
     {
+        BackgroundWorker backgroundWorker = new BackgroundWorker();
+
+        BL.IBL bl = new BL.BL();
+
         public HomeView()
         {
             InitializeComponent();
+            backgroundWorker.DoWork += UpdateImage;
+            backgroundWorker.RunWorkerAsync();
+        }
+
+        public async void UpdateImage(object sender, DoWorkEventArgs doWorkEventArgs)
+        {
+            this.Dispatcher.Invoke(()
+                =>
+            {
+                string url = bl.GetNormalTodayPicture();
+
+                var bitmapImage = new BitmapImage();
+                bitmapImage.BeginInit();
+                bitmapImage.UriSource = new Uri(url);
+                bitmapImage.EndInit();
+                TodayPicture.Source = bitmapImage;
+            });
         }
     }
 }

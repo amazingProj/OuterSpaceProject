@@ -66,3 +66,5 @@ C:\Users\33768\Desktop\C# (2)\PROJECT\Space\BL\bin\Debug\System.Text.Encodings.W
 C:\Users\33768\Desktop\C# (2)\PROJECT\Space\BL\bin\Debug\System.Text.Json.xml
 C:\Users\33768\Desktop\C# (2)\PROJECT\Space\BL\bin\Debug\System.Threading.Tasks.Extensions.xml
 C:\Users\33768\Desktop\C# (2)\PROJECT\Space\BL\bin\Debug\System.ValueTuple.xml
+C:\Users\AssafHillel\source\repos\OuterSpaceProject\Space\BL\bin\Debug\EntityFramework.dll
+C:\Users\AssafHillel\source\repos\OuterSpaceProject\Space\BL\bin\Debug\EntityFramework.xml
