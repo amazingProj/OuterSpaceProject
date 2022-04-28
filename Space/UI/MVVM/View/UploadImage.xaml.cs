@@ -1,4 +1,6 @@
-﻿using Microsoft.Win32;
+﻿using Leadtools;
+using Leadtools.Codecs;
+using Microsoft.Win32;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,6 +15,7 @@ using System.Windows.Controls;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+
 
 namespace UI.MVVM.View
 {
@@ -47,6 +50,13 @@ namespace UI.MVVM.View
                 {
                     FileName.Content = fileName;
                     FileName.Foreground = new SolidColorBrush(Colors.White);
+                    bitmapImage = new BitmapImage();
+                    bitmapImage.BeginInit();
+                    bitmapImage.UriSource = new Uri(files[0]);
+                    bitmapImage.EndInit();
+                    image.Source = bitmapImage;
+                    filePath = files[0];
+                    UploadButton.Visibility = Visibility.Visible;
                 }
                 else
                 {
@@ -77,7 +87,7 @@ namespace UI.MVVM.View
                 bitmapImage.BeginInit();
                 bitmapImage.UriSource = new Uri(dialog.FileName);
                 bitmapImage.EndInit();
-                image.ImageSource = bitmapImage;
+                image.Source = bitmapImage;
                 UploadButton.Visibility = Visibility.Visible;
             }
                      
@@ -85,12 +95,11 @@ namespace UI.MVVM.View
 
         private async void UploadButton_Click(object sender, RoutedEventArgs e)
         {
-            var encoder = new PngBitmapEncoder();
-            encoder.Frames.Add(BitmapFrame.Create((BitmapSource)image.ImageSource));
+            PngBitmapEncoder pngBitmapEncoder = new PngBitmapEncoder();
+            pngBitmapEncoder.Frames.Add(BitmapFrame.Create(bitmapImage));
             using (var stream = new MemoryStream())
             {
-                encoder.Save(stream);
-                
+                pngBitmapEncoder.Save(stream);
                 string stringPath = Convert.ToBase64String(stream.ToArray());
                 string messageResponse = await bL.ImageUpload(stringPath, filePath);
                 switch (messageResponse)
@@ -112,7 +121,6 @@ namespace UI.MVVM.View
                         break;
                 }
             }
-            
         }
     }
 }

@@ -8,6 +8,10 @@ namespace BL
 {
     public interface IBL : IFirebase
     {
-        Dictionary<string, string> GetPictureOfTheDay(); 
+        Dictionary<string, string> GetPictureOfTheDay();
+
+        List<Dictionary<string, string>> GetOnlyDangerous(string initialDate, string endDate);
+
+        string GetNormalTodayPicture();
     }
 }

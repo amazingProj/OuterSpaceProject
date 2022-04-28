@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
 using RestSharp;
@@ -11,19 +10,11 @@ namespace BL
     public class BL : IBL
     {
         private double MIN_CONFIDENCE = 65;
-        private double EPSILON = 0.1;
-
+      
         Dictionary<string, string> keywordsSpace = new Dictionary<string, string>();
 
         DAL.IDAL dAL;
-        //IEnumerable<Planets> GetPlanets();
-        /*public IEnumerable<Planets> GetPlanets()
-        {
-            return (from item in dAL.GetPlanets() ////////////////////    SELECT CLONING ?
-                    select item;
-        }*/
 
-        RestClient client;
         public BL()
         {
             dAL = new DAL.DAL();
@@ -32,6 +23,21 @@ namespace BL
             keywordsSpace.Add("space", "keyword");
             keywordsSpace.Add("spacecraft", "keyword");
             keywordsSpace.Add("star", "keyword");
+        }
+
+        public string GetNormalTodayPicture()
+        {
+            return dAL.GetNormalTodayPicture();
+        }
+
+        public List<Dictionary<string, string>> GetOnlyDangerous(string initialDate, string endDate = null)
+        {
+            if (initialDate == null)
+            {
+                return null;
+            }
+            List<Dictionary<string, string>> dangerous =  dAL.GetOnlyDangerous(initialDate, endDate);
+            return dangerous;
         }
 
         public Dictionary<string,string> GetPictureOfTheDay()
@@ -89,24 +95,6 @@ namespace BL
         public Task<List<string>> RetriveAllImagesFromFireBase()
         {
             return dAL.RetriveAllImagesFromFireBase();
-        }
-
-
-        public class Planets
-        {
-            public string Name { get; set; }
-            public string ImagesPath { get; set; }
-
-            public double mass { get; set; }
-            public double diameter { get; set; }
-            public double density { get; set; }
-            public double gravity { get; set; }
-            public double rotation_period { get; set; }
-            public double distance_from_sun { get; set; }
-            public double mean_temperature { get; set; }
-
-            public string Description { get; set; }
-
         }
     }
 }
