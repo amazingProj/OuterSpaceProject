@@ -35,16 +35,27 @@
 
                         <Grid Margin="0,0,1,0">
                             <StackPanel>
-                                <TextBlock Text="World Leader&#x0a;in space research"
-                                           Foreground="White"
-                                           FontSize="28"
-                                           Margin="10,10,0,0"
-                                           FontFamily="/Fonts/#Fredoka" />
-                                <TextBlock Text="Get Started Today!"
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Text="Today were"
+                                               Foreground="White"
+                                               FontSize="28"
+                                               Margin="10,10,0,0"
+                                               FontFamily="/Fonts/#Fredoka" />
+                                    <TextBlock Foreground="White"
+                                               x:Name="PotentiallyHazardCount"
+                                               FontSize="28"
+                                               Margin="10,10,0,0"
+                                               Text="8"
+                                               FontFamily="/Fonts/#Fredoka" />
+                                </StackPanel>
+                                
+                                <TextBlock Text="Potentially Hazard&#x0a;Near Earth Today"
                                            Foreground="White"
                                            FontSize="18"
                                            Margin="10,10,0,0"
-                                           FontFamily="/Fonts/#Fredoka" />
+                                           FontFamily="/Fonts/#Fredoka"
+                                           Height="49" />
+
                             </StackPanel>
 
                             <Image Width="250"
@@ -71,18 +82,7 @@
                     </Border.Background>
                     <Grid>
                         <StackPanel>
-                            <TextBlock Text="Potentially Hazard&#x0a;Near Earth Today:"
-                                       Foreground="White"
-                                       FontSize="18"
-                                       Margin="10,10,0,0"
-                                       FontFamily="/Fonts/#Fredoka"
-                                       Height="49" />
-                            <TextBlock Foreground="White"
-                                       x:Name="PotentiallyHazardCount"
-                                       FontSize="18"
-                                       Margin="20,2,0,2"
-                                       Text="7"
-                                       FontFamily="/Fonts/#Fredoka" />
+                           
                             <TextBlock Text="Non-Potentially Hazard&#x0a;Near Earth Today:&#x0a;"
                                        Foreground="White"
                                        FontSize="18"

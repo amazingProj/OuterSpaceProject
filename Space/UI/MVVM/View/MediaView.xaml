@@ -26,8 +26,8 @@
                 <TextBox HorizontalAlignment="Center"
                          x:Name="SearchBar"
                          Margin="0.2,0.2,0.8,0.8"
-                         Text ="{Binding Data, UpdateSourceTrigger=PropertyChanged}"
-                         Style="{StaticResource SearchBox}"
+                         Width="500"
+                         Height="25"
                          MouseDoubleClick="TextBox_MouseDoubleClick">
                     <TextBox.ToolTip>
                         <TextBlock Text="Click to Search"
@@ -116,9 +116,35 @@
 
 
         </StackPanel>
-        <ListView Width="900"
-                  Height="500"
-                  Background="Transparent"/>
+        <ListView x:Name="ListViewGallery"
+                  Background="Transparent"
+                  ItemsSource="{Binding}"
+                  Margin="54,0,52,0"
+                  Height="402">
+
+            <ListView.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <UniformGrid Columns="4" />
+                </ItemsPanelTemplate>
+            </ListView.ItemsPanel>
+
+            <!--<ListView.View>
+                <local:ImageView />
+            </ListView.View>-->
+
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal"
+                                Height="123">
+                        <!--<Image Source="{Binding }" Height="123" />-->
+                        <Image x:Name="theimage"
+                               Source="{Binding}" />
+                    </StackPanel>
+
+                </DataTemplate>
+            </ListView.ItemTemplate>
+
+        </ListView>
     </StackPanel>
     
 

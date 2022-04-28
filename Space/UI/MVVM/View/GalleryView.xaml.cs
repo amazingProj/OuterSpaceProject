@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.ComponentModel;
 using System.Drawing;
 using System.Drawing.Imaging;
 using System.IO;
@@ -24,13 +25,15 @@ namespace UI.MVVM.View
     {
         BL.IBL bL;
         ObservableCollection<BitmapImage> results = new ObservableCollection<BitmapImage>();
+        BackgroundWorker backGroundWorker = new BackgroundWorker();
 
         public GalleryView()
         {
             InitializeComponent();
             bL = new BL.BL();
             //ListViewGallery.DataContext = results;
-
+            backGroundWorker.DoWork += GetAllFirebaseImages;
+            backGroundWorker.RunWorkerAsync();
 
         }
 
@@ -47,12 +50,32 @@ namespace UI.MVVM.View
             return image;
         }
 
+        private async void GetAllFirebaseImages(object sender, DoWorkEventArgs doWorkEventArgs)
+        {
+            List<string> picturesStringFormatted = await bL.RetriveAllImagesFromFireBase();
+            this.Dispatcher.Invoke(() =>
+            {
+                foreach (string picture in picturesStringFormatted)
+                {
+                    byte[] binaryData = Convert.FromBase64String(picture);
+
+                    BitmapImage bi = new BitmapImage();
+                    bi.BeginInit();
+                    bi.StreamSource = new MemoryStream(binaryData);
+                    bi.EndInit();
+
+                    results.Add(bi);
+                }
+
+                ListViewGallery.ItemsSource = results;               
+            });
+            
+        }
+
         private async void GetStartedButton_Click(object sender, RoutedEventArgs e)
         {
             List<string> picturesStringFormatted = await bL.RetriveAllImagesFromFireBase();
-
-
-
+            
             foreach (string picture in picturesStringFormatted)
             {
                 byte[] binaryData = Convert.FromBase64String(picture);
@@ -63,17 +86,9 @@ namespace UI.MVVM.View
                 bi.EndInit();
 
                 results.Add(bi);
-
-                //imagetest.Source = bi; // 
-
             }
 
             ListViewGallery.ItemsSource = results;
-            //ListViewGallery.Items.Refresh();
-
-
         }
-
-      
     }
 }
