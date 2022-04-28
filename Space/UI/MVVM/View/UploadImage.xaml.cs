@@ -93,6 +93,8 @@ namespace UI.MVVM.View
                      
         }
 
+
+
         private async void UploadButton_Click(object sender, RoutedEventArgs e)
         {
             PngBitmapEncoder pngBitmapEncoder = new PngBitmapEncoder();

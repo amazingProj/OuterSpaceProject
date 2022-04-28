@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using UI.MVVM.ViewModel;
 
 namespace UI.MVVM.View
 {
@@ -20,9 +21,20 @@ namespace UI.MVVM.View
     /// </summary>
     public partial class MediaView : UserControl
     {
+        BL.IBL bL = new BL.BL();
+        MediaViewModel mediaViewModel;
+
         public MediaView()
         {
             InitializeComponent();
+            mediaViewModel = (MediaViewModel) DataContext;
+        }
+
+        private void TextBox_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            string text = SearchBar.Text;
+            List<Dictionary<string, string>> imageDetails = bL.GetAllImageSearch(text);
+            int x = 0;
         }
     }
 }

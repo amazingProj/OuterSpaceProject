@@ -67,21 +67,34 @@ namespace DAL
             }
         }
 
-        public void GetAllImageSearch(string query)
+        public List<Dictionary<string, string>> GetAllImageSearch(string query)
         {
             if (query == null)
             {
-                return;
+                return null;
             }
-
+            List<Dictionary<string, string>> result = new List<Dictionary<string, string>>();
             var url = $"https://images-api.nasa.gov/search?q={query}&media_type=image";
             var httpRequest = (HttpWebRequest)WebRequest.Create(url);
             var httpResponse = (HttpWebResponse)httpRequest.GetResponse();
             using (var streamReader = new StreamReader(httpResponse.GetResponseStream()))
             {
                 var resultStream = streamReader.ReadToEnd();
-
+                MediaCollectionModal mediaCollectionModal = JsonConvert.DeserializeObject<MediaCollectionModal>(resultStream);
+                ItemsModal itemsModal = JsonConvert.DeserializeObject<ItemsModal>(mediaCollectionModal.Collection.ToString());
+                foreach (JObject jObject in itemsModal.jArray)
+                {
+                    Dictionary<string, string> raw = new Dictionary<string, string>();
+                    ImageItemModal imageItemModal = JsonConvert.DeserializeObject<ImageItemModal>(jObject.ToString());
+                    DataModal dataModal = JsonConvert.DeserializeObject<DataModal>(imageItemModal.Data[0].ToString());
+                    LinksImageModal linksImageModal = JsonConvert.DeserializeObject<LinksImageModal>(imageItemModal.Links[0].ToString());
+                    raw.Add("Description", dataModal.Desription);
+                    raw.Add("Title", dataModal.Title);
+                    raw.Add("UrlJpgImage", linksImageModal.Url);
+                }
             }
+
+            return result;
         }
 
         public void GetAllAudioSearch(string query)

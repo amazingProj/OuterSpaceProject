@@ -4,9 +4,15 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:local="clr-namespace:UI.MVVM.View"
+             xmlns:viewModel="clr-namespace:UI.MVVM.ViewModel"
              mc:Ignorable="d"
              d:DesignHeight="550"
              d:DesignWidth="900">
+    
+    <UserControl.DataContext>
+        <viewModel:MediaViewModel />
+    </UserControl.DataContext>
+    
     <StackPanel Orientation="Vertical">
         <StackPanel Orientation="Horizontal"
                     HorizontalAlignment="Center"
@@ -18,8 +24,11 @@
                         Height="100">
 
                 <TextBox HorizontalAlignment="Center"
+                         x:Name="SearchBar"
                          Margin="0.2,0.2,0.8,0.8"
-                         Style="{StaticResource SearchBox}">
+                         Text ="{Binding Data, UpdateSourceTrigger=PropertyChanged}"
+                         Style="{StaticResource SearchBox}"
+                         MouseDoubleClick="TextBox_MouseDoubleClick">
                     <TextBox.ToolTip>
                         <TextBlock Text="Click to Search"
                                    Foreground="Black"/>

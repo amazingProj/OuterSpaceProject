@@ -34,6 +34,16 @@ namespace BL
             return dAL.GetAllAsteroids(initialDate, endDate);
         }
 
+        public List<Dictionary<string, string>> GetAllImageSearch(string query)
+        {
+            if (query == null)
+            {
+                return null;
+            }
+
+            return dAL.GetAllImageSearch(query);
+        }
+
         public string GetNormalTodayPicture()
         {
             return dAL.GetNormalTodayPicture();

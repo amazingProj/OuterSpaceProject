@@ -66,6 +66,7 @@
     <Compile Include="CloseApproachDataModal.cs" />
     <Compile Include="Counter_class.cs" />
     <Compile Include="DAL.cs" />
+    <Compile Include="DataModal.cs" />
     <Compile Include="DiameterMinMaxModal.cs" />
     <Compile Include="EstimatedDiameterModal.cs" />
     <Compile Include="EstimatedDiameterModalMetersTwo.cs" />
@@ -73,9 +74,13 @@
     <Compile Include="HazardsModal.cs" />
     <Compile Include="IDAL.cs" />
     <Compile Include="IFireBase.cs" />
+    <Compile Include="ImageItemModal.cs" />
     <Compile Include="Image_Modal.cs" />
     <Compile Include="IMediaStream.cs" />
+    <Compile Include="ItemsModal.cs" />
     <Compile Include="LinkModal.cs" />
+    <Compile Include="LinksImageModal.cs" />
+    <Compile Include="MediaCollectionModal.cs" />
     <Compile Include="Migrations\202204280622253_CreatePlanet.cs" />
     <Compile Include="Migrations\202204280622253_CreatePlanet.Designer.cs">
       <DependentUpon>202204280622253_CreatePlanet.cs</DependentUpon>

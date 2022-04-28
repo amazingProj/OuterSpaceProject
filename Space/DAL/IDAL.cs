@@ -15,5 +15,7 @@ namespace DAL
         List<Dictionary<string, string>> GetAllAsteroids(string initialDate, string endDate = null);
 
         List<Dictionary<string, string>> GetNotDangerous(string initialDate, string endDate = null);
+
+        List<Dictionary<string, string>> GetAllImageSearch(string query);
     }
 }
