@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -22,6 +23,7 @@ namespace UI.MVVM.View
     public partial class MediaView : UserControl
     {
         BL.IBL bL = new BL.BL();
+        ObservableCollection<BitmapImage> results = new ObservableCollection<BitmapImage>();
         MediaViewModel mediaViewModel;
 
         public MediaView()
@@ -30,11 +32,25 @@ namespace UI.MVVM.View
             mediaViewModel = (MediaViewModel) DataContext;
         }
 
+
         private void TextBox_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
             string text = SearchBar.Text;
-            List<Dictionary<string, string>> imageDetails = bL.GetAllImageSearch("mars");
-            int x = 0;
+            List<Dictionary<string, string>> imageDetails = bL.GetAllImageSearch(text);
+
+            this.Dispatcher.Invoke(() =>
+            {
+                foreach (var picture in imageDetails)
+                {
+                    BitmapImage bi = new BitmapImage();
+                    bi.BeginInit();
+                    bi.UriSource = new Uri(picture["UrlJpgImage"]);
+                    bi.EndInit();
+                    results.Add(bi);
+                }
+                ListViewGallery.ItemsSource = results;
+            });
         }
     }
+
 }

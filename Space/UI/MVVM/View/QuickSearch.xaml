@@ -25,7 +25,7 @@
                            x:Name="Now"
                            Foreground="White"
                            FontFamily="/Fonts/#Oswald" />
-                <TextBlock Text="Toward"
+                <TextBlock Text="Towards"
                            FontSize="14"
                            Foreground="White"
                            FontFamily="/Fonts/#Poppins" />
