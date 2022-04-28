@@ -25,9 +25,27 @@ namespace BL
             keywordsSpace.Add("star", "keyword");
         }
 
+        public List<Dictionary<string, string>> GetAllAsteroids(string initialDate, string endDate = null)
+        {
+            if (initialDate == null)
+            {
+                return null;
+            }
+            return dAL.GetAllAsteroids(initialDate, endDate);
+        }
+
         public string GetNormalTodayPicture()
         {
             return dAL.GetNormalTodayPicture();
+        }
+
+        public List<Dictionary<string, string>> GetNotDangerous(string initialDate, string endDate = null)
+        {
+            if (initialDate == null)
+            {
+                return null;
+            }
+            return dAL.GetNotDangerous(initialDate, endDate);
         }
 
         public List<Dictionary<string, string>> GetOnlyDangerous(string initialDate, string endDate = null)
