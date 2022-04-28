@@ -93,12 +93,12 @@ namespace DAL
 
             var url = $"https://images-api.nasa.gov/search?q={query}&media_type=audio";
             var httpRequest = (HttpWebRequest)WebRequest.Create(url);
-            var httpResponse = (HttpWebResponse)httpRequest.GetResponse();
+            var httpResponse = (HttpWebResponse)httpRequest.GetResponse();//
             using (var streamReader = new StreamReader(httpResponse.GetResponseStream()))
             {
-                var resultStream = streamReader.ReadToEnd();
+                var resultStream = streamReader.ReadToEnd();  
 
-            }
+            } 
         }
 
         public List<Dictionary<string, string>> GetAllAsteroids(string initialDate, string endDate = null)
