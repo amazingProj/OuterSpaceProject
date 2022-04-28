@@ -73,6 +73,7 @@ namespace DAL
             {
                 return null;
             }
+
             List<Dictionary<string, string>> result = new List<Dictionary<string, string>>();
             var url = $"https://images-api.nasa.gov/search?q={query}&media_type=image";
             var httpRequest = (HttpWebRequest)WebRequest.Create(url);
@@ -91,6 +92,7 @@ namespace DAL
                     raw.Add("Description", dataModal.Desription);
                     raw.Add("Title", dataModal.Title);
                     raw.Add("UrlJpgImage", linksImageModal.Url);
+                    result.Add(raw);
                 }
             }
 

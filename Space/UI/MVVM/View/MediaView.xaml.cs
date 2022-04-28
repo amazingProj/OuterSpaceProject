@@ -33,7 +33,7 @@ namespace UI.MVVM.View
         private void TextBox_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
             string text = SearchBar.Text;
-            List<Dictionary<string, string>> imageDetails = bL.GetAllImageSearch(text);
+            List<Dictionary<string, string>> imageDetails = bL.GetAllImageSearch("mars");
             int x = 0;
         }
     }
