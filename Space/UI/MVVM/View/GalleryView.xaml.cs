@@ -23,7 +23,7 @@ namespace UI.MVVM.View
     public partial class GalleryView : UserControl
     {
         BL.IBL bL;
-        ObservableCollection<ImageSource> results = new ObservableCollection<ImageSource>();
+        ObservableCollection<BitmapImage> results = new ObservableCollection<BitmapImage>();
 
         public GalleryView()
         {
@@ -49,33 +49,31 @@ namespace UI.MVVM.View
 
         private async void GetStartedButton_Click(object sender, RoutedEventArgs e)
         {
-            byte[] pictureBytes;
             List<string> picturesStringFormatted = await bL.RetriveAllImagesFromFireBase();
 
-            //var imageList = new ImageList();
 
 
             foreach (string picture in picturesStringFormatted)
             {
-                pictureBytes = Encoding.ASCII.GetBytes(picture);
-                using (var stream = new MemoryStream(pictureBytes))
-                {
-                    var bitmap = new BitmapImage();
-                    bitmap.BeginInit();
-                    bitmap.StreamSource = stream;
-                    bitmap.CacheOption = BitmapCacheOption.OnLoad;
-                    bitmap.Freeze();
-                    results.Add(bitmap);
-                }
+                byte[] binaryData = Convert.FromBase64String(picture);
+
+                BitmapImage bi = new BitmapImage();
+                bi.BeginInit();
+                bi.StreamSource = new MemoryStream(binaryData);
+                bi.EndInit();
+
+                results.Add(bi);
+
+                //imagetest.Source = bi; // 
 
             }
-            ListViewGallery.ItemsSource = results;
-            ListViewGallery.Items.Refresh();
 
+            ListViewGallery.ItemsSource = results;
+            //ListViewGallery.Items.Refresh();
 
 
         }
 
-
+      
     }
 }

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ﻿C:\Users\AssafHillel\source\repos\OuterSpaceProject\Space\UI\obj\Debug\GeneratedInternalTypeHelper.g.i.cs
 FC:\Users\AssafHillel\source\repos\OuterSpaceProject\Space\UI\App.xaml;;
 FC:\Users\AssafHillel\source\repos\OuterSpaceProject\Space\UI\MainWindow.xaml;;
@@ -9,4 +10,9 @@ FC:\Users\AssafHillel\source\repos\OuterSpaceProject\Space\UI\MVVM\View\SearchVi
 FC:\Users\AssafHillel\source\repos\OuterSpaceProject\Space\UI\MVVM\View\SolarSystemView.xaml;;
 FC:\Users\AssafHillel\source\repos\OuterSpaceProject\Space\UI\MVVM\View\TodayPictureView.xaml;;
 FC:\Users\AssafHillel\source\repos\OuterSpaceProject\Space\UI\MVVM\View\UploadImage.xaml;;
+=======
+﻿
+
+FC:\Users\33768\Desktop\C# (2)\PROJECT\Space\UI\MVVM\View\GalleryView.xaml;;
+>>>>>>> aacfa5845ba3b18b127ff937e736d35982705b24
 

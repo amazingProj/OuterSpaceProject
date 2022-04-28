@@ -8,34 +8,28 @@
              d:DesignHeight="550"
              d:DesignWidth="900">
     <StackPanel Orientation="Vertical">
-        <TextBlock Text="Public Community Gallery"
+        <TextBlock
                    Foreground="White"
-                   FontSize="18"
-                   Margin="400,20,0,0"
-                   FontFamily="/Fonts/#Arvo" />
-        <StackPanel Orientation="Horizontal">
-            <TextBlock Text="See users' public gallery&#x0a;To Here Users can share&#x0a;Space related pictures&#x0a;Get Started Today!"
+                   FontSize="25"
+                   FontFamily="/Fonts/#Arvo" Height="76" VerticalAlignment="Bottom" HorizontalAlignment="Center" Margin="308,0" TextAlignment="Center" ><Run/><LineBreak/><Run Text="Public Community Gallery"/></TextBlock>
+        <TextBlock Text="See user's public gallery to Here Users can share Space related pictures get Started Today!"
                        Foreground="White"
                        FontSize="13"
                        FontFamily="/Fonts/#Roboto"
-                       Margin="350,10,0,0" />
+                       Margin="205,10,168,0" Width="527" 
+                       HorizontalAlignment="Center" RenderTransformOrigin="0.5,0.5" Height="32"/>
 
-            <Button FontFamily="/Fonts/#Inter"
+        <StackPanel HorizontalAlignment="Right" Margin="54,0,52,0" Width="Auto" >
+
+            <Button  VerticalContentAlignment="Top"
                     x:Name="GetStartedButton"
                     Click="GetStartedButton_Click"
-                    VerticalContentAlignment="Top"
-                    HorizontalAlignment="Left"
-                    Content="Get Started"
                     Foreground="White"
-                    FontSize="16"
-                    FontWeight="Medium"
-                    Margin="20,10,0,0"
-                    RenderTransformOrigin="0.207,0.424"
-                    Width="182"
+                    Width="200"
                     Height="55">
                 <Button.ToolTip>
                     <StackPanel>
-                        <TextBlock Text="Click to approve&#x0a;Then See community treassures" />
+                        <TextBlock Text="Click to approve&#xA;Then See community treassures" />
 
                     </StackPanel>
                 </Button.ToolTip>
@@ -59,8 +53,7 @@
 
                 <Button.Template>
                     <ControlTemplate TargetType="{x:Type Button}">
-                        <Border Width="200"
-                                Height="100"
+                        <Border
                                 CornerRadius="8,8,8,8"
                                 Background="{TemplateBinding Background}"
                                 RenderTransformOrigin="0.031,0.565">
@@ -70,31 +63,42 @@
                         </Border>
                     </ControlTemplate>
                 </Button.Template>
+                <StackPanel Orientation="Horizontal" Height="51" Width="200"  >
+                    <Image Source="Icons\refresh_icon.png" Width="52" Margin="0,-8,0,10" />
+                    <Label    Content="Refresh" HorizontalAlignment="Center" 
+                              VerticalAlignment="Center" Foreground="White" FontSize="30" 
+                              RenderTransformOrigin="0.444,0.659" Background="{x:Null}" Width="140" Height="56" Margin="0,-8,0,3"/>
+                </StackPanel>
             </Button>
         </StackPanel>
-        <ListView Height="500"  Width="700"
+
+
+        <ListView 
                       x:Name="ListViewGallery"
-                     
-                      Background="Transparent"  ItemsSource="{Binding}" >
+            Background="Transparent"  ItemsSource="{Binding}" Margin="54,0,52,0" Height="402" >
+
+            <ListView.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <UniformGrid Columns="4"/>
+                </ItemsPanelTemplate>
+            </ListView.ItemsPanel>
+
             <!--<ListView.View>
                 <local:ImageView />
             </ListView.View>-->
 
             <ListView.ItemTemplate>
                 <DataTemplate>
-                    <StackPanel Orientation="Vertical" Height="123">
+                    <StackPanel Orientation="Horizontal" Height="123">
                         <!--<Image Source="{Binding }" Height="123" />-->
-                        <Image Source="C:\Users\33768\Desktop\C# (2)\PROJECT\Space\UI\Icons\backround solar galaxie srars  .jpg">
-                            
-                            
-                        </Image>
-                </StackPanel>
+                        <Image x:Name="theimage"    Source="{Binding}"  />
+                    </StackPanel>
 
                 </DataTemplate>
             </ListView.ItemTemplate>
 
         </ListView>
-        
-        
+
+
     </StackPanel>
 </UserControl>
