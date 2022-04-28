@@ -72,12 +72,29 @@
                 </Button.Template>
             </Button>
         </StackPanel>
-        <ListView Height="500"
-                      Width="700"
+        <ListView Height="500"  Width="700"
                       x:Name="ListViewGallery"
-                      Margin="0,20,0,0"
-                      Background="Transparent">
-            
+                     
+                      Background="Transparent"  ItemsSource="{Binding}" >
+            <!--<ListView.View>
+                <local:ImageView />
+            </ListView.View>-->
+
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Vertical" Height="123">
+                        <!--<Image Source="{Binding }" Height="123" />-->
+                        <Image Source="C:\Users\33768\Desktop\C# (2)\PROJECT\Space\UI\Icons\backround solar galaxie srars  .jpg">
+                            
+                            
+                        </Image>
+                </StackPanel>
+
+                </DataTemplate>
+            </ListView.ItemTemplate>
+
         </ListView>
+        
+        
     </StackPanel>
 </UserControl>

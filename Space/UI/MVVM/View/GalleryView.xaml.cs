@@ -1,6 +1,7 @@
 ﻿using Microsoft.Win32;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Drawing;
 using System.Drawing.Imaging;
 using System.IO;
@@ -22,17 +23,25 @@ namespace UI.MVVM.View
     public partial class GalleryView : UserControl
     {
         BL.IBL bL;
+        ObservableCollection<ImageSource> results = new ObservableCollection<ImageSource>();
+
         public GalleryView()
         {
             InitializeComponent();
             bL = new BL.BL();
+            //ListViewGallery.DataContext = results;
+
+
         }
 
         private async void GetStartedButton_Click(object sender, RoutedEventArgs e)
         {
             byte[] pictureBytes;
             List<string> picturesStringFormatted = await bL.RetriveAllImagesFromFireBase();
-           
+
+            //var imageList = new ImageList();
+
+
             foreach (string picture in picturesStringFormatted)
             {
                 pictureBytes = Encoding.ASCII.GetBytes(picture);
@@ -43,11 +52,17 @@ namespace UI.MVVM.View
                     bitmap.StreamSource = stream;
                     bitmap.CacheOption = BitmapCacheOption.OnLoad;
                     bitmap.Freeze();
-                    ListViewGallery.Items.Add(bitmap);
+                    results.Add(bitmap);
                 }
 
             }
-           
+            ListViewGallery.ItemsSource = results;
+            ListViewGallery.Items.Refresh();
+
+
+
         }
+
+
     }
 }

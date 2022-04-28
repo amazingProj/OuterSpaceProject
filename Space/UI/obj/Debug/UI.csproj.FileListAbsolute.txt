@@ -92,3 +92,7 @@ C:\Users\AssafHillel\source\repos\OuterSpaceProject\Space\UI\bin\Debug\RestSharp
 C:\Users\AssafHillel\source\repos\OuterSpaceProject\Space\UI\obj\Debug\MVVM\View\UploadImage.g.cs
 C:\Users\AssafHillel\source\repos\OuterSpaceProject\Space\UI\obj\Debug\MVVM\View\UploadImage.baml
 C:\Users\33768\Desktop\C# (2)\PROJECT\Space\UI\obj\Debug\MVVM\View\UploadImage.g.cs
+C:\Users\33768\Desktop\C# (2)\PROJECT\Space\UI\bin\Debug\RestSharp.dll
+C:\Users\33768\Desktop\C# (2)\PROJECT\Space\UI\bin\Debug\FireSharp.dll
+C:\Users\33768\Desktop\C# (2)\PROJECT\Space\UI\bin\Debug\RestSharp.xml
+C:\Users\33768\Desktop\C# (2)\PROJECT\Space\UI\obj\Debug\MVVM\View\UploadImage.baml

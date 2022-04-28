@@ -66,7 +66,7 @@ namespace UI.MVVM.View
 
         private void Motre_Details_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("ok"); // LINK TO WEB SITE 
+            System.Diagnostics.Process.Start("https://nssdc.gsfc.nasa.gov/planetary/factsheet/");
         }
 
     }
