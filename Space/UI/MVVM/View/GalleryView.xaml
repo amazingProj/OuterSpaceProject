@@ -8,33 +8,28 @@
              d:DesignHeight="550"
              d:DesignWidth="900">
     <StackPanel Orientation="Vertical">
-        <TextBlock Text="Public Community Gallery"
+        <TextBlock
                    Foreground="White"
-                   FontSize="18"
-                   Margin="400,20,0,0"
-                   FontFamily="/Fonts/#Arvo" />
-        <StackPanel Orientation="Horizontal">
-            <TextBlock Text="See users' public gallery to Here Users can share Space related pictures&#x0a;Get Started Today!"
+                   FontSize="25"
+                   FontFamily="/Fonts/#Arvo" Height="76" VerticalAlignment="Bottom" HorizontalAlignment="Center" Margin="308,0" TextAlignment="Center" ><Run/><LineBreak/><Run Text="Public Community Gallery"/></TextBlock>
+        <TextBlock Text="See user's public gallery to Here Users can share Space related pictures get Started Today!"
                        Foreground="White"
                        FontSize="13"
                        FontFamily="/Fonts/#Roboto"
-                       Margin="350,10,0,0" Width="261" />
+                       Margin="205,10,168,0" Width="527" 
+                       HorizontalAlignment="Center" RenderTransformOrigin="0.5,0.5" Height="32"/>
+
+        <StackPanel HorizontalAlignment="Right" Margin="54,0,52,0" Width="Auto" >
 
             <Button  VerticalContentAlignment="Top"
                     x:Name="GetStartedButton"
                     Click="GetStartedButton_Click"
                     Foreground="White"
                     Width="200"
-                    Height="72">
-                <StackPanel Orientation="Horizontal" Height="51" Width="200"  >
-                    <Image Source="Icons\refresh icon ok  - Copier.png" Width="52" />
-                    <Label    Content="Refresh" HorizontalAlignment="Center" 
-                              VerticalAlignment="Center" Foreground="White" FontSize="35" 
-                              RenderTransformOrigin="0.444,0.659" Background="{x:Null}" Width="140"/>
-                </StackPanel>
+                    Height="55">
                 <Button.ToolTip>
                     <StackPanel>
-                        <TextBlock Text="Click to approve&#x0a;Then See community treassures" />
+                        <TextBlock Text="Click to approve&#xA;Then See community treassures" />
 
                     </StackPanel>
                 </Button.ToolTip>
@@ -68,13 +63,19 @@
                         </Border>
                     </ControlTemplate>
                 </Button.Template>
+                <StackPanel Orientation="Horizontal" Height="51" Width="200"  >
+                    <Image Source="Icons\refresh_icon.png" Width="52" Margin="0,-8,0,10" />
+                    <Label    Content="Refresh" HorizontalAlignment="Center" 
+                              VerticalAlignment="Center" Foreground="White" FontSize="30" 
+                              RenderTransformOrigin="0.444,0.659" Background="{x:Null}" Width="140" Height="56" Margin="0,-8,0,3"/>
+                </StackPanel>
             </Button>
         </StackPanel>
 
 
         <ListView 
                       x:Name="ListViewGallery"
-            Background="Transparent"  ItemsSource="{Binding}" Margin="54,0,72,0" >
+            Background="Transparent"  ItemsSource="{Binding}" Margin="54,0,52,0" Height="402" >
 
             <ListView.ItemsPanel>
                 <ItemsPanelTemplate>

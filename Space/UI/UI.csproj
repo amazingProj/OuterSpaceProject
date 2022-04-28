@@ -244,10 +244,7 @@
     <Resource Include="Icons\venus.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Icons\refresh icon ok .png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Icons\refresh icon ok  - Copier.png" />
+    <Resource Include="Icons\refresh_icon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\Leadtools.Kernel.22.0.0.4\build\net40\Leadtools.Kernel.targets" Condition="Exists('..\packages\Leadtools.Kernel.22.0.0.4\build\net40\Leadtools.Kernel.targets')" />
