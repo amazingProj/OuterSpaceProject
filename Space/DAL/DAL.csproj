@@ -62,24 +62,33 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CloseApproachDataModalJArray.cs" />
+    <Compile Include="CloseApproachDataModal.cs" />
     <Compile Include="Counter_class.cs" />
     <Compile Include="DAL.cs" />
+    <Compile Include="DiameterMinMaxModal.cs" />
+    <Compile Include="EstimatedDiameterModal.cs" />
+    <Compile Include="EstimatedDiameterModalMetersTwo.cs" />
     <Compile Include="FireBaseData.cs" />
     <Compile Include="HazardsModal.cs" />
     <Compile Include="IDAL.cs" />
     <Compile Include="IFireBase.cs" />
     <Compile Include="Image_Modal.cs" />
     <Compile Include="IMediaStream.cs" />
+    <Compile Include="LinkModal.cs" />
     <Compile Include="Migrations\202204280622253_CreatePlanet.cs" />
     <Compile Include="Migrations\202204280622253_CreatePlanet.Designer.cs">
       <DependentUpon>202204280622253_CreatePlanet.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="MissDistanceModal.cs" />
     <Compile Include="NasaPictureOfTheDay.cs" />
     <Compile Include="Planet.cs" />
     <Compile Include="PlanetContext.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RawModal.cs" />
+    <Compile Include="RelativeVelocityModal.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
