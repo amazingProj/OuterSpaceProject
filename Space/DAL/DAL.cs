@@ -357,7 +357,5 @@ namespace DAL
             var task = await InsertImageToFireBaseAsync(convertedImage);
             return "success";
         }
-
-
     }
 }

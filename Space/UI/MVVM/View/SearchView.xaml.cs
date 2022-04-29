@@ -20,9 +20,12 @@ namespace UI.MVVM.View
     /// </summary>
     public partial class SearchView : UserControl
     {
+        string dateNow;
+
         public SearchView()
         {
             InitializeComponent();
+            MonthlyCalendarStart.DisplayDate = DateTime.UtcNow;
         }
     }
 }
