@@ -192,6 +192,8 @@
     <Resource Include="Fonts\Nunito.ttf" />
     <Resource Include="Fonts\Inter.ttf" />
     <Resource Include="Fonts\Lora.ttf" />
+    <Resource Include="Fonts\Dosis.ttf" />
+    <Resource Include="Fonts\Fredoka.ttf" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -246,6 +248,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Icons\refresh_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icons\Asteriod.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\Leadtools.Kernel.22.0.0.4\build\net40\Leadtools.Kernel.targets" Condition="Exists('..\packages\Leadtools.Kernel.22.0.0.4\build\net40\Leadtools.Kernel.targets')" />
