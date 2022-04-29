@@ -35,7 +35,40 @@
                            Foreground="White"
                            FontFamily="/Fonts/#Oswald" />
             </StackPanel>
-            
+
         </StackPanel>
+
+        <StackPanel Orientation="Horizontal" Height="386">
+
+            <StackPanel Width="126">
+
+                <TextBlock Text="List of Dangerous Asteroids  :" Foreground="Wheat" Height="39" TextWrapping="WrapWithOverflow" FontSize="16" FontFamily="/UI;component/Fonts/#Roboto" />
+                <TextBlock Text="for the 30 Last days" Foreground="#FFE8E5E0" Height="16" TextWrapping="WrapWithOverflow" FontSize="10" FontFamily="/UI;component/Fonts/#Roboto" />
+
+                <ListView x:Name="List_asteroids" Height="330" ItemsSource="{Binding}"
+                          Foreground="White" Background="Transparent" SelectionChanged="List_asteroids_SelectionChanged" FontSize="12" FontFamily="/UI;component/Fonts/#Poppins"/>
+
+            </StackPanel>
+
+
+            <Grid Margin="0,0,-678,0">
+                <Grid.Background>
+                    <ImageBrush ImageSource="/Icons/Asteroid_backround Shema.png" Stretch="Uniform"/>
+                </Grid.Background>
+
+                <StackPanel Orientation="Vertical" Margin="40,37,450,292">
+
+                    <TextBlock x:Name="DateTB" Text="{Binding}" Foreground="#FF8CF08C" Height="22"/>
+                                        <Separator Height="3" Margin="0,0,80,0"/>
+
+                    <Label Content="Date of Apparition" Foreground="#FF8CF08C" Height="33" VerticalAlignment="Top" VerticalContentAlignment="Top" HorizontalAlignment="Left" />
+                </StackPanel>
+
+                <TextBlock x:Name="NameTB" Text="{Binding}" Foreground="Wheat" Margin="271,10,251,316" />
+
+
+            </Grid>
+        </StackPanel>
+
     </StackPanel>
 </UserControl>

@@ -22,7 +22,7 @@ namespace UI.MVVM.View
     /// Interaction logic for SolarSystemView.xaml
     /// </summary>
     /// 
-   
+     
 
 
     public partial class SolarSystemView : UserControl
