@@ -41,8 +41,6 @@ namespace UI.MVVM.View
             Future.Text = DateTime.UtcNow.AddDays(30).ToString("MM-dd-yyyy");
             backgroundWorker.DoWork += IntializeListViewAsync;
             backgroundWorker.RunWorkerAsync();
-
-
         }
 
         private void IntializeListViewAsync(object sender, DoWorkEventArgs doWorkEventArgs)
@@ -51,16 +49,7 @@ namespace UI.MVVM.View
 
             foreach (var dic in Listdictionary)
             {
-               
-                    ListAsteroidNames.Add(dic["Name"]);
-              
-
-                //    foreach (var KEYVALUE in dic)  
-                //    {
-                //        if (KEYVALUE.Key = "name") { 
-                //            string name = KEYVALUE.Value;}
-                //    }
-
+                ListAsteroidNames.Add(dic["Name"]);
             }
 
             Dispatcher.Invoke(() =>
@@ -68,11 +57,6 @@ namespace UI.MVVM.View
                 List_asteroids.DataContext = ListAsteroidNames;   
 
             });
-
-
-
-
-            int x = 0;
         }
 
         private void List_asteroids_SelectionChanged(object sender, SelectionChangedEventArgs e)
