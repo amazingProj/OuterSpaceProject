@@ -28,11 +28,11 @@ namespace UI.MVVM.View
         public HomeView()
         {
             InitializeComponent();
-            backgroundWorker.DoWork += UpdateImage;
-            backgroundWorker.RunWorkerAsync();
+           // backgroundWorker.DoWork += UpdateImage;
+            //backgroundWorker.RunWorkerAsync();
         }
 
-        public async void UpdateImage(object sender, DoWorkEventArgs doWorkEventArgs)
+        /*public async void UpdateImage(object sender, DoWorkEventArgs doWorkEventArgs)
         {
             this.Dispatcher.Invoke(()
                 =>
@@ -45,6 +45,6 @@ namespace UI.MVVM.View
                 bitmapImage.EndInit();
                 TodayPicture.Source = bitmapImage;
             });
-        }
+        }*/
     }
 }

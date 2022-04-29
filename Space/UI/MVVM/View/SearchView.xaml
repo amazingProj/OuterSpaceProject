@@ -14,5 +14,20 @@
             </Grid.ColumnDefinitions>
             
         </Grid>
+
+        <DatePicker Name="MonthlyCalendar"
+                   
+                    DisplayDate="3/5/2010"
+                    DisplayDateStart="3/1/2010"
+                    DisplayDateEnd="3/31/2010"
+                    FirstDayOfWeek="Tuesday"
+                    IsTodayHighlighted="True"
+                    xmlns:sys="clr-namespace:System;assembly=mscorlib"
+                    Margin="15,39,88,19">
+            <DatePicker.Background>
+                <ImageBrush ImageSource="/Icons/backround solar.jpg"
+                            Opacity="0.3" />
+            </DatePicker.Background>
+        </DatePicker>
     </StackPanel>
 </UserControl>

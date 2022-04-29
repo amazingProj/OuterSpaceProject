@@ -6,181 +6,119 @@
              xmlns:local="clr-namespace:UI.MVVM.View"
              mc:Ignorable="d"
              d:DesignHeight="600"
+             ClipToBounds="True"
              d:DesignWidth="800">
-    <StackPanel>
-        <StackPanel Orientation="Horizontal">
-            <StackPanel Orientation="Horizontal">
-                <StackPanel Margin="20,20,0,0">
-                    <TextBlock Text="What's New Today?"
-                               Grid.Row="0"
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="25" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+
+
+        <StackPanel Grid.Row="1"
+                    VerticalAlignment="Center"
+                    Margin="60">
+
+            <StackPanel>
+                <StackPanel Orientation="Horizontal"
+                            Margin="0,0,0,20">
+                    <Image Source="/Icons/Asteriod.png"
+                           Width="150"
+                           Height="100"
+                           RenderOptions.BitmapScalingMode="Fant" />
+                    <TextBlock Text="Asteroids"
+                               Margin="10,0,0,0"
                                Foreground="White"
-                               FontSize="18" />
-                    <Border Width="300"
-                            Height="200"
-                            Margin="10,5,0,0">
-                        <Border.Background>
-                            <LinearGradientBrush StartPoint="0,0"
-                                                 EndPoint="1,2">
-                                <GradientStop Color="#5bc3ff"
-                                              Offset="0.0" />
-                                <GradientStop Color="#3aafff"
-                                              Offset="1" />
-                            </LinearGradientBrush>
-                        </Border.Background>
-                        <Border.Clip>
-                            <RectangleGeometry RadiusX="10"
-                                               RadiusY="10"
-                                               Rect="0,0,400,200" />
-                        </Border.Clip>
-
-                        <Grid Margin="0,0,1,0">
-                            <StackPanel>
-                                <StackPanel Orientation="Horizontal">
-                                    <TextBlock Text="Today were"
-                                               Foreground="White"
-                                               FontSize="28"
-                                               Margin="10,10,0,0"
-                                               FontFamily="/Fonts/#Fredoka" />
-                                    <TextBlock Foreground="White"
-                                               x:Name="PotentiallyHazardCount"
-                                               FontSize="28"
-                                               Margin="10,10,0,0"
-                                               Text="8"
-                                               FontFamily="/Fonts/#Fredoka" />
-                                </StackPanel>
-                                
-                                <TextBlock Text="Potentially Hazard&#x0a;Near Earth Today"
-                                           Foreground="White"
-                                           FontSize="18"
-                                           Margin="10,10,0,0"
-                                           FontFamily="/Fonts/#Fredoka"
-                                           Height="49" />
-
-                            </StackPanel>
-
-                            <Image Width="250"
-                                   Height="250"
-                                   Source="/Icons/true_man.png"
-                                   Margin="100,65,-51,-115" />
-                        </Grid>
-                    </Border>
-                    <!-- how much dangerous stars today and
-                no dangerous and overall count and then the today picture only picture in horizontal-->
+                               FontSize="28"
+                               FontWeight="Medium"
+                               VerticalAlignment="Center"
+                               FontFamily="Fonts/#Dosis" />
                 </StackPanel>
-                <Border Width="200"
-                        Height="220"
-                        CornerRadius="10"
-                        Margin="5,40,0,0">
-                    <Border.Background>
-                        <LinearGradientBrush StartPoint="0,0"
-                                             EndPoint="1,2">
-                            <GradientStop Color="#ff37ba"
-                                          Offset="0.0" />
-                            <GradientStop Color="#ff3754"
-                                          Offset="1" />
-                        </LinearGradientBrush>
-                    </Border.Background>
-                    <Grid>
-                        <StackPanel>
-                           
-                            <TextBlock Text="Non-Potentially Hazard&#x0a;Near Earth Today:&#x0a;"
-                                       Foreground="White"
-                                       FontSize="18"
-                                       Margin="10,10,0,0"
-                                       FontFamily="/Fonts/#Fredoka"
-                                       Height="49" />
-                            <TextBlock Foreground="White"
-                                       Text="12"
-                                       x:Name="NonPotentiallyHazardCount"
-                                       FontSize="18"
-                                       Margin="20,0,0,2"
-                                       FontFamily="/Fonts/#Fredoka" />
-                            <StackPanel Orientation="Horizontal">
-                                <TextBlock Text="Overall: "
-                                           Foreground="White"
-                                           FontSize="20"
-                                           Margin="10,10,0,0"
-                                           FontFamily="/Fonts/#Fredoka" />
-                                <TextBlock x:Name="Number"
-                                           Foreground="White"
-                                           FontSize="20"
-                                           Text="19"
-                                           Margin="2,10,0,0"
-                                           FontFamily="/Fonts/#Fredoka" />
-                                <TextBlock Foreground="White"
-                                           FontSize="20"
-                                           Text="Asteroid"
-                                           Margin="10,10,0,0"
-                                           FontFamily="/Fonts/#Fredoka" />
-                            </StackPanel>
-                        </StackPanel>
-                    </Grid>
-                </Border>
-            </StackPanel>
-            <StackPanel Margin="50,35,0,0">
-                <TextBlock Text="The Picture of The day"
+                <TextBlock Text="Research"
                            Foreground="White"
-                           HorizontalAlignment="Center"
-                           FontSize="13" />
-                <Image Height="200"
-                       Width="300"
-                       x:Name="TodayPicture" />
+                           FontSize="25"
+                           FontFamily="/Fonts/#Dosis"
+                           FontWeight="Medium" />
+                <TextBlock Text="THE"
+                           Foreground="White"
+                           FontSize="25"
+                           FontFamily="/Fonts/#Dosis"
+                           FontWeight="Medium" />
+                <TextBlock Text="Close to Earth"
+                           Foreground="White"
+                           FontSize="25"
+                           FontFamily="/Fonts/#Dosis"
+                           FontWeight="Medium" />
+                <TextBlock Text="This system is beutiful look system which visually decribes the close to Earth Asteroids.&#x0a;Reinforce the community by sharing space related images.&#x0a;Enjoy our media search gallery.&#x0a;This is just the beginning, expect to more..."
+                           Foreground="White"
+                           FontSize="12"
+                           FontFamily="/Fonts/#Dosis"
+                           FontWeight="Medium"
+                           TextWrapping="Wrap"
+                           Margin="0,10,0,0" />
             </StackPanel>
+
+           
         </StackPanel>
 
-
-        <StackPanel Orientation="Horizontal">
-            <TextBlock  Text="Reinforce the community&#x0a;Share your space pictures"
-                        Foreground="White"
-                        Margin="20,20,0,0"
-                        HorizontalAlignment="Left"
-                        FontSize="16" />
-
+        <Grid Grid.Column="1"
+              Grid.RowSpan="2"
+              Panel.ZIndex="-1"
+              Margin="160, -365, -610, 85">
+            <Grid.RenderTransform>
+                <RotateTransform Angle="50" />
+            </Grid.RenderTransform>
             <StackPanel Orientation="Horizontal"
-                        Margin="196,450,-8,-250"
-                        Height="157"
-                        RenderTransformOrigin="0.5,0.5">
-                <StackPanel.RenderTransform>
-                    <TransformGroup>
-                        <ScaleTransform />
-                        <SkewTransform AngleY="0.156" />
-                        <RotateTransform />
-                        <TranslateTransform Y="-347.235" />
-                    </TransformGroup>
-                </StackPanel.RenderTransform>
+                        Margin="-350, 250, -255, -250">
                 <StackPanel>
-
-                    
-
-                   
-                </StackPanel>
-
-                <StackPanel>
-                    <Border Width="20"
+                    <Border Width="700"
                             Height="35"
                             Background="#3dddc2"
-                            Margin="100,0,0,0"
+                            Margin="150,0,0,0"
                             CornerRadius="20" />
 
-                    <Border Width="20"
+                    <Border Width="700"
                             Height="35"
                             Background="#fc6586"
-                            Margin="100,15,0,0"
+                            Margin="0,15,0,0"
                             CornerRadius="20" />
 
-                    <Border Width="20"
+                    <Border Width="700"
                             Height="35"
                             Background="#383660"
-                            Margin="100,15,0,0"
+                            Margin="75,15,0,0"
                             CornerRadius="20" />
                 </StackPanel>
-               
+
+                <StackPanel>
+                    <Border Width="700"
+                            Height="35"
+                            Background="#3dddc2"
+                            Margin="150,0,0,0"
+                            CornerRadius="20" />
+
+                    <Border Width="700"
+                            Height="35"
+                            Background="#fc6586"
+                            Margin="0,15,0,0"
+                            CornerRadius="20" />
+
+                    <Border Width="700"
+                            Height="35"
+                            Background="#383660"
+                            Margin="75,15,0,0"
+                            CornerRadius="20" />
+                </StackPanel>
+
             </StackPanel>
-            
-            <!-- Discover what the community uploaded -->
-            <!--Horizontal animation of beating heart with love for you-->
-        </StackPanel>
+        </Grid>
+    </Grid>
 
 
-    </StackPanel>
+
 </UserControl>

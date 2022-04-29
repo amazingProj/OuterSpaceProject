@@ -29,7 +29,7 @@
                     Height="55">
                 <Button.ToolTip>
                     <StackPanel>
-                        <TextBlock Text="Click to approve&#xA;Then See community treassures" />
+                        <TextBlock Text="Refresh the image view" />
 
                     </StackPanel>
                 </Button.ToolTip>

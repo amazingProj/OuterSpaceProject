@@ -65,9 +65,11 @@ namespace UI.MVVM.View
                     bi.EndInit();
 
                     results.Add(bi);
+
+                    ListViewGallery.ItemsSource = results;
                 }
 
-                ListViewGallery.ItemsSource = results;               
+                           
             });
             
         }
@@ -75,7 +77,8 @@ namespace UI.MVVM.View
         private async void GetStartedButton_Click(object sender, RoutedEventArgs e)
         {
             List<string> picturesStringFormatted = await bL.RetriveAllImagesFromFireBase();
-            
+
+            results.Clear();
             foreach (string picture in picturesStringFormatted)
             {
                 byte[] binaryData = Convert.FromBase64String(picture);
@@ -86,9 +89,11 @@ namespace UI.MVVM.View
                 bi.EndInit();
 
                 results.Add(bi);
+
+                ListViewGallery.ItemsSource = results;
             }
 
-            ListViewGallery.ItemsSource = results;
+           
         }
     }
 }

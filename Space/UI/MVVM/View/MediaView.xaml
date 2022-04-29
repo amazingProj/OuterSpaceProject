@@ -135,7 +135,8 @@
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <StackPanel Orientation="Horizontal"
-                                Height="123">
+                                Height="123"
+                                Width="100">
                         <!--<Image Source="{Binding }" Height="123" />-->
                         <Image x:Name="theimage"
                                Source="{Binding}" />
