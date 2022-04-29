@@ -43,6 +43,14 @@ namespace UI.MVVM.View
         private void IntializeListViewAsync(object sender, DoWorkEventArgs doWorkEventArgs)
         {
             List<Dictionary<string, string>> dictionary = bl.GetOnlyDangerous(dateNow, future);
+            List<string> values = new List<string>();
+            foreach (var dic in dictionary)
+            {
+                foreach (var key in dic.Keys)
+                {
+                    values.Add(dic[key]);
+                }
+            }
             int x = 0;
         }
     }
