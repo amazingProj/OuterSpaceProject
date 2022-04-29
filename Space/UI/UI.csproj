@@ -247,6 +247,9 @@
   <ItemGroup>
     <Resource Include="Icons\refresh_icon.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icons\Asteroid_backround Shema.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\Leadtools.Kernel.22.0.0.4\build\net40\Leadtools.Kernel.targets" Condition="Exists('..\packages\Leadtools.Kernel.22.0.0.4\build\net40\Leadtools.Kernel.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
