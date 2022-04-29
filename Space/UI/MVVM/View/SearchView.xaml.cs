@@ -87,6 +87,8 @@ namespace UI.MVVM.View
         {
             OptionalPickers.Visibility = Visibility.Visible;
             EndDatePicker.SelectedDate = MonthlyCalendarStart.SelectedDate;
+            EndDatePicker.DisplayDateStart = MonthlyCalendarStart.SelectedDate;
+            SearchButton.Visibility = Visibility.Visible;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)

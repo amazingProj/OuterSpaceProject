@@ -52,10 +52,7 @@
 
 
             <Grid Margin="0,0,-678,0">
-                <Grid.Background>
-                    <ImageBrush ImageSource="/Icons/Asteroid_backround Shema.png" Stretch="Uniform"/>
-                </Grid.Background>
-
+                
                 <StackPanel Orientation="Vertical" Margin="40,37,450,292">
 
                     <TextBlock x:Name="DateTB" Text="{Binding}" Foreground="#FF8CF08C" Height="22"/>
