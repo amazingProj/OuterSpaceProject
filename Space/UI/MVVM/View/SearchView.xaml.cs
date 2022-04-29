@@ -82,5 +82,20 @@ namespace UI.MVVM.View
 
             return null;
         }
+
+        private void dpick_SelectedDateChanged(object sender, SelectionChangedEventArgs e)
+        {
+            OptionalPickers.Visibility = Visibility.Visible;
+            EndDatePicker.SelectedDate = MonthlyCalendarStart.SelectedDate;
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            string initialDate = MonthlyCalendarStart.SelectedDate.Value.Year.ToString() + "-" +
+                MonthlyCalendarStart.SelectedDate.Value.Month.ToString() + "-" +
+                MonthlyCalendarStart.SelectedDate.Value.Day.ToString();
+
+
+        }
     }
 }

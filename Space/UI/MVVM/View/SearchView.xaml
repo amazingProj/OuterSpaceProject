@@ -26,6 +26,8 @@
 
         <DatePicker Name="MonthlyCalendarStart"
                     Language="English"
+                    FirstDayOfWeek="Sunday"
+                    SelectedDateChanged="dpick_SelectedDateChanged"
                     Loaded="DatePicker_Loaded"
                     xmlns:sys="clr-namespace:System;assembly=mscorlib"
                     Margin="15,39,88,19">
@@ -36,7 +38,7 @@
         </DatePicker>
 
 
-        <StackPanel >
+        <StackPanel Visibility="Hidden" x:Name="OptionalPickers">
             <StackPanel Margin="0,10,0,0"
                         
                         Height="129">
@@ -44,6 +46,7 @@
                            FontSize="18"
                            Text="Optional Fields" />
                 <DatePicker Language="English"
+                            x:Name="EndDatePicker"
                             Loaded="DatePicker_LoadedEnd"
                             xmlns:sys="clr-namespace:System;assembly=mscorlib"
                             Margin="0,10,0,10">
@@ -90,7 +93,8 @@
             <Button Content="Search"
                     Foreground="White"
                     FontSize="10"
-                    FontWeight="Medium"               
+                    FontWeight="Medium"
+                    Click="Button_Click"
                     Margin="160,1,6.4,-1.2"
                     RenderTransformOrigin="0.151,0.363">
                 <Button.Style>
