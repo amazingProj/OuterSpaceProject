@@ -68,10 +68,10 @@
                     <!-- how much dangerous stars today and
                 no dangerous and overall count and then the today picture only picture in horizontal-->
                 </StackPanel>
-                <Border Width="200"
-                        Height="220"
+                <Border Width="400"
+                        Height="200"
                         CornerRadius="10"
-                        Margin="5,40,0,0">
+                        Margin="40,40,0,0">
                     <Border.Background>
                         <LinearGradientBrush StartPoint="0,0"
                                              EndPoint="1,2">
@@ -84,40 +84,12 @@
                     <Grid>
                         <StackPanel>
                            
-                            <TextBlock Text="Non-Potentially Hazard&#x0a;Near Earth Today:&#x0a;"
-                                       Foreground="White"
-                                       FontSize="18"
-                                       Margin="10,10,0,0"
-                                       FontFamily="/Fonts/#Fredoka"
-                                       Height="49" />
-                            <TextBlock Foreground="White"
-                                       Text="12"
-                                       x:Name="NonPotentiallyHazardCount"
-                                       FontSize="18"
-                                       Margin="20,0,0,2"
-                                       FontFamily="/Fonts/#Fredoka" />
-                            <StackPanel Orientation="Horizontal">
-                                <TextBlock Text="Overall: "
-                                           Foreground="White"
-                                           FontSize="20"
-                                           Margin="10,10,0,0"
-                                           FontFamily="/Fonts/#Fredoka" />
-                                <TextBlock x:Name="Number"
-                                           Foreground="White"
-                                           FontSize="20"
-                                           Text="19"
-                                           Margin="2,10,0,0"
-                                           FontFamily="/Fonts/#Fredoka" />
-                                <TextBlock Foreground="White"
-                                           FontSize="20"
-                                           Text="Asteroid"
-                                           Margin="10,10,0,0"
-                                           FontFamily="/Fonts/#Fredoka" />
-                            </StackPanel>
+                          
                         </StackPanel>
                     </Grid>
                 </Border>
             </StackPanel>
+            
             <StackPanel Margin="50,35,0,0">
                 <TextBlock Text="The Picture of The day"
                            Foreground="White"
@@ -136,7 +108,16 @@
                         Margin="20,20,0,0"
                         HorizontalAlignment="Left"
                         FontSize="16" />
+            <StackPanel HorizontalAlignment="Left"
+                        Margin="0,0,0,110.8">
+                <Border Width="800"
+                        Margin="20,20,0,0"
+                        Height="35"
+                        Background="#3dddc2"
+                        CornerRadius="20" />
 
+
+            </StackPanel>
             <StackPanel Orientation="Horizontal"
                         Margin="196,450,-8,-250"
                         Height="157"
@@ -156,25 +137,7 @@
                    
                 </StackPanel>
 
-                <StackPanel>
-                    <Border Width="20"
-                            Height="35"
-                            Background="#3dddc2"
-                            Margin="100,0,0,0"
-                            CornerRadius="20" />
-
-                    <Border Width="20"
-                            Height="35"
-                            Background="#fc6586"
-                            Margin="100,15,0,0"
-                            CornerRadius="20" />
-
-                    <Border Width="20"
-                            Height="35"
-                            Background="#383660"
-                            Margin="100,15,0,0"
-                            CornerRadius="20" />
-                </StackPanel>
+                
                
             </StackPanel>
             

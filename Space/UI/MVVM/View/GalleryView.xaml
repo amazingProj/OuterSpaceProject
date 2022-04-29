@@ -29,7 +29,7 @@
                     Height="55">
                 <Button.ToolTip>
                     <StackPanel>
-                        <TextBlock Text="Click to approve&#xA;Then See community treassures" />
+                        <TextBlock Text="Refresh the image view" />
 
                     </StackPanel>
                 </Button.ToolTip>
@@ -64,7 +64,7 @@
                     </ControlTemplate>
                 </Button.Template>
                 <StackPanel Orientation="Horizontal" Height="51" Width="200"  >
-                    <Image Source="Icons\refresh_icon.png" Width="52" Margin="0,-8,0,10" />
+                    <Image Source="/Icons/refresh_icon.png" Width="52" Margin="0,-8,0,10" />
                     <Label    Content="Refresh" HorizontalAlignment="Center" 
                               VerticalAlignment="Center" Foreground="White" FontSize="30" 
                               RenderTransformOrigin="0.444,0.659" Background="{x:Null}" Width="140" Height="56" Margin="0,-8,0,3"/>

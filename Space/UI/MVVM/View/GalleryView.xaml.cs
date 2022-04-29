@@ -65,9 +65,11 @@ namespace UI.MVVM.View
                     bi.EndInit();
 
                     results.Add(bi);
+
+                    ListViewGallery.ItemsSource = results;
                 }
 
-                ListViewGallery.ItemsSource = results;               
+                           
             });
             
         }
@@ -87,9 +89,11 @@ namespace UI.MVVM.View
                 bi.EndInit();
 
                 results.Add(bi);
+
+                ListViewGallery.ItemsSource = results;
             }
 
-            ListViewGallery.ItemsSource = results;
+           
         }
     }
 }
