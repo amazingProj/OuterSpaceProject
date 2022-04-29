@@ -75,7 +75,8 @@ namespace UI.MVVM.View
         private async void GetStartedButton_Click(object sender, RoutedEventArgs e)
         {
             List<string> picturesStringFormatted = await bL.RetriveAllImagesFromFireBase();
-            
+
+            results.Clear();
             foreach (string picture in picturesStringFormatted)
             {
                 byte[] binaryData = Convert.FromBase64String(picture);

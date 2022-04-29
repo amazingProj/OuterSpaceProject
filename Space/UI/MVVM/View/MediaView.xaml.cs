@@ -37,7 +37,7 @@ namespace UI.MVVM.View
         {
             string text = SearchBar.Text;
             List<Dictionary<string, string>> imageDetails = bL.GetAllImageSearch(text);
-
+            results.Clear();
             this.Dispatcher.Invoke(() =>
             {
                 foreach (var picture in imageDetails)
