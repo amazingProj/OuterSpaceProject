@@ -9,7 +9,7 @@ namespace BL
 {
     public class BL : IBL
     {
-        private double MIN_CONFIDENCE = 65;
+        private double MIN_CONFIDENCE = 50;
       
         Dictionary<string, string> keywordsSpace = new Dictionary<string, string>();
 
@@ -23,6 +23,12 @@ namespace BL
             keywordsSpace.Add("space", "keyword");
             keywordsSpace.Add("spacecraft", "keyword");
             keywordsSpace.Add("star", "keyword");
+            keywordsSpace.Add("stars", "keyword");
+            keywordsSpace.Add("telescope", "keyword");
+            keywordsSpace.Add("cosmic", "keyword");
+            keywordsSpace.Add("astrology", "keyword");
+            keywordsSpace.Add("universe", "keyword");
+            keywordsSpace.Add("astronomy", "keyword");
         }
 
         public List<Dictionary<string, string>> GetAllAsteroids(string initialDate, string endDate = null)

@@ -15,7 +15,7 @@
                                Grid.Row="0"
                                Foreground="White"
                                FontSize="18" />
-                    <Border Width="300"
+                    <Border Width="400"
                             Height="200"
                             Margin="10,5,0,0">
                         <Border.Background>
@@ -47,14 +47,15 @@
                                                Margin="10,10,0,0"
                                                Text="8"
                                                FontFamily="/Fonts/#Fredoka" />
+                                    <TextBlock Text="&#x0a;Potentially Hazard&#x0a;Near Earth Today"
+                                               Foreground="White"
+                                               FontSize="28"
+                                               Margin="10,10,0,0"
+                                               FontFamily="/Fonts/#Fredoka"
+                                               Height="49" />
                                 </StackPanel>
                                 
-                                <TextBlock Text="Potentially Hazard&#x0a;Near Earth Today"
-                                           Foreground="White"
-                                           FontSize="18"
-                                           Margin="10,10,0,0"
-                                           FontFamily="/Fonts/#Fredoka"
-                                           Height="49" />
+                                
 
                             </StackPanel>
 
