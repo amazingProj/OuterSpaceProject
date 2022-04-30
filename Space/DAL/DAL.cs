@@ -371,15 +371,15 @@ namespace DAL
             
             while (sqlDataReader.Read())
             {
-                Dictionary<string, string> keyValuePairs = new Dictionary<string, string>();
-                keyValuePairs.Add("Name", sqlDataReader["Name"].ToString());
-                keyValuePairs.Add("Name", sqlDataReader[""]);
-                keyValuePairs.Add("Name", sqlDataReader["Name"]);
-                keyValuePairs.Add("Name", sqlDataReader["Name"]);
-                keyValuePairs.Add("Name", sqlDataReader["Name"]);
-                keyValuePairs.Add("Name", sqlDataReader["Name"]);
-                keyValuePairs.Add("Name", sqlDataReader["Name"]);
-                keyValuePairs.Add(keyValuePairs);
+                //Dictionary<string, string> keyValuePairs = new Dictionary<string, string>();
+                //keyValuePairs.Add("Name", sqlDataReader["Name"].ToString());
+                //keyValuePairs.Add("Name", sqlDataReader[""]);
+                //keyValuePairs.Add("Name", sqlDataReader["Name"]);
+                //keyValuePairs.Add("Name", sqlDataReader["Name"]);
+                //keyValuePairs.Add("Name", sqlDataReader["Name"]);
+                //keyValuePairs.Add("Name", sqlDataReader["Name"]);
+                //keyValuePairs.Add("Name", sqlDataReader["Name"]);
+                //keyValuePairs.Add(keyValuePairs);
 
             }
 
