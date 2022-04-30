@@ -203,7 +203,7 @@ namespace DAL
                         var desirializeddeserializedEstimatedDiameter = JsonConvert.DeserializeObject<EstimatedDiameterModalMetersTwo>(desrializedObject.EstimatedDiameter.ToString());
                         var diameter = JsonConvert.DeserializeObject<DiameterMinMaxModal>(desirializeddeserializedEstimatedDiameter.meters.ToString());
                         raw.Add("estimated_diameter_min_Means_Koter_meters", diameter.EstimatedDiameter_Min.ToString());
-                        raw.Add("estimated_diameter_max_Means_Koter_meters", diameter.EstimatedDiameter_Min.ToString());
+                        raw.Add("estimated_diameter_max_Means_Koter_meters", diameter.estimated_diameter_max.ToString());
                         var closeApproachDataModalJArrayFirst = JsonConvert.DeserializeObject<CloseApproachDataModalJArrayFirst>(desrializedObject.CloseApproachData[0].ToString());
                         raw.Add("close_approach_date_full", closeApproachDataModalJArrayFirst.CloseApproachDateFull);
                         var relativeVelocity = JsonConvert.DeserializeObject<RelativeVelocityModal>(closeApproachDataModalJArrayFirst.RelativeVelocity.ToString());
@@ -256,7 +256,7 @@ namespace DAL
                         var desirializeddeserializedEstimatedDiameter = JsonConvert.DeserializeObject<EstimatedDiameterModalMetersTwo>(desrializedObject.EstimatedDiameter.ToString());
                         var diameter = JsonConvert.DeserializeObject<DiameterMinMaxModal>(desirializeddeserializedEstimatedDiameter.meters.ToString());
                         raw.Add("estimated_diameter_min_Means_Koter_meters", diameter.EstimatedDiameter_Min.ToString());
-                        raw.Add("estimated_diameter_max_Means_Koter_meters", diameter.EstimatedDiameter_Min.ToString());
+                        raw.Add("estimated_diameter_max_Means_Koter_meters", diameter.estimated_diameter_max.ToString());
                         var closeApproachDataModalJArrayFirst = JsonConvert.DeserializeObject<CloseApproachDataModalJArrayFirst>(desrializedObject.CloseApproachData[0].ToString());
                         raw.Add("close_approach_date_full", closeApproachDataModalJArrayFirst.CloseApproachDateFull);
                         var relativeVelocity = JsonConvert.DeserializeObject<RelativeVelocityModal>(closeApproachDataModalJArrayFirst.RelativeVelocity.ToString());
@@ -359,19 +359,31 @@ namespace DAL
             return "success";
         }
 
-        public void RetrieveDataFromSQLServer()
+        public List<Dictionary<string, string>> RetrieveDataFromSQLServer()
         {
+            List<Dictionary<string, string>> result = new List<Dictionary<string, string>>();
             SqlConnection sqlConnection = new SqlConnection("Server=(localdb)\\MSSQLLocalDB; initial catalog=DAL.PlanetContext;");
             sqlConnection.Open();
             SqlCommand sqlCommand = new SqlCommand("Select * from Planets", sqlConnection);
             SqlDataReader sqlDataReader;
             sqlDataReader = sqlCommand.ExecuteReader();
 
-            if (sqlDataReader.Read())
-            {
-                Console.WriteLine(sqlDataReader["Name"]);
-            }
             
+            while (sqlDataReader.Read())
+            {
+                Dictionary<string, string> keyValuePairs = new Dictionary<string, string>();
+                keyValuePairs.Add("Name", sqlDataReader["Name"].ToString());
+                keyValuePairs.Add("Name", sqlDataReader[""]);
+                keyValuePairs.Add("Name", sqlDataReader["Name"]);
+                keyValuePairs.Add("Name", sqlDataReader["Name"]);
+                keyValuePairs.Add("Name", sqlDataReader["Name"]);
+                keyValuePairs.Add("Name", sqlDataReader["Name"]);
+                keyValuePairs.Add("Name", sqlDataReader["Name"]);
+                keyValuePairs.Add(keyValuePairs);
+
+            }
+
+            return result;
         }
     }
 }
