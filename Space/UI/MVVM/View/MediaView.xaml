@@ -27,87 +27,18 @@
                          x:Name="SearchBar"
                          Margin="0.2,0.2,0.8,0.8"
                          Width="500"
-                         Height="25"
+                         Height="43"
+                         KeyDown="SearchBar_KeyDown"
+                         Style="{StaticResource Moderntextbox}"
                          MouseDoubleClick="TextBox_MouseDoubleClick">
                     <TextBox.ToolTip>
                         <TextBlock Text="Click to Search"
-                                   Foreground="Black"/>
+                                   Foreground="Black" />
                     </TextBox.ToolTip>
-                
+
                 </TextBox>
-
-
-
-                <StackPanel Orientation="Horizontal"
-                            HorizontalAlignment="Left">
-                    <StackPanel>
-                        <Border Background="#186DB6"
-                                Height="21"
-                                Width="76"
-                                Margin="80,0,0,0">
-
-                            <StackPanel Orientation="Horizontal"
-                                        HorizontalAlignment="Right">
-                                <CheckBox Margin="100,1,5,0"
-                                          IsChecked="True" />
-                                <TextBlock Foreground="White"
-                                           FontSize="12"
-                                           Text="Image"
-                                           Margin="0,0,10,0"
-                                           Width="40"
-                                           FontFamily="/Fonts/#Lora" />
-                            </StackPanel>
-
-                        </Border>
-
-                    </StackPanel>
-
-                    <StackPanel>
-                        <Border Background="#186DB6"
-                                Height="21"
-                                Width="76"
-                                Margin="20,0,0,0">
-
-                            <StackPanel Orientation="Horizontal"
-                                        HorizontalAlignment="Right">
-                                <CheckBox Margin="100,1,5,0"
-                                          IsChecked="True" />
-                                <TextBlock Foreground="White"
-                                           FontSize="12"
-                                           Text="Video"
-                                           Margin="0,0,10,0"
-                                           Width="40"
-                                           FontFamily="/Fonts/#Lora" />
-                            </StackPanel>
-
-                        </Border>
-
-                    </StackPanel>
-
-                    <StackPanel>
-                        <Border Background="#186DB6"
-                                Height="21"
-                                Width="76"
-                                Margin="20,0,0,0">
-
-                            <StackPanel Orientation="Horizontal"
-                                        HorizontalAlignment="Right">
-                                <CheckBox Margin="100,1,5,0"
-                                          IsChecked="True" />
-                                <TextBlock Foreground="White"
-                                           FontSize="12"
-                                           Text="Audio"
-                                           Margin="0,0,10,0"
-                                           Width="40"
-                                           FontFamily="/Fonts/#Lora" />
-                            </StackPanel>
-
-                        </Border>
-
-                    </StackPanel>
-                </StackPanel>
-
             </StackPanel>
+            
             <Image Height="60"
                    Margin="0,0,0,0"
                    VerticalAlignment="Top"

@@ -51,6 +51,28 @@ namespace UI.MVVM.View
                 ListViewGallery.ItemsSource = results;
             });
         }
+
+        private void SearchBar_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Enter)
+            {
+                string text = SearchBar.Text;
+                List<Dictionary<string, string>> imageDetails = bL.GetAllImageSearch(text);
+                results.Clear();
+                this.Dispatcher.Invoke(() =>
+                {
+                    foreach (var picture in imageDetails)
+                    {
+                        BitmapImage bi = new BitmapImage();
+                        bi.BeginInit();
+                        bi.UriSource = new Uri(picture["UrlJpgImage"]);
+                        bi.EndInit();
+                        results.Add(bi);
+                    }
+                    ListViewGallery.ItemsSource = results;
+                });
+            }
+        }
     }
 
 }
