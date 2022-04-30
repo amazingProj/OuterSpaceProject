@@ -361,16 +361,16 @@ namespace DAL
 
         public void RetrieveDataFromSQLServer()
         {
-            SqlConnection sqlConnection = new SqlConnection("Server=(localdb)\\MSSQLLocalDB;");
+            SqlConnection sqlConnection = new SqlConnection("Server=(localdb)\\MSSQLLocalDB; initial catalog=DAL.PlanetContext;");
             sqlConnection.Open();
             SqlCommand sqlCommand = new SqlCommand("Select * from Planets", sqlConnection);
             SqlDataReader sqlDataReader;
             sqlDataReader = sqlCommand.ExecuteReader();
 
-            //if (sqlDataReader.Read())
-            //{
-            //    Console.WriteLine(sqlDataReader["Name"]);
-            //}
+            if (sqlDataReader.Read())
+            {
+                Console.WriteLine(sqlDataReader["Name"]);
+            }
             
         }
     }
