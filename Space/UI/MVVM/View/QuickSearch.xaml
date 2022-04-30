@@ -7,15 +7,22 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <StackPanel>
-        <StackPanel>
+
+        <StackPanel Orientation="Vertical" Height="79">
             <TextBlock Text="Most dangerous close to Earth Asteroids"
                        FontSize="18"
                        Foreground="White"
                        HorizontalAlignment="Center"
-                       FontFamily="/Fonts/#Arvo"/>
-            <StackPanel Margin="0,20,0,0"
+                       FontFamily="/Fonts/#Arvo" Height="36" Margin="239,0"/>
+
+            <TextBlock HorizontalAlignment="Left" Text="List of Dangerous Asteroids  :" 
+                       Foreground="Wheat" Height="20" TextWrapping="WrapWithOverflow" FontSize="16" FontFamily="/UI;component/Fonts/#Roboto" />
+
+
+            <StackPanel 
                         Orientation="Horizontal"
-                        HorizontalAlignment="Center">
+                        HorizontalAlignment="Left" Height="22">
+
                 <TextBlock Text="From"
                            FontSize="14"
                            Foreground="White"
@@ -40,35 +47,75 @@
 
         <StackPanel Orientation="Horizontal" Height="386">
 
-            <StackPanel Width="126">
+            <StackPanel Width="126" Margin="0,0,0,10">
 
-                <TextBlock Text="List of Dangerous Asteroids  :" Foreground="Wheat" Height="39" TextWrapping="WrapWithOverflow" FontSize="16" FontFamily="/UI;component/Fonts/#Roboto" />
-                <TextBlock Text="for the 30 Last days" Foreground="#FFE8E5E0" Height="16" TextWrapping="WrapWithOverflow" FontSize="10" FontFamily="/UI;component/Fonts/#Roboto" />
-
-                <ListView x:Name="List_asteroids" Height="330" ItemsSource="{Binding}"
+                <ListView x:Name="List_asteroids" Height="372" ItemsSource="{Binding}"
                           Foreground="White" Background="Transparent" SelectionChanged="List_asteroids_SelectionChanged" FontSize="12" FontFamily="/UI;component/Fonts/#Poppins"/>
 
             </StackPanel>
 
 
-            <Grid Margin="0,0,-678,0">
+            <Grid Margin="0,0,-678,10" Width="672">
                 <Grid.Background>
                     <ImageBrush ImageSource="/Icons/Asteroid_backround Shema.png" Stretch="Uniform"/>
                 </Grid.Background>
 
-                <StackPanel Orientation="Vertical" Margin="40,37,450,292">
 
-                    <TextBlock x:Name="DateTB" Text="{Binding}" Foreground="#FF8CF08C" Height="22"/>
-                                        <Separator Height="3" Margin="0,0,80,0"/>
+                <TextBlock x:Name="NameTB" Text="{Binding}" Foreground="Wheat" Margin="0,49,247,279" 
+                           FontSize="20" HorizontalAlignment="Right" FontWeight="Bold" 
+                          />
 
-                    <Label Content="Date of Apparition" Foreground="#FF8CF08C" Height="33" VerticalAlignment="Top" VerticalContentAlignment="Top" HorizontalAlignment="Left" />
+
+                <DockPanel Margin="0,10,436,307">
+
+                    <Border  CornerRadius="6" Padding="8" BorderThickness="2"  BorderBrush="#FF8CF08C" Margin="32,0,28,0" Width="172" >
+                        <StackPanel  Orientation="Vertical" Margin="-10,-10,-19,-10">
+
+                            <TextBlock x:Name="DateTB" Text="{Binding}" Foreground="#FF8CF08C" Height="28" FontSize="18" Margin="10,0,0,0"/>
+                            <Separator Height="3" Margin="0,0,74,0" Background="#FFA5D1A5"/>
+                            <Label Content="Date of Apparition" Foreground="#FFA5D1A5" Height="25" VerticalAlignment="Top" VerticalContentAlignment="Top" HorizontalAlignment="Left" />
+                        </StackPanel>
+                    </Border>
+                </DockPanel>
+
+
+                <StackPanel Background="Black" Orientation="Vertical" Margin="266,192,247,132" Width="159">
+
+                    <TextBlock x:Name="DistanceTB" Text="{Binding}" Foreground="White" Height="24" FontSize="14"/>
+                    <Separator Height="1" Margin="0,0,59,0" Foreground="White" Background="White"/>
+                    <Label Content="Distance of Earth" Foreground="#FFE6E6E6" Height="25" VerticalAlignment="Top" VerticalContentAlignment="Top" HorizontalAlignment="Left" />
                 </StackPanel>
 
-                <TextBlock x:Name="NameTB" Text="{Binding}" Foreground="Wheat" Margin="271,10,251,316" />
+                <StackPanel Background="Black"  Orientation="Vertical" Margin="565,119,10,187">
+                    <Label Content="Estimated Diameter" Foreground="#FFB0B0B0" Height="23" VerticalAlignment="Top" VerticalContentAlignment="Top" HorizontalAlignment="Left" FontSize="10" />
+                    <TextBlock x:Name="DiamMinTB" Text="{Binding}" Foreground="White" Height="24" FontSize="14"/>
+                    <TextBlock x:Name="DiamMaxTB" Text="{Binding}" Foreground="White" Height="24" FontSize="14"/>
 
+                </StackPanel>
+
+                <StackPanel Background="Black" Orientation="Vertical" Margin="508,0,10,326">
+                    <Label Content="Vitess Aproach" Foreground="#FFB0B0B0" Height="23" VerticalAlignment="Top" VerticalContentAlignment="Top" HorizontalAlignment="Left" FontSize="10" />
+
+                    <TextBlock x:Name="VitessTB" Text="{Binding ''}" Foreground="White" Height="24" FontSize="14"/>
+                </StackPanel>
+
+                <StackPanel  x:Name="Dangerous" Orientation="Horizontal" Margin="306,326,10,10" Visibility="Hidden" >
+                    <Image Source="/Icons/asteroideIconAlert.png" />
+                    <Label Content="Is Potentially Hazardous Asteroids" Foreground="White" Height="40" VerticalAlignment="Top" VerticalContentAlignment="Top" HorizontalAlignment="Left" FontSize="18" Background="{x:Null}" Width="310" />
+
+                </StackPanel>
 
             </Grid>
         </StackPanel>
 
+
+
     </StackPanel>
+
+
+
+
+
+
+
 </UserControl>

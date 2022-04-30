@@ -89,8 +89,18 @@ namespace UI.MVVM.View
                         if (dic["Name"] == (List_asteroids.SelectedItem).ToString())
                         {
                             try {
-                                DateTB.Text = dic["Date"];
-                                NameTB.Text = dic["Name"]; }
+                                DateTB.Text = dic["close_approach_date_full"]; // Date complete
+                                NameTB.Text = dic["Name"];
+                                DistanceTB.Text = dic["MissDistanceKilometers"] + " Km";
+                                DiamMinTB.Text = "Min : " + dic["estimated_diameter_min_Means_Koter_meters"] + " m";
+                                DiamMaxTB.Text = "Max : " + dic["estimated_diameter_max_Means_Koter_meters"] + " m";
+                                VitessTB.Text = dic["kilometers_per_hour"] + " Km/h";
+
+                                if (dic["IsPotentiallyHazardousAsteroids"] == "IsPotentiallyHazardousAsteroids")
+                                {
+                                    Dangerous.Visibility = Visibility.Visible;
+                                }
+                            }
 
                             catch { }
 
