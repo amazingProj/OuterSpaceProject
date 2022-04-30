@@ -99,7 +99,7 @@
                     <TextBlock x:Name="VitessTB" Text="{Binding ''}" Foreground="White" Height="24" FontSize="14"/>
                 </StackPanel>
 
-                <StackPanel  x:Name="Dangerous" Orientation="Horizontal" Margin="306,326,10,10" Visibility="Hidden" >
+                <StackPanel  x:Name="Dangerous" Orientation="Horizontal" Margin="306,326,10,10" Visibility="Visible" >
                     <Image Source="/Icons/asteroideIconAlert.png" />
                     <Label Content="Is Potentially Hazardous Asteroids" Foreground="White" Height="40" VerticalAlignment="Top" VerticalContentAlignment="Top" HorizontalAlignment="Left" FontSize="18" Background="{x:Null}" Width="310" />
 
