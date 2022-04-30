@@ -12,6 +12,7 @@ using FireSharp.Response;
 using RestSharp;
 using Newtonsoft.Json.Linq;
 using System.Data.Entity;
+using System.Data.SqlClient;
 
 namespace DAL
 { 
@@ -356,6 +357,21 @@ namespace DAL
         {
             var task = await InsertImageToFireBaseAsync(convertedImage);
             return "success";
+        }
+
+        public void RetrieveDataFromSQLServer()
+        {
+            SqlConnection sqlConnection = new SqlConnection("Server=(localdb)\\MSSQLLocalDB;");
+            sqlConnection.Open();
+            SqlCommand sqlCommand = new SqlCommand("Select * from Planets", sqlConnection);
+            SqlDataReader sqlDataReader;
+            sqlDataReader = sqlCommand.ExecuteReader();
+
+            //if (sqlDataReader.Read())
+            //{
+            //    Console.WriteLine(sqlDataReader["Name"]);
+            //}
+            
         }
     }
 }

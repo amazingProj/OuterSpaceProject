@@ -81,9 +81,9 @@
     <Compile Include="LinkModal.cs" />
     <Compile Include="LinksImageModal.cs" />
     <Compile Include="MediaCollectionModal.cs" />
-    <Compile Include="Migrations\202204280622253_CreatePlanet.cs" />
-    <Compile Include="Migrations\202204280622253_CreatePlanet.Designer.cs">
-      <DependentUpon>202204280622253_CreatePlanet.cs</DependentUpon>
+    <Compile Include="Migrations\202204302127202_CreatePlanetPost.cs" />
+    <Compile Include="Migrations\202204302127202_CreatePlanetPost.Designer.cs">
+      <DependentUpon>202204302127202_CreatePlanetPost.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="MissDistanceModal.cs" />
@@ -100,8 +100,8 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202204280622253_CreatePlanet.resx">
-      <DependentUpon>202204280622253_CreatePlanet.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202204302127202_CreatePlanetPost.resx">
+      <DependentUpon>202204302127202_CreatePlanetPost.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
