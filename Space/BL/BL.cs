@@ -79,7 +79,6 @@ namespace BL
             return dAL.GetPictureOfTheDay();
         }
 
-
         public async Task<string> ImageUpload(string imageConverted, string path)
         {
             string apiKey = "acc_dca1d0642913a5a";

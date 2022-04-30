@@ -30,11 +30,11 @@ C:\Users\AssafHillel\source\repos\OuterSpaceProject\Space\DAL\bin\Debug\EntityFr
 C:\Users\AssafHillel\source\repos\OuterSpaceProject\Space\DAL\bin\Debug\EntityFramework.SqlServer.dll
 C:\Users\AssafHillel\source\repos\OuterSpaceProject\Space\DAL\bin\Debug\EntityFramework.xml
 C:\Users\AssafHillel\source\repos\OuterSpaceProject\Space\DAL\bin\Debug\EntityFramework.SqlServer.xml
-C:\Users\AssafHillel\source\repos\OuterSpaceProject\Space\DAL\obj\Debug\DAL.Migrations.CreatePlanet.resources
-C:\Users\AssafHillel\source\repos\OuterSpaceProject\Space\DAL\obj\Debug\DAL.csproj.GenerateResource.cache
 C:\Users\33768\Desktop\C# (2)\PROJECT\Space\DAL\bin\Debug\EntityFramework.dll
 C:\Users\33768\Desktop\C# (2)\PROJECT\Space\DAL\bin\Debug\EntityFramework.SqlServer.dll
 C:\Users\33768\Desktop\C# (2)\PROJECT\Space\DAL\bin\Debug\EntityFramework.xml
 C:\Users\33768\Desktop\C# (2)\PROJECT\Space\DAL\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\33768\Desktop\C# (2)\PROJECT\Space\DAL\obj\Debug\DAL.Migrations.CreatePlanet.resources
 C:\Users\33768\Desktop\C# (2)\PROJECT\Space\DAL\obj\Debug\DAL.csproj.GenerateResource.cache
+C:\Users\AssafHillel\source\repos\OuterSpaceProject\Space\DAL\obj\Debug\DAL.Migrations.CreatePlanetPost.resources
+C:\Users\AssafHillel\source\repos\OuterSpaceProject\Space\DAL\obj\Debug\DAL.csproj.GenerateResource.cache

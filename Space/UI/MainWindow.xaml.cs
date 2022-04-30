@@ -52,5 +52,14 @@ namespace UI
         {
             Close();
         }
+
+        private void TextBox_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Enter)
+            {
+                string text = SearchBar.Text;
+                
+            }
+        }
     }
 }

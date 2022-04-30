@@ -141,7 +141,9 @@
                      HorizontalAlignment="Left"
                      Margin="200,5,5,5"
                      Grid.Column="1"
-                     Style="{StaticResource Moderntextbox}">
+                     x:Name="SearchBar"
+                     Style="{StaticResource Moderntextbox}"
+                     KeyDown="TextBox_KeyDown">
 
                 <TextBox.ToolTip>
                     <TextBlock Text="Search Space Pictures&#x0a;click enter when finished" />

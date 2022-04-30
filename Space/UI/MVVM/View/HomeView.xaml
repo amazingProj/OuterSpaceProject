@@ -54,7 +54,7 @@
                            FontSize="25"
                            FontFamily="/Fonts/#Dosis"
                            FontWeight="Medium" />
-                <TextBlock Text="This system is beutiful look system which visually decribes the close to Earth Asteroids.&#x0a;Reinforce the community by sharing space related images.&#x0a;Enjoy our media search gallery.&#x0a;This is just the beginning, expect to more..."
+                <TextBlock Text="This system is beutiful look system which visually decribes the close to Earth Asteroids.&#x0a;Reinforce the community by sharing space related images.&#x0a;Enjoy our media search gallery.&#x0a;This is just the beginning, expect to more upgrades in the future..."
                            Foreground="White"
                            FontSize="12"
                            FontFamily="/Fonts/#Dosis"
