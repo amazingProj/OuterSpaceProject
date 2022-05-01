@@ -28,6 +28,8 @@ namespace UI.MVVM.View
     public partial class SolarSystemView : UserControl
     {         
         double offset = 0;
+        BL.IBL bl = new BL.BL();
+
         //ObservableCollection<BL.Planet> Planets_list;  // ADD REFERENCE
 
         public SolarSystemView()
@@ -35,7 +37,22 @@ namespace UI.MVVM.View
             InitializeComponent();
 
             //Planets_list = new ObservableCollection<BL.Planet>(BL.getPlanets());
-            //lb.ItemsSource = Planets_list;
+
+            List<Dictionary<string, string>> Listdictionary = bl.RetrieveDataFromSQLServer() ;
+
+            lb.ItemsSource = Listdictionary ;
+
+
+
+            //foreach (var dic in Listdictionary)
+            //{
+            //    lb.ItemsSource = dic[];
+            //}
+
+
+            //List<Dictionary<string, string>> RetrieveDataFromSQLServer()
+
+
 
 
         }
@@ -60,9 +77,6 @@ namespace UI.MVVM.View
                 offset = 0;
             sv.ScrollToHorizontalOffset(offset);
         }
-
-
-
 
         private void Motre_Details_Click(object sender, RoutedEventArgs e)
         {

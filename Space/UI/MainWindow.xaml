@@ -43,7 +43,7 @@
                              Style="{StaticResource MenuButtonTheme}"
                              IsChecked="True"
                              Command="{Binding HomeViewCommand}"/>
-                <RadioButton Content="Search &#x0a;Hazards"
+                <RadioButton Content="Search &#x0a;Asteroids"
                              Height="70"
                              Foreground="White"
                              FontSize="16"
