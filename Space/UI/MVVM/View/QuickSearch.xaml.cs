@@ -47,6 +47,7 @@ namespace UI.MVVM.View
         {
             List<Dictionary<string, string>> Listdictionary = bl.GetOnlyDangerous(dateNow, future);
 
+            
             foreach (var dic in Listdictionary)
             {
                 ListAsteroidNames.Add(dic["Name"]);

@@ -155,7 +155,7 @@
 
             </StackPanel>
 
-            <StackPanel x:Name="binding_column" VerticalAlignment="Top" Orientation="Vertical" >
+            <StackPanel x:Name="binding_column" VerticalAlignment="Top" Orientation="Vertical" Width="191" >
                 <Label Content="{Binding SelectedItem.mass, ElementName=lb, UpdateSourceTrigger=PropertyChanged}"  
                                    Foreground="Wheat" HorizontalAlignment="Left" VerticalAlignment="Top" 
                                    Width="155" Height="40" FontSize="16" />
@@ -179,7 +179,7 @@
                             Width="155" Height="40" FontSize="16" />
             </StackPanel>
 
-            <StackPanel x:Name="bindingDESCRIPTION_column"  VerticalAlignment="Top" Orientation="Vertical" Height="277" Width="436"  >
+            <StackPanel x:Name="bindingDESCRIPTION_column"  VerticalAlignment="Top" Orientation="Vertical" Height="277" Width="430"  >
 
                 <TextBlock Text="{Binding SelectedItem.Description, ElementName=lb, UpdateSourceTrigger=PropertyChanged}"
                        Foreground="Wheat"
