@@ -160,3 +160,5 @@ C:\Users\33768\Desktop\C# (2)\PROJECT\Space\UI\obj\Debug\MVVM\View\QuickSearch.b
 C:\Users\33768\Desktop\C# (2)\PROJECT\Space\UI\obj\Debug\MVVM\View\UploadImage.baml
 C:\Users\AssafHillel\source\repos\OuterSpaceProject\Space\UI\bin\Debug\EntityFramework.SqlServer.dll
 C:\Users\AssafHillel\source\repos\OuterSpaceProject\Space\UI\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\33768\Desktop\C# (2)\PROJECT\Space\UI\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\33768\Desktop\C# (2)\PROJECT\Space\UI\bin\Debug\EntityFramework.SqlServer.xml
