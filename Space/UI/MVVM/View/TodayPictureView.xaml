@@ -44,8 +44,7 @@
                                Margin="0,40,40,0"
                                FontSize="14"
                                LineHeight="25"
-                               Foreground="White"
-                               Text="{Binding Path=DataContext.TodayPictureModel.Content}"/>
+                               Foreground="White"/>
                 </StackPanel>
             </StackPanel>
             <StackPanel HorizontalAlignment="Center">
