@@ -13,8 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Collections.ObjectModel;
-
-
+using UI.MVVM.Model;
 
 namespace UI.MVVM.View
 {
@@ -29,6 +28,7 @@ namespace UI.MVVM.View
     {         
         double offset = 0;
         BL.IBL bl = new BL.BL();
+        List<Planet> planets;
 
         //ObservableCollection<BL.Planet> Planets_list;  // ADD REFERENCE
 
@@ -39,19 +39,32 @@ namespace UI.MVVM.View
             //Planets_list = new ObservableCollection<BL.Planet>(BL.getPlanets());
 
             List<Dictionary<string, string>> Listdictionary = bl.RetrieveDataFromSQLServer() ;
+            planets = new List<Planet>();
 
-            lb.ItemsSource = Listdictionary ;
+            foreach (var dic in Listdictionary)
+            {
+                Planet planet = new Planet();
+                planet.Name = dic["Name"];
+                planet.Description = dic["Discription"];
+                planet.ImagesPath = dic["ImagesPath"];
+                planet.mass = Double.Parse(dic["Mass"]);
+                planet.diameter = Double.Parse(dic["Diameter"]);
+                planet.density = Double.Parse(dic["Density"]);
+                planet.gravity = Double.Parse(dic["Gravity"]);
+                planet.rotation_period = Double.Parse(dic["Rotation_Period"]);
+                planet.distance_from_sun = Double.Parse(dic["distance_from_sun"]);
+                planet.mean_temperature = Double.Parse(dic["mean_temperature"]);
 
 
 
-            //foreach (var dic in Listdictionary)
-            //{
-            //    lb.ItemsSource = dic[];
-            //}
+
+                planets.Add(planet);
+            }
 
 
             //List<Dictionary<string, string>> RetrieveDataFromSQLServer()
 
+            lb.ItemsSource = planets;
 
 
 
@@ -83,5 +96,9 @@ namespace UI.MVVM.View
             System.Diagnostics.Process.Start("https://nssdc.gsfc.nasa.gov/planetary/factsheet/");
         }
 
+        private void lb_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            
+        }
     }
 }

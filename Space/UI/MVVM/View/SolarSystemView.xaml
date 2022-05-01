@@ -100,7 +100,8 @@
 
     <StackPanel Margin="33,10,21,0" Orientation="Vertical" >
        
-        <ListBox  x:Name="lb" Style="{DynamicResource ListBoxStyle1}" Margin="10,0,10,26" Height="242"  SelectedIndex="0">
+        <ListBox  x:Name="lb" ItemsSource="{Binding}" Style="{DynamicResource ListBoxStyle1}" Margin="10,0,10,26" Height="242"  SelectedIndex="0"
+                  SelectionChanged="lb_SelectionChanged">
             
             <ListBox.ItemsPanel>
                 <ItemsPanelTemplate>
@@ -178,11 +179,22 @@
                             Width="155" Height="40" FontSize="16" />
             </StackPanel>
 
-            <StackPanel x:Name="bindingDESCRIPTION_column" VerticalAlignment="Top" Orientation="Vertical" Height="277" Width="436"  >
+            <StackPanel x:Name="bindingDESCRIPTION_column"  VerticalAlignment="Top" Orientation="Vertical" Height="277" Width="436"  >
 
-                <Label Content="{Binding SelectedItem.Description, ElementName=lb, UpdateSourceTrigger=PropertyChanged}"  
-                             Foreground="Wheat" HorizontalAlignment="Center" VerticalAlignment="Top" 
-                            FontSize="20" FontFamily="/UI;component/Fonts/#Roboto" />
+                <TextBlock Text="{Binding SelectedItem.Description, ElementName=lb, UpdateSourceTrigger=PropertyChanged}"
+                       Foreground="Wheat"
+                       HorizontalAlignment="Left"
+                       FontSize="20"
+                       TextWrapping="Wrap"
+                       FontFamily="/UI;component/Fonts/#Roboto"
+                       VerticalAlignment="Center" >
+                    
+                    <!--<Label.Content>
+                        
+                    <AccessText TextWrapping="Wrap"/>
+                    </Label.Content>-->
+
+                </TextBlock>
 
             </StackPanel>
 
