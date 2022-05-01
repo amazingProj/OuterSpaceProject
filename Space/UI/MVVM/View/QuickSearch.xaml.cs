@@ -59,47 +59,47 @@ namespace UI.MVVM.View
             });
         }
 
-        private void List_asteroids_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            try
+            private void List_asteroids_SelectionChanged(object sender, SelectionChangedEventArgs e)
             {
-                if (List_asteroids.SelectedItem != null)
+                try
                 {
-                    List<Dictionary<string, string>> Listdictionary = bl.GetOnlyDangerous(dateNow, future);
-
-                    foreach (var dic in Listdictionary)
+                    if (List_asteroids.SelectedItem != null)
                     {
+                        List<Dictionary<string, string>> Listdictionary = bl.GetOnlyDangerous(dateNow, future);
 
-                        if (dic["Name"] == (List_asteroids.SelectedItem).ToString())
+                        foreach (var dic in Listdictionary)
                         {
-                            try {
-                                DateTB.Text = dic["close_approach_date_full"]; // Date complete
-                                NameTB.Text = dic["Name"];
-                                DistanceTB.Text = dic["MissDistanceKilometers"] + " Km";
-                                DiamMinTB.Text = "Min : " + dic["estimated_diameter_min_Means_Koter_meters"] + " m";
-                                DiamMaxTB.Text = "Max : " + dic["estimated_diameter_max_Means_Koter_meters"] + " m";
-                                VitessTB.Text = dic["kilometers_per_hour"] + " Km/h";
 
-                                if (dic["IsPotentiallyHazardousAsteroids"] == "IsPotentiallyHazardousAsteroids")
-                                {
-                                    Dangerous.Visibility = Visibility.Visible;
+                            if (dic["Name"] == (List_asteroids.SelectedItem).ToString())
+                            {
+                                try {
+                                    DateTB.Text = dic["close_approach_date_full"]; // Date complete
+                                    NameTB.Text = dic["Name"];
+                                    DistanceTB.Text = dic["MissDistanceKilometers"] + " Km";
+                                    DiamMinTB.Text = "Min : " + dic["estimated_diameter_min_Means_Koter_meters"] + " m";
+                                    DiamMaxTB.Text = "Max : " + dic["estimated_diameter_max_Means_Koter_meters"] + " m";
+                                    VitessTB.Text = dic["kilometers_per_hour"] + " Km/h";
+
+                                    if (dic["IsPotentiallyHazardousAsteroids"] == "IsPotentiallyHazardousAsteroids")
+                                    {
+                                        Dangerous.Visibility = Visibility.Visible;
+                                    }
                                 }
+
+                                catch { }
+
                             }
 
-                            catch { }
+
+
+                            //name = ((Listdictionary.SelectedItem as BO.Station).name);
 
                         }
-
-
-
-                        //name = ((Listdictionary.SelectedItem as BO.Station).name);
-
                     }
+            
                 }
             
-        }
-            
-            catch { }
-        }
+                     catch { }
+            }
     }
 }

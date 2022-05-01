@@ -7,19 +7,22 @@
              mc:Ignorable="d"
              d:DesignHeight="600"
              d:DesignWidth="900">
-    <StackPanel Margin="2,4,189,306"
-                Orientation="Horizontal">
 
-        <StackPanel Orientation="Vertical">
-            <StackPanel Orientation="Horizontal">
-                <TextBlock Text="Search asteroids"
+    <StackPanel x:Name="WIN" Orientation="Vertical">
+
+        <StackPanel Margin="2,4,189,5"
+                Orientation="Horizontal" Height="129">
+
+            <StackPanel Orientation="Vertical">
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="Search asteroids"
                            Foreground="White"
                            FontSize="32">
-                    <TextBlock.ToolTip>
-                        <TextBlock Text="Search asteroids which close to Earth" />
-                    </TextBlock.ToolTip>
+                        <TextBlock.ToolTip>
+                            <TextBlock Text="Search asteroids which close to Earth" />
+                        </TextBlock.ToolTip>
                 </TextBlock>
-                <Button Content="Search"
+                    <Button Content="Search"
                         Foreground="White"
                         FontSize="10"
                         x:Name="SearchButton"
@@ -28,44 +31,44 @@
                         Click="Button_Click"
                         Margin="20,5,6.4,-1.2"
                         RenderTransformOrigin="0.151,0.363">
-                    <Button.Style>
-                        <Style TargetType="Button">
-                            <Setter Property="TextElement.FontFamily"
+                        <Button.Style>
+                            <Style TargetType="Button">
+                                <Setter Property="TextElement.FontFamily"
                                     Value="Fonts/#Dosis" />
-                            <Setter Property="Background"
+                                <Setter Property="Background"
                                     Value="#FE6584" />
-                            <Setter Property="Cursor"
+                                <Setter Property="Cursor"
                                     Value="Hand" />
-                            <Style.Triggers>
-                                <Trigger Property="IsMouseOver"
+                                <Style.Triggers>
+                                    <Trigger Property="IsMouseOver"
                                          Value="True">
-                                    <Setter Property="Background"
+                                        <Setter Property="Background"
                                             Value="#FF4C70" />
-                                </Trigger>
-                            </Style.Triggers>
-                        </Style>
-                    </Button.Style>
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Button.Style>
 
-                    <Button.Template>
-                        <ControlTemplate TargetType="Button">
-                            <Border Width="75"
+                        <Button.Template>
+                            <ControlTemplate TargetType="Button">
+                                <Border Width="75"
                                     Height="15"
                                     CornerRadius="8"
                                     Background="{TemplateBinding Background}">
-                                <ContentPresenter VerticalAlignment="Center"
+                                    <ContentPresenter VerticalAlignment="Center"
                                                   HorizontalAlignment="Center" />
-                            </Border>
-                        </ControlTemplate>
-                    </Button.Template>
+                                </Border>
+                            </ControlTemplate>
+                        </Button.Template>
 
-                    <Button.ToolTip>
-                        <TextBlock Text="Click here to search" />
-                    </Button.ToolTip>
-                </Button>
-            </StackPanel>
-           
+                        <Button.ToolTip>
+                            <TextBlock Text="Click here to search" />
+                        </Button.ToolTip>
+                    </Button>
+                </StackPanel>
 
-            <DatePicker Name="MonthlyCalendarStart"
+
+                <DatePicker Name="MonthlyCalendarStart"
                         HorizontalAlignment="Left"
                         Language="English"
                         Width="200"
@@ -74,70 +77,141 @@
                         Loaded="DatePicker_Loaded"
                         xmlns:sys="clr-namespace:System;assembly=mscorlib"
                         Margin="15,25,88,19">
-                <DatePicker.Background>
-                    <ImageBrush ImageSource="/Icons/backround solar.jpg"
+                    <DatePicker.Background>
+                        <ImageBrush ImageSource="/Icons/backround solar.jpg"
                                 Opacity="0.3" />
-                </DatePicker.Background>
-            </DatePicker>
+                    </DatePicker.Background>
+                </DatePicker>
 
 
-        </StackPanel>
+            </StackPanel>
 
-        <StackPanel Visibility="Hidden"
+            <StackPanel Visibility="Hidden"
                     Margin="35,20,0,0"
                     x:Name="OptionalPickers">
-            <StackPanel Margin="0,10,0,0"
+                <StackPanel Margin="0,10,0,0"
                         Height="129">
-                <TextBlock Foreground="White"
+                    <TextBlock Foreground="White"
                            FontSize="24"
                            Text="Optional Fields" />
-                <DatePicker Language="English"
+                    <DatePicker Language="English"
                             HorizontalAlignment="Left"
                             x:Name="EndDatePicker"
                             Width="200"
                             Loaded="DatePicker_LoadedEnd"
                             xmlns:sys="clr-namespace:System;assembly=mscorlib"
                             Margin="0,5,0,0">
-                    <DatePicker.Background>
-                        <ImageBrush ImageSource="/Icons/backround solar.jpg"
+                        <DatePicker.Background>
+                            <ImageBrush ImageSource="/Icons/backround solar.jpg"
                                     Opacity="0.3" />
-                    </DatePicker.Background>
-                </DatePicker>
+                        </DatePicker.Background>
+                    </DatePicker>
 
-                <StackPanel Orientation="Horizontal">
-                    <TextBlock Text="Select only dangerous"
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="Select only dangerous"
                                Foreground="White"
                                FontSize="13"
                                FontFamily="/Fonts/#Poppins">
-                        <TextBlock.ToolTip>
-                            <TextBlock Text="Click check box to filter&#x0a;Only dangerous." />
-                        </TextBlock.ToolTip>
+                            <TextBlock.ToolTip>
+                                <TextBlock Text="Click check box to filter&#x0a;Only dangerous." />
+                            </TextBlock.ToolTip>
                 </TextBlock>
 
-                    <CheckBox Height="20"
+                        <CheckBox Height="20"
                               Margin="3,2,0,0"
                               Width="20" />
 
-                </StackPanel>
+                    </StackPanel>
 
-                <StackPanel Orientation="Horizontal">
-                    <TextBlock Text="Bigger than radius(meters)"
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="Bigger than radius(meters)"
                                Foreground="White"
                                FontSize="13"
                                FontFamily="/Fonts/#Poppins">
-                        <TextBlock.ToolTip>
-                            <TextBlock Text="Input the text box to filter&#x0a;Only bigger than certain radius." />
-                        </TextBlock.ToolTip>
+                            <TextBlock.ToolTip>
+                                <TextBlock Text="Input the text box to filter&#x0a;Only bigger than certain radius." />
+                            </TextBlock.ToolTip>
                 </TextBlock>
 
-                    <TextBox InputScope="Number"
+                        <TextBox x:Name="RadiusTB" InputScope="Number"
                              Width="100"
                              HorizontalAlignment="Left"
                              Margin="5" />
+                    </StackPanel>
                 </StackPanel>
             </StackPanel>
+
+
         </StackPanel>
 
-       
+        <Label Visibility="Visible" Content="Results :" Foreground="White" FontSize="20" />
+
+        <StackPanel Visibility="Visible" Orientation="Horizontal" Height="431" >
+
+            <StackPanel Width="220"  >
+
+                <ListView x:Name="List_asteroids" Height="435" ItemsSource="{Binding}" SelectedIndex="0"
+                                      Foreground="White" Background="Transparent" SelectionChanged="List_asteroids_SelectionChanged" FontSize="12" FontFamily="/UI;component/Fonts/#Poppins"/>
+
+            </StackPanel>
+
+
+            <Grid  Width="672">
+                <Grid.Background>
+                    <ImageBrush ImageSource="/Icons/Asteroid_backround Shema.png" Stretch="Fill"/>
+                </Grid.Background>
+
+
+                <TextBlock x:Name="NameTB" Text="Load..." Foreground="Wheat" Margin="0,49,247,335" 
+                                    FontSize="20" HorizontalAlignment="Right" FontWeight="Bold" 
+                                    />
+
+
+                <DockPanel Margin="0,10,436,357">
+
+                    <Border  CornerRadius="6" Padding="8" BorderThickness="2"  BorderBrush="#FF8CF08C" Margin="32,0,28,0" Width="172" >
+                        <StackPanel  Orientation="Vertical" Margin="-10,-10,-19,-10">
+
+                            <TextBlock x:Name="DateTB" Text="" Foreground="#FF8CF08C" Height="28" FontSize="18" Margin="10,0,0,0"/>
+                            <Separator Height="3" Margin="0,0,74,0" Background="#FFA5D1A5"/>
+                            <Label Content="Date of Apparition" Foreground="#FFA5D1A5" Height="25" VerticalAlignment="Top" VerticalContentAlignment="Top" HorizontalAlignment="Left" />
+                        </StackPanel>
+                    </Border>
+                </DockPanel>
+
+
+                <StackPanel Background="Black" Orientation="Vertical" Margin="266,222,247,153" Width="159">
+
+                    <TextBlock x:Name="DistanceTB" Text="" Foreground="White" Height="24" FontSize="14"/>
+                    <Separator Height="1" Margin="0,0,59,0" Foreground="White" Background="White"/>
+                    <Label Content="Distance of Earth" Foreground="#FFE6E6E6" Height="25" VerticalAlignment="Top" VerticalContentAlignment="Top" HorizontalAlignment="Left" />
+                </StackPanel>
+
+                <StackPanel Background="Black"  Orientation="Vertical" Margin="565,136,0,222">
+                    <Label Content="Estimated Diameter" Foreground="#FFB0B0B0" Height="23" VerticalAlignment="Top" VerticalContentAlignment="Top" HorizontalAlignment="Left" FontSize="10" />
+                    <TextBlock x:Name="DiamMinTB" Text="" Foreground="White" Height="24" FontSize="14"/>
+                    <TextBlock x:Name="DiamMaxTB" Text="" Foreground="White" Height="24" FontSize="14"/>
+
+                </StackPanel>
+
+                <StackPanel Background="Black" Orientation="Vertical" Margin="508,0,10,378">
+                    <Label Content="Vitess Aproach" Foreground="#FFB0B0B0" Height="23" VerticalAlignment="Top" VerticalContentAlignment="Top" HorizontalAlignment="Left" FontSize="10" />
+
+                    <TextBlock x:Name="VitessTB" Text="" Foreground="White" Height="24" FontSize="14"/>
+                </StackPanel>
+
+                <StackPanel  x:Name="Dangerous" Orientation="Horizontal" Margin="306,350,10,10" Visibility="Visible" >
+                    <Image Source="/Icons/asteroideIconAlert.png" Margin="0,32,0,0" Width="41" />
+                    <Label Content="Is Potentially Hazardous Asteroids" Foreground="White" Height="53" VerticalAlignment="Top" VerticalContentAlignment="Top" HorizontalAlignment="Left" FontSize="18" Background="{x:Null}" Width="310" Margin="0,32,0,0" />
+
+                </StackPanel>
+
+            </Grid>
+
+        </StackPanel>
+
+
     </StackPanel>
+
+
 </UserControl>

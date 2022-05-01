@@ -20,7 +20,14 @@ namespace UI.MVVM.View
     /// </summary>
     public partial class SearchView : UserControl
     {
-        string dateNow;
+        string dateNow; /// <summary>
+        /// ///////
+        /// </summary>
+
+        List<string> ListAsteroidNames = new List<string>();
+
+
+        BL.IBL bl = new BL.BL();
 
         private const string datePickerHint = "Select initial date";
         const string datePickerHintEnd = "Select end date";
@@ -91,13 +98,97 @@ namespace UI.MVVM.View
             SearchButton.Visibility = Visibility.Visible;
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void Button_Click(object sender, RoutedEventArgs e)  // search
         {
             string initialDate = MonthlyCalendarStart.SelectedDate.Value.Year.ToString() + "-" +
                 MonthlyCalendarStart.SelectedDate.Value.Month.ToString() + "-" +
                 MonthlyCalendarStart.SelectedDate.Value.Day.ToString();
 
 
+            string future = EndDatePicker.SelectedDate.Value.Year.ToString() + "-" +
+                EndDatePicker.SelectedDate.Value.Month.ToString() + "-" +
+                EndDatePicker.SelectedDate.Value.Day.ToString(); 
+
+            double radius = 0 ; 
+
+            // IF RADIUS
+
+
+            //List<Dictionary<string, string>> Listdictionary = bl.GetOnlyDangerous(initialDate, future, radius);
+
+            List<Dictionary<string, string>> Listdictionary = bl.GetOnlyDangerous(initialDate, future);
+
+            foreach (var dic in Listdictionary)
+            {
+                ListAsteroidNames.Add(dic["Name"]);
+            }
+
+            Dispatcher.Invoke(() =>
+            {
+                List_asteroids.DataContext = ListAsteroidNames;
+
+            });
+
+            // LABEL AND STACK PANNEL VISIBILITY
+        }
+
+        private void List_asteroids_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            string initialDate = MonthlyCalendarStart.SelectedDate.Value.Year.ToString() + "-" +
+               MonthlyCalendarStart.SelectedDate.Value.Month.ToString() + "-" +
+               MonthlyCalendarStart.SelectedDate.Value.Day.ToString();
+
+
+            string future = EndDatePicker.SelectedDate.Value.Year.ToString() + "-" +
+                EndDatePicker.SelectedDate.Value.Month.ToString() + "-" +
+                EndDatePicker.SelectedDate.Value.Day.ToString();
+
+            try
+            {
+                if (List_asteroids.SelectedItem != null)
+                {
+                    //IF RADIUS   DANGEROUS 
+
+                    List<Dictionary<string, string>> Listdictionary = bl.GetOnlyDangerous(initialDate, future); //// //// //////////
+
+                    // IF
+
+                    foreach (var dic in Listdictionary)
+                    {
+
+                        if (dic["Name"] == (List_asteroids.SelectedItem).ToString())
+                        {
+                            try
+                            {
+                                DateTB.Text = dic["close_approach_date_full"]; // Date complete
+                                NameTB.Text = dic["Name"];
+                                DistanceTB.Text = dic["MissDistanceKilometers"] + " Km";
+                                DiamMinTB.Text = "Min : " + dic["estimated_diameter_min_Means_Koter_meters"] + " m";
+                                DiamMaxTB.Text = "Max : " + dic["estimated_diameter_max_Means_Koter_meters"] + " m";
+                                VitessTB.Text = dic["kilometers_per_hour"] + " Km/h";
+
+                                if (dic["IsPotentiallyHazardousAsteroids"] == "IsPotentiallyHazardousAsteroids")
+                                {
+                                    Dangerous.Visibility = Visibility.Visible;
+                                }
+                            }
+
+                            catch { }
+
+                        }
+
+
+
+                        //        //name = ((Listdictionary.SelectedItem as BO.Station).name);
+
+                        //    }
+                        //}
+
+                    }
+                }
+            }
+
+            catch { }
         }
     }
 }

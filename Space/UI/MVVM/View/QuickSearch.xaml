@@ -49,19 +49,23 @@
 
             <StackPanel Width="126" Margin="0,0,0,10">
 
-                <ListView x:Name="List_asteroids" Height="372" ItemsSource="{Binding}"
-                          Foreground="White" Background="Transparent" SelectionChanged="List_asteroids_SelectionChanged" FontSize="12" FontFamily="/UI;component/Fonts/#Poppins"/>
+                <ListView x:Name="List_asteroids" Height="372" ItemsSource="{Binding}" SelectedIndex="0"
+                          Foreground="White" SelectionChanged="List_asteroids_SelectionChanged" FontSize="12" FontFamily="/UI;component/Fonts/#Poppins">
+                    <ListView.Background>
+                        <SolidColorBrush Color="Black" Opacity="0.2"/>
+                    </ListView.Background>
+                </ListView>
 
             </StackPanel>
 
 
             <Grid Margin="0,0,-678,10" Width="672">
                 <Grid.Background>
-                    <ImageBrush ImageSource="/Icons/Asteroid_backround Shema.png" Stretch="Uniform"/>
+                    <ImageBrush ImageSource="/Icons/Asteroid_backround Shema.png" Stretch="Uniform" Opacity="0.8"/>
                 </Grid.Background>
 
 
-                <TextBlock x:Name="NameTB" Text="{Binding}" Foreground="Wheat" Margin="0,49,247,279" 
+                <TextBlock x:Name="NameTB" Text="Loaded..." Foreground="Wheat" Margin="0,49,247,279" 
                            FontSize="20" HorizontalAlignment="Right" FontWeight="Bold" 
                           />
 
@@ -71,7 +75,7 @@
                     <Border  CornerRadius="6" Padding="8" BorderThickness="2"  BorderBrush="#FF8CF08C" Margin="32,0,28,0" Width="172" >
                         <StackPanel  Orientation="Vertical" Margin="-10,-10,-19,-10">
 
-                            <TextBlock x:Name="DateTB" Text="{Binding}" Foreground="#FF8CF08C" Height="28" FontSize="18" Margin="10,0,0,0"/>
+                            <TextBlock x:Name="DateTB" Foreground="#FF8CF08C" Height="28" FontSize="18" Margin="10,0,0,0"/>
                             <Separator Height="3" Margin="0,0,74,0" Background="#FFA5D1A5"/>
                             <Label Content="Date of Apparition" Foreground="#FFA5D1A5" Height="25" VerticalAlignment="Top" VerticalContentAlignment="Top" HorizontalAlignment="Left" />
                         </StackPanel>
@@ -79,24 +83,33 @@
                 </DockPanel>
 
 
-                <StackPanel Background="Black" Orientation="Vertical" Margin="266,192,247,132" Width="159">
+                <StackPanel Orientation="Vertical" Margin="266,192,247,132" Width="159">
+                    <StackPanel.Background>
+                        <SolidColorBrush Color="Black" Opacity="0.3"/>
+                    </StackPanel.Background>
 
-                    <TextBlock x:Name="DistanceTB" Text="{Binding}" Foreground="White" Height="24" FontSize="14"/>
+                    <TextBlock x:Name="DistanceTB" Text="{}" Foreground="White" Height="24" FontSize="14"/>
                     <Separator Height="1" Margin="0,0,59,0" Foreground="White" Background="White"/>
                     <Label Content="Distance of Earth" Foreground="#FFE6E6E6" Height="25" VerticalAlignment="Top" VerticalContentAlignment="Top" HorizontalAlignment="Left" />
                 </StackPanel>
 
-                <StackPanel Background="Black"  Orientation="Vertical" Margin="565,119,10,187">
+                <StackPanel  Orientation="Vertical" Margin="564,119,4,187">
+                    <StackPanel.Background>
+                        <SolidColorBrush Color="Black" Opacity="0.8"/>
+                    </StackPanel.Background>
                     <Label Content="Estimated Diameter" Foreground="#FFB0B0B0" Height="23" VerticalAlignment="Top" VerticalContentAlignment="Top" HorizontalAlignment="Left" FontSize="10" />
-                    <TextBlock x:Name="DiamMinTB" Text="{Binding}" Foreground="White" Height="24" FontSize="14"/>
-                    <TextBlock x:Name="DiamMaxTB" Text="{Binding}" Foreground="White" Height="24" FontSize="14"/>
+                    <TextBlock x:Name="DiamMinTB" Text="{}" Foreground="White" Height="24" FontSize="14"/>
+                    <TextBlock x:Name="DiamMaxTB" Text="{}" Foreground="White" Height="24" FontSize="14"/>
 
                 </StackPanel>
 
-                <StackPanel Background="Black" Orientation="Vertical" Margin="508,0,10,326">
-                    <Label Content="Vitess Aproach" Foreground="#FFB0B0B0" Height="23" VerticalAlignment="Top" VerticalContentAlignment="Top" HorizontalAlignment="Left" FontSize="10" />
+                <StackPanel Orientation="Vertical" Margin="508,0,10,326">
+                    <StackPanel.Background>
+                        <SolidColorBrush Color="Black" Opacity="0.3"/>
+                    </StackPanel.Background>
+                    <Label Content="Approach Speed" Foreground="#FFB0B0B0" Height="23" VerticalAlignment="Top" VerticalContentAlignment="Top" HorizontalAlignment="Left" FontSize="10" />
 
-                    <TextBlock x:Name="VitessTB" Text="{Binding}" Foreground="White" Height="24" FontSize="14"/>
+                    <TextBlock x:Name="VitessTB" Text="{}" Foreground="White" Height="24" FontSize="14"/>
                 </StackPanel>
 
                 <StackPanel  x:Name="Dangerous" Orientation="Horizontal" Margin="306,326,10,10" Visibility="Visible" >
