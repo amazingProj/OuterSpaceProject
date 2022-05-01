@@ -368,20 +368,28 @@ namespace DAL
             SqlDataReader sqlDataReader;
             sqlDataReader = sqlCommand.ExecuteReader();
 
-           
-            while (sqlDataReader.Read())
+            if (sqlDataReader.HasRows)
             {
-                Dictionary<string, string> keyValuePairs = new Dictionary<string, string>();
-                /*keyValuePairs.Add("Name", sqlDataReader["Name"].ToString());
-                keyValuePairs.Add("Name", sqlDataReader[""]);
-                keyValuePairs.Add("Name", sqlDataReader["Name"]);
-                keyValuePairs.Add("Name", sqlDataReader["Name"]);
-                keyValuePairs.Add("Name", sqlDataReader["Name"]);
-                keyValuePairs.Add("Name", sqlDataReader["Name"]);
-                keyValuePairs.Add("Name", sqlDataReader["Name"]);
-                keyValuePairs.Add(keyValuePairs);*/
+                while (sqlDataReader.Read())
+                {
+                    Dictionary<string, string> keyValuePairs = new Dictionary<string, string>();
 
+                    keyValuePairs.Add("Name", sqlDataReader["Name"].ToString());
+                    keyValuePairs.Add("ImagesPath", sqlDataReader["ImagesPath"].ToString());
+                    keyValuePairs.Add("Mass", sqlDataReader["mass"].ToString());
+                    keyValuePairs.Add("Diameter", sqlDataReader["diameter"].ToString());
+                    keyValuePairs.Add("Density", sqlDataReader["density"].ToString());
+                    keyValuePairs.Add("Gravity", sqlDataReader["gravity"].ToString());
+                    keyValuePairs.Add("Rotation_Period", sqlDataReader["rotation_period"].ToString());
+                    keyValuePairs.Add("distance_from_sun", sqlDataReader["distance_from_sun"].ToString());
+                    keyValuePairs.Add("mean_temperature", sqlDataReader["mean_temperature"].ToString());
+                    keyValuePairs.Add("Discription", sqlDataReader["Description"].ToString());
+
+                    result.Add(keyValuePairs);
+
+                }
             }
+            
 
             return result;
         }

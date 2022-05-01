@@ -125,6 +125,11 @@ namespace BL
             return messageResponseDal;
         }
 
+        public List<Dictionary<string, string>> RetrieveDataFromSQLServer()
+        {
+            return dAL.RetrieveDataFromSQLServer();
+        }
+
         public Task<List<string>> RetriveAllImagesFromFireBase()
         {
             return dAL.RetriveAllImagesFromFireBase();
