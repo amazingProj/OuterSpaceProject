@@ -31,13 +31,13 @@ namespace BL
             keywordsSpace.Add("astronomy", "keyword");
         }
 
-        public List<Dictionary<string, string>> GetAllAsteroids(string initialDate, string endDate = null)
+        public List<Dictionary<string, string>> GetAllAsteroids(string initialDate, string endDate = null, double radius = 0)
         {
             if (initialDate == null)
             {
                 return null;
             }
-            return dAL.GetAllAsteroids(initialDate, endDate);
+            return dAL.GetAllAsteroids(initialDate, endDate, radius);
         }
 
         public List<Dictionary<string, string>> GetAllImageSearch(string query)
@@ -55,22 +55,22 @@ namespace BL
             return dAL.GetNormalTodayPicture();
         }
 
-        public List<Dictionary<string, string>> GetNotDangerous(string initialDate, string endDate = null)
+        public List<Dictionary<string, string>> GetNotDangerous(string initialDate, string endDate = null, double radius = 0)
         {
             if (initialDate == null)
             {
                 return null;
             }
-            return dAL.GetNotDangerous(initialDate, endDate);
+            return dAL.GetNotDangerous(initialDate, endDate, radius);
         }
 
-        public List<Dictionary<string, string>> GetOnlyDangerous(string initialDate, string endDate = null)
+        public List<Dictionary<string, string>> GetOnlyDangerous(string initialDate, string endDate = null, double radius = 0)
         {
             if (initialDate == null)
             {
                 return null;
             }
-            List<Dictionary<string, string>> dangerous =  dAL.GetOnlyDangerous(initialDate, endDate);
+            List<Dictionary<string, string>> dangerous =  dAL.GetOnlyDangerous(initialDate, endDate, radius);
             return dangerous;
         }
 
