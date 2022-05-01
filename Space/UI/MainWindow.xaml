@@ -137,20 +137,6 @@
                 </Button.Template>
             </Button>
 
-            <TextBox VerticalContentAlignment="Center"
-                     HorizontalAlignment="Left"
-                     Margin="200,5,5,5"
-                     Grid.Column="1"
-                     x:Name="SearchBar"
-                     Style="{StaticResource Moderntextbox}"
-                     KeyDown="TextBox_KeyDown">
-
-                <TextBox.ToolTip>
-                    <TextBlock Text="Search Space Pictures&#x0a;click enter when finished" />
-                </TextBox.ToolTip>
-            </TextBox>
-
-
             <ContentControl Grid.Row="1" Grid.Column="1"
                             Margin="10"
                             Content="{Binding CurrentView}" />
