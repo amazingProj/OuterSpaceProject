@@ -150,15 +150,15 @@ namespace DAL
                         raw.Add("Name", desrializedObject.Name);
                         var desirializeddeserializedEstimatedDiameter = JsonConvert.DeserializeObject<EstimatedDiameterModalMetersTwo>(desrializedObject.EstimatedDiameter.ToString());
                         var diameter = JsonConvert.DeserializeObject<DiameterMinMaxModal>(desirializeddeserializedEstimatedDiameter.meters.ToString());
-                        raw.Add("estimated_diameter_min_Means_Koter_meters", diameter.EstimatedDiameter_Min.ToString());
-                        raw.Add("estimated_diameter_max_Means_Koter_meters", diameter.EstimatedDiameter_Min.ToString());
+                        raw.Add("estimated_diameter_min_Means_Koter_meters", diameter.EstimatedDiameter_Min.ToString(".###"));
+                        raw.Add("estimated_diameter_max_Means_Koter_meters", diameter.EstimatedDiameter_Min.ToString(".###"));
                         var closeApproachDataModalJArrayFirst = JsonConvert.DeserializeObject<CloseApproachDataModalJArrayFirst>(desrializedObject.CloseApproachData[0].ToString());
                         raw.Add("close_approach_date_full", closeApproachDataModalJArrayFirst.CloseApproachDateFull);
                         var relativeVelocity = JsonConvert.DeserializeObject<RelativeVelocityModal>(closeApproachDataModalJArrayFirst.RelativeVelocity.ToString());
-                        raw.Add("kilometers_per_hour", relativeVelocity.kilometers_per_hour.ToString());
+                        raw.Add("kilometers_per_hour", relativeVelocity.kilometers_per_hour.ToString(".###"));
 
                         var MissDistance = JsonConvert.DeserializeObject<MissDistanceModal>(closeApproachDataModalJArrayFirst.MissDistance.ToString());
-                        raw.Add("MissDistanceKilometers", MissDistance.KilometersMissDistance.ToString());
+                        raw.Add("MissDistanceKilometers", MissDistance.KilometersMissDistance.ToString(".####"));
 
                         raw.Add("IsPotentiallyHazardousAsteroids", desrializedObject.IsPotentiallyHazardousAsteroids.ToString());
                         
@@ -202,15 +202,15 @@ namespace DAL
                         raw.Add("Name", desrializedObject.Name);
                         var desirializeddeserializedEstimatedDiameter = JsonConvert.DeserializeObject<EstimatedDiameterModalMetersTwo>(desrializedObject.EstimatedDiameter.ToString());
                         var diameter = JsonConvert.DeserializeObject<DiameterMinMaxModal>(desirializeddeserializedEstimatedDiameter.meters.ToString());
-                        raw.Add("estimated_diameter_min_Means_Koter_meters", diameter.EstimatedDiameter_Min.ToString());
-                        raw.Add("estimated_diameter_max_Means_Koter_meters", diameter.estimated_diameter_max.ToString());
+                        raw.Add("estimated_diameter_min_Means_Koter_meters", diameter.EstimatedDiameter_Min.ToString(".###"));
+                        raw.Add("estimated_diameter_max_Means_Koter_meters", diameter.estimated_diameter_max.ToString(".###"));
                         var closeApproachDataModalJArrayFirst = JsonConvert.DeserializeObject<CloseApproachDataModalJArrayFirst>(desrializedObject.CloseApproachData[0].ToString());
                         raw.Add("close_approach_date_full", closeApproachDataModalJArrayFirst.CloseApproachDateFull);
                         var relativeVelocity = JsonConvert.DeserializeObject<RelativeVelocityModal>(closeApproachDataModalJArrayFirst.RelativeVelocity.ToString());
-                        raw.Add("kilometers_per_hour", relativeVelocity.kilometers_per_hour.ToString());
+                        raw.Add("kilometers_per_hour", relativeVelocity.kilometers_per_hour.ToString(".###"));
 
                         var MissDistance = JsonConvert.DeserializeObject<MissDistanceModal>(closeApproachDataModalJArrayFirst.MissDistance.ToString());
-                        raw.Add("MissDistanceKilometers", MissDistance.KilometersMissDistance.ToString());
+                        raw.Add("MissDistanceKilometers", MissDistance.KilometersMissDistance.ToString(".####"));
 
                         raw.Add("IsPotentiallyHazardousAsteroids", desrializedObject.IsPotentiallyHazardousAsteroids.ToString());
                         if (!desrializedObject.IsPotentiallyHazardousAsteroids)
@@ -255,15 +255,15 @@ namespace DAL
                         raw.Add("Name", desrializedObject.Name);
                         var desirializeddeserializedEstimatedDiameter = JsonConvert.DeserializeObject<EstimatedDiameterModalMetersTwo>(desrializedObject.EstimatedDiameter.ToString());
                         var diameter = JsonConvert.DeserializeObject<DiameterMinMaxModal>(desirializeddeserializedEstimatedDiameter.meters.ToString());
-                        raw.Add("estimated_diameter_min_Means_Koter_meters", diameter.EstimatedDiameter_Min.ToString());
-                        raw.Add("estimated_diameter_max_Means_Koter_meters", diameter.estimated_diameter_max.ToString());
+                        raw.Add("estimated_diameter_min_Means_Koter_meters", diameter.EstimatedDiameter_Min.ToString(".###"));
+                        raw.Add("estimated_diameter_max_Means_Koter_meters", diameter.estimated_diameter_max.ToString(".###"));
                         var closeApproachDataModalJArrayFirst = JsonConvert.DeserializeObject<CloseApproachDataModalJArrayFirst>(desrializedObject.CloseApproachData[0].ToString());
                         raw.Add("close_approach_date_full", closeApproachDataModalJArrayFirst.CloseApproachDateFull);
                         var relativeVelocity = JsonConvert.DeserializeObject<RelativeVelocityModal>(closeApproachDataModalJArrayFirst.RelativeVelocity.ToString());
-                        raw.Add("kilometers_per_hour", relativeVelocity.kilometers_per_hour.ToString());
+                        raw.Add("kilometers_per_hour", relativeVelocity.kilometers_per_hour.ToString(".###"));
 
                         var MissDistance = JsonConvert.DeserializeObject<MissDistanceModal>(closeApproachDataModalJArrayFirst.MissDistance.ToString());
-                        raw.Add("MissDistanceKilometers", MissDistance.KilometersMissDistance.ToString());
+                        raw.Add("MissDistanceKilometers", MissDistance.KilometersMissDistance.ToString(".####"));
                         
                         raw.Add("IsPotentiallyHazardousAsteroids", desrializedObject.IsPotentiallyHazardousAsteroids.ToString());
                         if (desrializedObject.IsPotentiallyHazardousAsteroids)
@@ -368,18 +368,18 @@ namespace DAL
             SqlDataReader sqlDataReader;
             sqlDataReader = sqlCommand.ExecuteReader();
 
-            
+           
             while (sqlDataReader.Read())
             {
-                //Dictionary<string, string> keyValuePairs = new Dictionary<string, string>();
-                //keyValuePairs.Add("Name", sqlDataReader["Name"].ToString());
-                //keyValuePairs.Add("Name", sqlDataReader[""]);
-                //keyValuePairs.Add("Name", sqlDataReader["Name"]);
-                //keyValuePairs.Add("Name", sqlDataReader["Name"]);
-                //keyValuePairs.Add("Name", sqlDataReader["Name"]);
-                //keyValuePairs.Add("Name", sqlDataReader["Name"]);
-                //keyValuePairs.Add("Name", sqlDataReader["Name"]);
-                //keyValuePairs.Add(keyValuePairs);
+                Dictionary<string, string> keyValuePairs = new Dictionary<string, string>();
+                /*keyValuePairs.Add("Name", sqlDataReader["Name"].ToString());
+                keyValuePairs.Add("Name", sqlDataReader[""]);
+                keyValuePairs.Add("Name", sqlDataReader["Name"]);
+                keyValuePairs.Add("Name", sqlDataReader["Name"]);
+                keyValuePairs.Add("Name", sqlDataReader["Name"]);
+                keyValuePairs.Add("Name", sqlDataReader["Name"]);
+                keyValuePairs.Add("Name", sqlDataReader["Name"]);
+                keyValuePairs.Add(keyValuePairs);*/
 
             }
 
