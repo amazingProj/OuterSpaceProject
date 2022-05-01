@@ -25,6 +25,7 @@ namespace UI.MVVM.View
         /// </summary>
 
         List<string> ListAsteroidNames = new List<string>();
+        double radius = 0;
 
 
         BL.IBL bl = new BL.BL();
@@ -109,14 +110,33 @@ namespace UI.MVVM.View
                 EndDatePicker.SelectedDate.Value.Month.ToString() + "-" +
                 EndDatePicker.SelectedDate.Value.Day.ToString(); 
 
-            double radius = 0 ; 
 
-            // IF RADIUS
+            List<Dictionary<string, string>> Listdictionary=null;
 
+          
 
-            //List<Dictionary<string, string>> Listdictionary = bl.GetOnlyDangerous(initialDate, future, radius);
+            if (DangerCB.IsChecked == true && RadiusTB.Text != "")
+            {
+                radius = Double.Parse(RadiusTB.Text);
 
-            List<Dictionary<string, string>> Listdictionary = bl.GetOnlyDangerous(initialDate, future);
+                Listdictionary = bl.GetOnlyDangerous(initialDate, future, radius);  
+
+            }
+            if (DangerCB.IsChecked == true && RadiusTB.Text == null)
+            {
+                Listdictionary = bl.GetOnlyDangerous(initialDate, future);
+            }
+            else
+            {
+                if (RadiusTB.Text != "")
+                {
+                    radius = Double.Parse(RadiusTB.Text);
+
+                    Listdictionary = bl.GetAllAsteroids(initialDate, future, radius);
+                }
+                else {Listdictionary = bl.GetAllAsteroids(initialDate, future); }
+            }
+
 
             foreach (var dic in Listdictionary)
             {
@@ -129,7 +149,9 @@ namespace UI.MVVM.View
 
             });
 
-            // LABEL AND STACK PANNEL VISIBILITY
+            ResultsLB.Visibility = Visibility.Visible;
+            StackResults.Visibility = Visibility.Visible;
+
         }
 
         private void List_asteroids_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -147,11 +169,31 @@ namespace UI.MVVM.View
             {
                 if (List_asteroids.SelectedItem != null)
                 {
-                    //IF RADIUS   DANGEROUS 
 
-                    List<Dictionary<string, string>> Listdictionary = bl.GetOnlyDangerous(initialDate, future); //// //// //////////
+                    List<Dictionary<string, string>> Listdictionary;
 
-                    // IF
+
+                    if (DangerCB.IsChecked == true && RadiusTB.Text != "")
+                    {
+                        radius = Double.Parse(RadiusTB.Text);
+
+                        Listdictionary = bl.GetOnlyDangerous(initialDate, future, radius);
+
+                    }
+                    if (DangerCB.IsChecked == true && RadiusTB.Text == null)
+                    {
+                        Listdictionary = bl.GetOnlyDangerous(initialDate, future);
+                    }
+                    else
+                    {
+                        if (RadiusTB.Text != "")
+                        {
+                            radius = Double.Parse(RadiusTB.Text);
+
+                            Listdictionary = bl.GetAllAsteroids(initialDate, future, radius);
+                        }
+                        else { Listdictionary = bl.GetAllAsteroids(initialDate, future); }
+                    }
 
                     foreach (var dic in Listdictionary)
                     {
