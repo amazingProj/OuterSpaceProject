@@ -96,7 +96,7 @@
                 <StackPanel Background="Black" Orientation="Vertical" Margin="508,0,10,326">
                     <Label Content="Vitess Aproach" Foreground="#FFB0B0B0" Height="23" VerticalAlignment="Top" VerticalContentAlignment="Top" HorizontalAlignment="Left" FontSize="10" />
 
-                    <TextBlock x:Name="VitessTB" Text="{Binding ''}" Foreground="White" Height="24" FontSize="14"/>
+                    <TextBlock x:Name="VitessTB" Text="{Binding}" Foreground="White" Height="24" FontSize="14"/>
                 </StackPanel>
 
                 <StackPanel  x:Name="Dangerous" Orientation="Horizontal" Margin="306,326,10,10" Visibility="Visible" >
