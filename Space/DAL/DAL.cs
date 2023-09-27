@@ -51,22 +51,6 @@ namespace DAL
             }
         }
 
-        public void GetAllVideoSearch(string query)
-        {
-            if (query == null)
-            {
-                return;
-            }
-
-            var url = $"https://images-api.nasa.gov/search?q={query}&media_type=video";
-            var httpRequest = (HttpWebRequest)WebRequest.Create(url);
-            var httpResponse = (HttpWebResponse)httpRequest.GetResponse();
-            using (var streamReader = new StreamReader(httpResponse.GetResponseStream()))
-            {
-                var resultStream = streamReader.ReadToEnd();
-
-            }
-        }
 
         public List<Dictionary<string, string>> GetAllImageSearch(string query)
         {
@@ -100,22 +84,6 @@ namespace DAL
             return result;
         }
 
-        public void GetAllAudioSearch(string query)
-        {
-            if (query == null)
-            {
-                return;
-            }
-
-            var url = $"https://images-api.nasa.gov/search?q={query}&media_type=audio";
-            var httpRequest = (HttpWebRequest)WebRequest.Create(url);
-            var httpResponse = (HttpWebResponse)httpRequest.GetResponse();//
-            using (var streamReader = new StreamReader(httpResponse.GetResponseStream()))
-            {
-                var resultStream = streamReader.ReadToEnd();  
-
-            } 
-        }
 
         public List<Dictionary<string, string>> GetAllAsteroids(string initialDate, string endDate = null, double radius = 0)
         {

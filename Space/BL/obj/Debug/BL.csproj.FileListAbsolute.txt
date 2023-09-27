@@ -74,3 +74,4 @@ C:\Users\AssafHillel\source\repos\OuterSpaceProject\Space\BL\bin\Debug\EntityFra
 C:\Users\AssafHillel\source\repos\OuterSpaceProject\Space\BL\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\33768\Desktop\C# (2)\PROJECT\Space\BL\bin\Debug\EntityFramework.SqlServer.dll
 C:\Users\33768\Desktop\C# (2)\PROJECT\Space\BL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\AssafHillel\source\repos\OuterSpaceProject\Space\BL\obj\Debug\BL.csproj.SuggestedBindingRedirects.cache
